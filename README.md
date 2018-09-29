@@ -1,9 +1,5 @@
 # webapp320
-A javascript web application for CS 320
-
-
-# Prime Functions
-This is a description of our webapp.
+A javascript web application for CS 320. This is a description of our webapp.
 
 ## Getting Started
 
