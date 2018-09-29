@@ -17,6 +17,6 @@ This is how it work.
 ## Author
 
 * **Julian Keller**  - [JulianKeller](https://github.com/JulianKeller)
-* **Tyler Higgins
+* **Tyler Higgins**
 
 
