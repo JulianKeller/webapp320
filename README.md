@@ -13,6 +13,9 @@ This program is easiest viewed in a web browser such as Google Chrome.
 
 This is how it work.
 
+## TODO
+Choose an idea.
+Complete the SRS document by October 7, 2018.
 
 ## Author
 
