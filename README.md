@@ -15,12 +15,12 @@ This is how it work.
 
 ## TODO
 1. Choose an idea.
-2. Download Repo and create a branch for each of us so we can work on things and then update to master when we are together.
+2. Download Repo and create a branch for each of us so we can work on things and then update to master when we are together. (I'll just name my branch "julian")
 ```
 git clone <repo url here>
 git branch -b <name of new branch>
 ```
-(I'll just name my branch "julian")
+
 2. Complete the SRS document by October 7, 2018.
 
 ## Author
