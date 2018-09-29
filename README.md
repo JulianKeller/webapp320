@@ -20,6 +20,7 @@ This is how it work.
 git clone <repo url here>
 git branch -b <name of new branch>
 ```
+(I'll just name my branch "julian")
 2. Complete the SRS document by October 7, 2018.
 
 ## Author
