@@ -26,6 +26,6 @@ git branch -b <name of new branch>
 ## Author
 
 * **Julian Keller**  - [JulianKeller](https://github.com/JulianKeller)
-* **Tyler Higgins**
+* **Tyler Higgins**  - [TylerHiggins](https://github.com/tylerhiggins)
 
 
