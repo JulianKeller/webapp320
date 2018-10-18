@@ -2,7 +2,7 @@
 A javascript web application for CS 320. This is a description of our webapp.
 
 ## TODO
-- Finish Part 2.2, Add method parameters to Class Diagram. 
+- Finish Part 2.2 - Add method parameters to Class Diagram. 
   - Copy the url from ClassDiagram.txt (webapp320/Milestones/milestone2/StructuralModeling/ClassDiagram.txt)
   - Paste that url at the bottom of the page at http://www.plantuml.com/plantuml/uml
     - This will open up the code and let you edit it
