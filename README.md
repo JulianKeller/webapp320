@@ -14,6 +14,10 @@ A javascript web application for CS 320. This is a description of our webapp.
   - submit SDD as a pdf
   - submit text file with Github page
 
+### Helpful Plantuml Links
+http://plantuml.com/sequence-diagram
+http://www.plantuml.com/plantuml/uml
+http://plantuml.com/skinparam
 
 ## Getting Started
 
