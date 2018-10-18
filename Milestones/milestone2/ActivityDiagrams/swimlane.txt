@@ -1,0 +1,39 @@
+Link to UML:
+
+http://www.plantuml.com/plantuml/png/RL3BQeKm4DtFLyntw4QhfLqL5tsiHpELW1h9Z1GX7z-e4P5xDtcSHyx95ABaTHa725_2Fi1-X-pRYbNyuJPkd4D8fm1PRMKUQ8LtD_9CVIIJCwiyapAKNUUMIM-cDrPCEDIiP0V1N-z6tAnHMPDIIx99IsDs5DL1Wky56i_2aygkaZCEcoTT43xu3ryMqxFcnzDLX7ldBGk2kejxDLPFSZqxFZHBUlXqHpfUl-N9G16NECj_
+
+
+PlantUML Code:
+
+@startuml
+|User|
+start
+:Visit Website;
+|Website|
+:Display
+Homepage;
+|User|
+:Create
+Account;
+|Website|
+:Get Account
+Details from User;
+|Database|
+:Add User to
+Database;
+|Website|
+:Presents Users
+Account Page;
+|User|
+:Create 
+New Budget;
+:Add Categories 
+to Budget;
+:Edit Category
+Details;
+|Database|
+:Add Budget
+To Users 
+Account;
+end
+@enduml
