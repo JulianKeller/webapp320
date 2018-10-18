@@ -7,6 +7,7 @@ A javascript web application for CS 320. This is a description of our webapp.
   - Paste that url at the bottom of the page at http://www.plantuml.com/plantuml/uml
     - This will open up the code and let you edit it
   - Add anything to the classes that I didn't think of
+  - Add .png from the diagram to latex.
 - Part 2.3
 - Part 3
 - (optional) Improve layout of Latex document
