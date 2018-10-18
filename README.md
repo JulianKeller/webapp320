@@ -1,6 +1,20 @@
 # webapp320
 A javascript web application for CS 320. This is a description of our webapp.
 
+## TODO
+- Finish Part 2.2, Add method parameters to Class Diagram. 
+  - Copy the url from ClassDiagram.txt (webapp320/Milestones/milestone2/StructuralModeling/ClassDiagram.txt)
+  - Paste that url at the bottom of the page at http://www.plantuml.com/plantuml/uml
+    - This will open up the code and let you edit it
+  - Add anything to the classes that I didn't think of
+- Part 2.3
+- Part 3
+- (optional) Improve layout of Latex document
+- Submit SDD by October 21
+  - submit SDD as a pdf
+  - submit text file with Github page
+
+
 ## Getting Started
 
 These instructions will get you a copy of the project running on your local machine.
@@ -11,17 +25,8 @@ This program is easiest viewed in a web browser such as Google Chrome.
 
 ## Running the program
 
-This is how it work.
+This is how it works.
 
-## TODO
-1. Choose an idea.
-2. Download Repo and create a branch for each of us so we can work on things and then update to master when we are together. (I'll just name my branch "julian")
-```
-git clone <repo url here>
-git branch -b <name of new branch>
-```
-
-2. Complete the SRS document by October 7, 2018.
 
 ## Author
 

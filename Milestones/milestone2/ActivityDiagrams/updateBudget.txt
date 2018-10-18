@@ -1,0 +1,43 @@
+Link to UML:
+
+http://www.plantuml.com/plantuml/uml/ROwzRiCm38HtFWMV8rdouxHRbo3rJ5k4GrYo38ckOLHzzz957HH15_tStNVa8IibdOA7tCimKgA03RLzb-8qk7FqCU5y5-K_FhKg7w8BVWBYPKkTl64cd9xeUgMl8VPivaiSz8q2up49UHEkimHF0zVYz8xPBFW2W7BBd0hyB0UxTycYM7DZ5--X_BuAx2h9ewS5rZWUszR6wdwZZUCPJvFhs4Ge5Iarb5VkbHNN46pkFvsRzQYxE56C2Q5Ypyfm9kKkfiN-IkBpqupRw4ZvKSE3WuCTK_3V
+
+
+PlantUML Code:
+
+@startuml
+skinparam backgroundColor white
+skinparam activity {
+  EndColor Black
+  BackgroundColor WhiteSmoke
+  FontName Arial
+  SwimlaneWidth same
+}
+
+
+|User|
+start
+:Visit Website;
+|Website|
+:Display
+User Account;
+|User|
+:View Budget;
+
+|Database|
+:Get User
+Budget;
+|Website|
+:Display
+Budget;
+
+|User|
+:Edit
+Category
+Details;
+
+|Database|
+:Update
+Budget;
+end
+@enduml

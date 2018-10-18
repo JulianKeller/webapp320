@@ -1,0 +1,48 @@
+Link to UML:
+
+http://www.plantuml.com/plantuml/png/RK_DJW8n4BxFKynpm8KV40-6aA1o7hRZEg4_f9sLR5pVtUuk3Q9UskRxxomfHMsSXNGIVwP83ezKdUeO6c-MmOQ8btTH_i5JfV8Xsk8d8Evx_wXx4iURoEmpl2xcXSrf6LZy2ZtqeNiNJfp9X-1rIuvn7eKiV050zv8uTZ3CWych954yy35VF8Nk-kfWif9qjjJ2Ot1yffgdnJbPHYPbc5TLRjKxquOLhpYiM4bimhSO7FRMh5oHqf5IBvqRCw2e0GfybxMBdDXh6bIfrE7kdoq8MxxWeZ4rwtICNcQu3b4u8MYuSMiZMiYsRFoxRDJ3SnZRyVPRzWPc-MYS_GO0
+
+
+PlantUML Code:
+
+@startuml
+skinparam backgroundColor white
+skinparam activity {
+  StartColor LimeGreen
+  EndColor Black
+  BackgroundColor WhiteSmoke
+  FontName Arial
+}
+
+
+|User|
+start
+:Visit Website;
+|Website|
+:Display
+Homepage;
+|User|
+:Create
+Account;
+|Website|
+:Get Account
+Details from User;
+|Database|
+:Add User to
+Database;
+|Website|
+:Presents Users
+Account Page;
+|User|
+:Create 
+New Budget;
+:Add Categories 
+to Budget;
+:Edit Category
+Details;
+|Database|
+:Add Budget
+To Users 
+Account;
+end
+@enduml
