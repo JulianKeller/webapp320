@@ -23,6 +23,8 @@ Design Phase.
   ~~- submit SDD as a pdf~~
   ~~- submit text file with Github page~~
 
+Review and Submit.
+
 ### Helpful Plantuml Links
 http://plantuml.com/sequence-diagram
 http://www.plantuml.com/plantuml/uml
