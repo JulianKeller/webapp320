@@ -2,10 +2,9 @@
 A javascript web application for CS 320. This is a description of our webapp.
 
 ## TODO
-- Finish Part 2.2 - Add method parameters to Class Diagram. 
+~~- Finish Part 2.2 - Add method parameters to Class Diagram.
   - Copy the url from ClassDiagram.txt (webapp320/Milestones/milestone2/StructuralModeling/ClassDiagram.txt)
-  - Paste that url at the bottom of the page at http://www.plantuml.com/plantuml/uml
-    - This will open up the code and let you edit it
+  - Paste that url at the bottom of the page at http://www.plantuml.com/plantuml/uml    - This will open up the code and let you edit it
   - Add anything to the classes that I didn't think of
   - Add .png from the diagram to latex.
 - Part 2.3
@@ -13,7 +12,7 @@ A javascript web application for CS 320. This is a description of our webapp.
 - (optional) Improve layout of Latex document
 - Submit SDD by October 21
   - submit SDD as a pdf
-  - submit text file with Github page
+  - submit text file with Github page~~
 
 ### Helpful Plantuml Links
 http://plantuml.com/sequence-diagram
