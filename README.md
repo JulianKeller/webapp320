@@ -1,4 +1,4 @@
-# webapp320
+# Budget Forecast
 ## Description
 A web application that helps people with budgeting.  Users will be able to create their own budget, place them into categories, as well as add money to the budget.
 
