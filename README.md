@@ -36,11 +36,11 @@ These instructions will get you a copy of the project running on your local mach
 
 ### Prerequisites
 
-This program is easiest viewed in a web browser such as Google Chrome.
+This program is best viewed in a web browser such as Google Chrome.
 
 ## Running the program
 
-This is how it works.
+Coming Soon.
 
 
 
