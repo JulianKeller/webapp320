@@ -1,4 +1,4 @@
-# webapp320
+# Budget Forecast
 ## Description
 A web application that helps people with budgeting.  Users will be able to create their own budget, place them into categories, as well as add money to the budget.
 
@@ -36,11 +36,11 @@ These instructions will get you a copy of the project running on your local mach
 
 ### Prerequisites
 
-This program is easiest viewed in a web browser such as Google Chrome.
+This program is best viewed in a web browser such as Google Chrome.
 
 ## Running the program
 
-This is how it works.
+Coming Soon.
 
 
 
