@@ -7,12 +7,12 @@ CS 320 - Webapp Mockup
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Mockup</title>
+  <title>Budget</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.css">
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script type="text/javascript"
           src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.js"></script>
-  <link rel="stylesheet" href="style-template.css">
+  <link rel="stylesheet" href="style-budget.css">
 </head>
 <body>
 
@@ -40,13 +40,77 @@ CS 320 - Webapp Mockup
 
 <!-- Middle Section -->
 
+
 <!-- Center Block -->
 <div class="center-block">
   <div class="ui container colorblocktop">
-    This is the center
-  </div>
-</div>
 
+    <h1 class="ui header">
+      Budget Title
+    </h1>
+
+
+
+
+    <table class="ui three column table">
+      <thead>
+      <tr><th>Subsection</th>
+        <th></th>
+        <th><button class="ui button">
+          <i class="plus icon"></i>
+          Add Item
+        </button></th>
+      </tr></thead>
+      <tbody>
+      <tr>
+        <td class="selectable">
+          <a href="#">Name</a>
+        </td>
+        <td class="selectable">
+          <a href="#">Description</a>
+        </td>
+        <td class="selectable">
+          <a href="#">$0</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="selectable">
+          <a href="#">Name</a>
+        </td>
+        <td class="selectable">
+          <a href="#">Description</a>
+        </td>
+        <td class="selectable">
+          <a href="#">$0</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="selectable">
+          <a href="#">Name</a>
+        </td>
+        <td class="selectable">
+          <a href="#">Description</a>
+        </td>
+        <td class="selectable">
+          <a href="#">$0</a>
+        </td>
+      </tr>
+      <!--<tfoot>-->
+      <!--<tr>-->
+        <!--<th>></th>-->
+        <!--<th></th>-->
+        <!--<th></th>-->
+      <!--</tr></tfoot>-->
+    </table>
+
+    <button class="ui button">
+      <i class="plus icon"></i>
+      Add Category
+    </button>
+
+    TODO add calculator, add total, play with add item button placement, add category button
+</div>
+</div>
 
 
 <!-- Footer -->
