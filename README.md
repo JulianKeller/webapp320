@@ -41,6 +41,6 @@ This program is best viewed in a web browser such as Google Chrome.
 ## Running the program
 
 Go to the webapp320 directory then:<br/>
-'cd app'<br/>
-'meteor run'
+`cd app`<br/>
+`meteor run`
 
