@@ -46,61 +46,115 @@ CS 320 - Webapp Mockup
   <div class="ui container colorblocktop">
 
     <h1 class="ui header">
-      Budget Title
+      Personal Budget
     </h1>
 
-
-
+    <div class="ui labeled action input">
+      <label for="amount" class="ui label">$</label>
+      <input type="text" placeholder="Amount">
+      <button class="ui button">Enter</button>
+    </div>
 
     <table class="ui three column table">
       <thead>
-      <tr><th>Subsection</th>
+      <tr><th>Monthly Bills</th>
         <th></th>
-        <th><button class="ui button">
-          <i class="plus icon"></i>
-          Add Item
-        </button></th>
+        <th></th>
       </tr></thead>
       <tbody>
       <tr>
         <td class="selectable">
-          <a href="#">Name</a>
+          <a href="#">Rent</a>
         </td>
         <td class="selectable">
-          <a href="#">Description</a>
+          <a href="#">$1000 due on the 1st</a>
         </td>
         <td class="selectable">
-          <a href="#">$0</a>
+          <a href="#">$675</a>
         </td>
       </tr>
       <tr>
         <td class="selectable">
-          <a href="#">Name</a>
+          <a href="#">Electricity</a>
         </td>
         <td class="selectable">
-          <a href="#">Description</a>
+          <a href="#">$35 due on the 15th</a>
         </td>
         <td class="selectable">
-          <a href="#">$0</a>
+          <a href="#">$35</a>
         </td>
       </tr>
       <tr>
         <td class="selectable">
-          <a href="#">Name</a>
+          <a href="#">Phone</a>
         </td>
         <td class="selectable">
-          <a href="#">Description</a>
+          <a href="#">$85 due on the 22nd</a>
         </td>
         <td class="selectable">
           <a href="#">$0</a>
         </td>
       </tr>
-      <!--<tfoot>-->
-      <!--<tr>-->
-        <!--<th>></th>-->
-        <!--<th></th>-->
-        <!--<th></th>-->
-      <!--</tr></tfoot>-->
+      <tfoot>
+      <tr>
+        <th><button class="ui mini button">
+          <i class="plus icon"></i>
+          Add Item
+        </button></th>
+        <th></th>
+        <th></th>
+      </tr></tfoot>
+    </table>
+
+    <table class="ui three column table">
+      <thead>
+      <tr><th>Expenses</th>
+        <th></th>
+        <th></th>
+      </tr></thead>
+      <tbody>
+      <tr>
+        <td class="selectable">
+          <a href="#">Groceries</a>
+        </td>
+        <td class="selectable">
+          <a href="#">$100 per week</a>
+        </td>
+        <td class="selectable">
+          <a href="#">$275</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="selectable">
+          <a href="#">Gas</a>
+        </td>
+        <td class="selectable">
+          <a href="#">$150 per month</a>
+        </td>
+        <td class="selectable">
+          <a href="#">$75</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="selectable">
+          <a href="#">Misc</a>
+        </td>
+        <td class="selectable">
+          <a href="#">$50 month</a>
+        </td>
+        <td class="selectable">
+          <a href="#">$0</a>
+        </td>
+      </tr>
+      <tfoot>
+      <tr>
+        <th><button class="ui mini button">
+          <i class="plus icon"></i>
+          Add Item
+        </button></th>
+        <th></th>
+        <th></th>
+      </tr></tfoot>
     </table>
 
     <button class="ui button">
@@ -108,7 +162,7 @@ CS 320 - Webapp Mockup
       Add Category
     </button>
 
-    TODO add calculator, add total, play with add item button placement, add category button
+    TODO add calculator, add total, move category button
 </div>
 </div>
 
