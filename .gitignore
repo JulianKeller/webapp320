@@ -2,6 +2,8 @@
 *.xml
 *.iml
 .idea
+.idea/
+/.idea
 .DS_Store
 ProjectInfo/.DS_Store
 ProjectInfo/~$s_template.docx
