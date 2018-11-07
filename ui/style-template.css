@@ -1,0 +1,91 @@
+
+/*written by Julian Keller*/
+/*CS 320 - Webapp Mockup*/
+
+
+/* Top Menu Bar */
+.ui.borderless.topmenu.menu {
+  background-color: #F4F6F5;
+  box-shadow: none;
+  border: none;
+  padding: 0px 35px 0px 35px;
+}
+
+/* Top Menu Icons */
+.ui.menu .item{
+  /*padding: 2px 1px 2px 5px;*/
+}
+
+/* Cougar Logo*/
+#logo {
+  display: block;
+  max-width: 200px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Middle Menu Bar*/
+.ui.borderless.midmenu.menu {
+  box-shadow: none;
+  border: none;
+  padding: 10px 10px 0px 10px;
+}
+
+/* Middle Menu Text */
+.ui.dropdown>.midtext {
+  padding: 20px 20px 20px 0px;
+}
+
+/* Main Center Image */
+#center-img {
+  width: 100%;
+}
+
+/* Footer Color Block*/
+.center-block {
+  background-color: white;
+  padding-bottom: 50px;
+  /*color: #F0F0F0;*/
+}
+
+/* Footer Color Block*/
+.footer {
+  background-color: #292929;
+  padding-bottom: 50px;
+  color: #F0F0F0;
+}
+
+/* Footer Grids*/
+.ui[class*="three column"].grid>.column:not(.row), .ui[class*="three column"].grid>.row>.column {
+  width: 33.33333333%;
+  padding: 55px 20px 30px 20px;
+  text-align: left;
+}
+.ui[class*="one column"].grid>.column:not(.row), .ui[class*="one column"].grid>.row>.column {
+  padding: 10px 20px 20px 20px;
+}
+
+/* Center grid items */
+.ui.container.colorblocktop {
+  text-align: center;
+}
+
+/* Footer Social Media Icons */
+.bottom-icon {
+  color: #F4F6F5;
+  padding: 15px 15px 15px 15px;
+}
+
+/* Footer dividers */
+.ui.divider {
+  background-color: #F4F6F5;
+}
+
+a {
+  color: #F4F6F5;
+}
+
+a:hover {
+  color: #c2c2c2;
+}

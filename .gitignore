@@ -1,3 +1,7 @@
+# IDEA files
+*.xml
+*.iml
+.idea
 .DS_Store
 ProjectInfo/.DS_Store
 ProjectInfo/~$s_template.docx
