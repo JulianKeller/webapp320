@@ -34,12 +34,21 @@
   text-align: center;
 }
 
+.login{
+  color: #EAEAEA;
+}
+
 .item{
   padding-left: 5px;
   padding-right: 5px;
   color: #EAEAEA;
 }
 .links{
+  padding-top: 25px;
+  font-size: 11px;
+}
+
+.copyright{
   padding-top: 25px;
   font-size: 11px;
 }
