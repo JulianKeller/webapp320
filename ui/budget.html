@@ -49,18 +49,46 @@ CS 320 - Webapp Mockup
       Personal Budget
     </h1>
 
-    <div class="ui labeled action input">
-      <label for="amount" class="ui label">$</label>
-      <input type="text" placeholder="Amount">
-      <button class="ui button">Enter</button>
-    </div>
-
-    <table class="ui three column table">
+    <table class="ui three column status table">
       <thead>
-      <tr><th>Monthly Bills</th>
+      <!--<tr>-->
+        <!--<th>Monthly Bills</th>-->
+        <!--<th></th>-->
+        <!--<th></th>-->
+      <!--</tr>-->
+      </thead>
+      <tbody>
+      <tr>
+        <td>
+          <h3>Balance $1060.00</h3>
+        </td>
+        <td>
+          <h3>Available $110.00</h3>
+        </td>
+        <td>
+          <div id="AmountButton">
+            <div class="ui labeled action input">
+              <label class="ui label">$</label>
+              <input id="input" type="text" placeholder="Add to Budget">
+              <button class="ui button">Enter</button>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </table>
+
+    <table class="ui three column color table">
+      <thead>
+      <tr>
+        <th>Monthly Bills</th>
         <th></th>
-        <th></th>
-      </tr></thead>
+        <th class="selectable">
+          <a id="addColor" href="#">
+            <i class="plus icon"></i>
+            Add Item
+          </a>
+      </tr>
+      </thead>
       <tbody>
       <tr>
         <td class="selectable">
@@ -95,23 +123,22 @@ CS 320 - Webapp Mockup
           <a href="#">$0</a>
         </td>
       </tr>
-      <tfoot>
-      <tr>
-        <th><button class="ui mini button">
-          <i class="plus icon"></i>
-          Add Item
-        </button></th>
-        <th></th>
-        <th></th>
-      </tr></tfoot>
     </table>
 
     <table class="ui three column table">
       <thead>
-      <tr><th>Expenses</th>
-        <th></th>
-        <th></th>
-      </tr></thead>
+      <tr>
+        <th>Expenses</th>
+        <th>
+        </th>
+        <th class="selectable">
+          <a id="add" href="#">
+            <i class="plus icon"></i>
+            Add Item
+          </a>
+        </th>
+      </tr>
+      </thead>
       <tbody>
       <tr>
         <td class="selectable">
@@ -146,24 +173,75 @@ CS 320 - Webapp Mockup
           <a href="#">$0</a>
         </td>
       </tr>
-      <tfoot>
-      <tr>
-        <th><button class="ui mini button">
-          <i class="plus icon"></i>
-          Add Item
-        </button></th>
-        <th></th>
-        <th></th>
-      </tr></tfoot>
     </table>
 
-    <button class="ui button">
+    <table class="ui three column green table">
+      <thead>
+      <tr>
+        <th>Expenses</th>
+        <th></th>
+        <th class="selectable">
+          <a id="add" href="#">
+            <i class="plus icon"></i>
+            Add Item
+          </a>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td class="selectable">
+          <a href="#">Groceries</a>
+        </td>
+        <td class="selectable">
+          <a href="#">$100 per week</a>
+        </td>
+        <td class="selectable">
+          <a href="#">$275</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="selectable">
+          <a href="#">Gas</a>
+        </td>
+        <td class="selectable">
+          <a href="#">$150 per month</a>
+        </td>
+        <td class="selectable">
+          <a href="#">$75</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="selectable">
+          <a href="#">Misc</a>
+        </td>
+        <td class="selectable">
+          <a href="#">$50 month</a>
+        </td>
+        <td class="selectable">
+          <a href="#">$0</a>
+        </td>
+      </tr>
+      <!--<tfoot>-->
+      <!--<tr>-->
+        <!--<th>-->
+          <!--<button class="ui mini button">-->
+            <!--<i class="plus icon"></i>-->
+            <!--Add Item-->
+          <!--</button>-->
+        <!--</th>-->
+        <!--<th></th>-->
+        <!--<th></th>-->
+      <!--</tr>-->
+      <!--</tfoot>-->
+    </table>
+
+
+    <button class="ui category button">
       <i class="plus icon"></i>
       Add Category
     </button>
 
-    TODO add calculator, add total, move category button
-</div>
+  </div>
 </div>
 
 

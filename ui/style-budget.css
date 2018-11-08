@@ -62,6 +62,60 @@
   width: 70%;
 }
 
+.ui.borderless.segment {
+  border: none;
+  box-shadow: none;
+}
+
+/* Amount Button */
+#AmountButton {
+  float: left;
+  /*width: 80px;*/
+  /*padding-top: 10px;*/
+  /*padding-bottom: 10px;*/
+}
+
+/* Top status table */
+.ui.status.table {
+  background: none;
+  border: none;
+}
+
+/* Status Table input width*/
+#input {
+  width: 33%;
+}
+
+/* Green Table */
+.ui.color.table thead th{
+  background: #089208;
+  color: white;
+}
+
+/*!* Border Table *!*/
+/*.ui.border.table th{*/
+  /*border: 2px solid #089208;*/
+/*}*/
+
+
+/* category table */
+.ui.table thead th {
+  /*background: #089208;*/
+  /*color: whitesmoke;*/
+}
+
+/* Add Category Button */
+.ui.category.button {
+  float: left;
+  /*background: #16B616;*/
+}
+
+/* Header title */
+h1.ui.header {
+  padding: 10px 10px 10px 10px;
+}
+
+
 .ui.card>.content>.description, .ui.cards>.card>.content>.description {
   text-align: center;
 }
@@ -83,5 +137,29 @@ a {
 
 a:hover {
   color: whitesmoke;
+}
+
+#add {
+  color: grey;
+  float: right;
+  padding-right: 5px;
+}
+
+#add:hover {
+  color: #089208;
+  float: right;
+  padding-right: 5px;
+}
+
+#addColor {
+  color: lightgray;
+  float: right;
+  padding-right: 5px;
+}
+
+#addColor:hover {
+  color: whitesmoke;
+  float: right;
+  padding-right: 5px;
 }
 
