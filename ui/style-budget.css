@@ -3,14 +3,6 @@
 /*CS 320 - Webapp Mockup*/
 
 
-/* Top Menu Bar */
-.ui.borderless.topmenu.menu {
-  background-color: #F4F6F5;
-  box-shadow: none;
-  border: none;
-  padding: 0px 35px 0px 35px;
-}
-
 /* Welcome Header */
 .ui.header{
   padding-top: 50px;
@@ -135,9 +127,6 @@ a {
   color: white;
 }
 
-a:hover {
-  color: whitesmoke;
-}
 
 #add {
   color: grey;
