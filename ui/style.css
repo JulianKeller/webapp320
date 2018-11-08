@@ -5,3 +5,41 @@
   padding-left: 50px;
   padding-right: 50px;
 }
+
+.centered.placeholder{
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.footer{
+  background-color: #292929;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.wide.column{
+  color: #EAEAEA;
+  text-align: left;
+  font-weight: bold;
+}
+.ui.divider:not(.vertical):not(.horizontal) {
+  border-top: 1px solid rgba(34,36,38,.15);
+  border-bottom: 2px solid rgb(234, 234, 234);
+}
+.massive.menu{
+  padding-left: 325px;
+  background-color: #292929;
+}
+.fifteen.wide.column{
+  text-align: center;
+}
+
+.item{
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #EAEAEA;
+}
+.links{
+  padding-top: 25px;
+  font-size: 11px;
+}
