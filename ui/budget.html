@@ -59,17 +59,11 @@ CS 320 - Webapp Mockup
     </h1>
 
     <table class="ui three column status table">
-      <thead>
-      <!--<tr>-->
-        <!--<th>Monthly Bills</th>-->
-        <!--<th></th>-->
-        <!--<th></th>-->
-      <!--</tr>-->
-      </thead>
+      <thead></thead>
       <tbody>
       <tr>
         <td>
-          <h3>Balance $1060.00</h3>
+          <h3>Balance $5835.00</h3>
         </td>
         <td>
           <h3>Available $110.00</h3>
@@ -86,13 +80,14 @@ CS 320 - Webapp Mockup
       </tr>
     </table>
 
-    <table class="ui three column color table">
+    <table class="ui three column green table">
       <thead>
       <tr>
         <th>Monthly Bills</th>
-        <th></th>
+        <th>Description</th>
         <th class="selectable">
-          <a id="addColor" href="#">
+          Balance
+          <a id="add" href="#">
             <i class="plus icon"></i>
             Add Item
           </a>
@@ -134,66 +129,18 @@ CS 320 - Webapp Mockup
       </tr>
     </table>
 
-    <table class="ui three column table">
-      <thead>
-      <tr>
-        <th>Expenses</th>
-        <th>
-        </th>
-        <th class="selectable">
-          <a id="add" href="#">
-            <i class="plus icon"></i>
-            Add Item
-          </a>
-        </th>
-      </tr>
-      </thead>
-      <tbody>
-      <tr>
-        <td class="selectable">
-          <a href="#">Groceries</a>
-        </td>
-        <td class="selectable">
-          <a href="#">$100 per week</a>
-        </td>
-        <td class="selectable">
-          <a href="#">$275</a>
-        </td>
-      </tr>
-      <tr>
-        <td class="selectable">
-          <a href="#">Gas</a>
-        </td>
-        <td class="selectable">
-          <a href="#">$150 per month</a>
-        </td>
-        <td class="selectable">
-          <a href="#">$75</a>
-        </td>
-      </tr>
-      <tr>
-        <td class="selectable">
-          <a href="#">Misc</a>
-        </td>
-        <td class="selectable">
-          <a href="#">$50 month</a>
-        </td>
-        <td class="selectable">
-          <a href="#">$0</a>
-        </td>
-      </tr>
-    </table>
-
     <table class="ui three column green table">
       <thead>
       <tr>
         <th>Expenses</th>
-        <th></th>
+        <th>Description</th>
         <th class="selectable">
+          Balance
           <a id="add" href="#">
             <i class="plus icon"></i>
             Add Item
           </a>
+        </th>
       </tr>
       </thead>
       <tbody>
@@ -230,27 +177,195 @@ CS 320 - Webapp Mockup
           <a href="#">$0</a>
         </td>
       </tr>
-      <!--<tfoot>-->
-      <!--<tr>-->
-        <!--<th>-->
-          <!--<button class="ui mini button">-->
-            <!--<i class="plus icon"></i>-->
-            <!--Add Item-->
-          <!--</button>-->
-        <!--</th>-->
-        <!--<th></th>-->
-        <!--<th></th>-->
-      <!--</tr>-->
-      <!--</tfoot>-->
     </table>
 
-
+    <!-- Add Category Button -->
     <button class="ui category button">
       <i class="plus icon"></i>
       Add Category
     </button>
 
+    <h2 class="ui left aligned header">
+      Goals
+    </h2>
+
+    <table class="ui five column green table">
+      <thead>
+      <tr>
+        <th>Item</th>
+        <th>Goal</th>
+        <th>Saved</th>
+        <th>Needed</th>
+        <th>Progress
+          <a id="add" href="#">
+            <i class="plus icon"></i>
+            Add Goal
+          </a>
+        </th>
+      </thead>
+      <tbody>
+      <tr>
+        <td class="selectable">
+          <a href="#">New Car</a>
+        </td>
+        <td class="selectable">
+          <a href="#">$4000</a>
+        </td>
+
+        <td class="selectable">
+          <a href="#">$4000</a>
+        </td>
+        <td>
+          $0
+        </td>
+
+        <td>
+          <div class="center">
+          <div class="ui indicating progress" data-value="4000" data-total="4000" id="goal1">
+            <div class="bar">
+              <div class="progress"></div>
+            </div>
+            <div id="label"></div>
+            <script>
+              $('#goal1')
+                  .progress('increment')
+              ;
+            </script>
+          </div>
+          </div>
   </div>
+  </td>
+
+  </tr>
+
+  <tr>
+    <td class="selectable">
+      <a href="#">Playstation 4</a>
+    </td>
+    <td class="selectable">
+      <a href="#">$300</a>
+    </td>
+
+    <td class="selectable">
+      <a href="#">$225</a>
+    </td>
+    <td>
+      $75
+    </td>
+    <td>
+      <div class="center">
+      <div class="ui indicating progress" data-value="225" data-total="300" id="goal2">
+        <div class="bar">
+          <div class="progress"></div>
+        </div>
+        <!--<div class="label">$4000</div>-->
+        <script>
+          $('#goal2')
+              .progress('increment')
+          ;
+        </script>
+      </div>
+      </div>
+    </td>
+  </tr>
+
+  <tr>
+    <td class="selectable">
+      <a href="#">Shoes</a>
+    </td>
+    <td class="selectable">
+      <a href="#">$100</a>
+    </td>
+
+    <td class="selectable">
+      <a href="#">$50</a>
+    </td>
+    <td>
+      $50
+    </td>
+    <td>
+      <div class="center">
+      <div class="ui indicating center progress" data-value="50" data-total="100" id="goal3">
+        <div class="bar">
+          <div class="progress"></div>
+        </div>
+        <!--<div class="label">$4000</div>-->
+        <script>
+          $('#goal3')
+              .progress('increment')
+          ;
+        </script>
+      </div>
+      </div>
+    </td>
+  </tr>
+
+  <tr>
+    <td class="selectable">
+      <a href="#">Macbook Pro</a>
+    </td>
+    <td class="selectable">
+      <a href="#">$2000</a>
+    </td>
+
+    <td class="selectable">
+      <a href="#">$500</a>
+    </td>
+    <td>
+      $1500
+    </td>
+    <td>
+      <div class="center">
+      <div class="ui indicating progress" data-value="500" data-total="2000" id="goal4">
+        <div class="bar">
+          <div class="progress"></div>
+        </div>
+        <!--<div class="label">$4000</div>-->
+        <script>
+          $('#goal4')
+              .progress('increment')
+          ;
+        </script>
+      </div>
+      </div>
+    </td>
+  </tr>
+
+  <tr>
+    <td class="selectable">
+      <a href="#">House</a>
+    </td>
+    <td class="selectable">
+      <a href="#">$200000</a>
+    </td>
+
+    <td class="selectable">
+      <a href="#">$0</a>
+    </td>
+    <td>
+      $275
+    </td>
+    <td>
+      <div class="center">
+      <div class="ui indicating progress" data-value="0" data-total="200000" id="goal5">
+        <div class="bar">
+          <div class="progress"></div>
+        </div>
+        <!--<div class="label">$4000</div>-->
+        <script>
+          $('#goal5')
+              .progress('increment')
+          ;
+        </script>
+      </div>
+      </div>
+    </td>
+  </tr>
+
+
+  </table>
+
+</div>
 </div>
 
 
@@ -301,4 +416,5 @@ CS 320 - Webapp Mockup
 
 
 </body>
+
 </html>

@@ -38,14 +38,14 @@
 }
 
 /* Footer Grids*/
-.ui[class*="three column"].grid>.column:not(.row), .ui[class*="three column"].grid>.row>.column {
-  width: 33.33333333%;
-  padding: 55px 20px 30px 20px;
-  text-align: left;
-}
-.ui[class*="one column"].grid>.column:not(.row), .ui[class*="one column"].grid>.row>.column {
-  padding: 10px 20px 20px 20px;
-}
+/*.ui[class*="three column"].grid>.column:not(.row), .ui[class*="three column"].grid>.row>.column {*/
+  /*width: 33.33333333%;*/
+  /*padding: 55px 20px 30px 20px;*/
+  /*text-align: left;*/
+/*}*/
+/*.ui[class*="one column"].grid>.column:not(.row), .ui[class*="one column"].grid>.row>.column {*/
+  /*padding: 10px 20px 20px 20px;*/
+/*}*/
 
 /* Center grid items */
 .ui.container.colorblocktop {
@@ -62,9 +62,6 @@
 /* Amount Button */
 #AmountButton {
   float: left;
-  /*width: 80px;*/
-  /*padding-top: 10px;*/
-  /*padding-bottom: 10px;*/
 }
 
 /* Top status table */
@@ -78,21 +75,9 @@
   width: 33%;
 }
 
-/* Green Table */
-.ui.color.table thead th{
-  background: #089208;
-  color: white;
-}
-
-/*!* Border Table *!*/
-/*.ui.border.table th{*/
-  /*border: 2px solid #089208;*/
-/*}*/
-
-
 /* category table */
 .ui.table thead th {
-  /*background: #089208;*/
+  background: #F2F2F2;
   /*color: whitesmoke;*/
 }
 
@@ -101,6 +86,18 @@
   float: left;
   /*background: #16B616;*/
 }
+
+/* Goal Progress Bar */
+.ui.five.column.table td{
+  /*padding-top: 0px;*/
+  /*padding-bottom: 0px;*/
+}
+
+/* Force progress bar to vertically align*/
+.center{
+  height: 24px;
+}
+
 
 /* Header title */
 h1.ui.header {

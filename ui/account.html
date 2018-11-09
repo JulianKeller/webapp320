@@ -7,7 +7,7 @@ CS 320 - Webapp Mockup
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Budget Account</title>
+  <title>Account</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.css">
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script type="text/javascript"
@@ -16,24 +16,31 @@ CS 320 - Webapp Mockup
 </head>
 <body>
 
-<!--Top Menu-->
+<!-- topmenu -->
 <div class="ui borderless topmenu menu">
-  <a class="item">
-    Home
+  <a class="fitted item" href="index.html">
+    <i class="home icon"></i>
+    HOME
   </a>
-  <a class="item">
-    FAQ
+  &ensp;
+  &ensp;<a class="fitted item" href="budget.html">
+  <i class="alternate money bill icon"></i>
+  MY BUDGET
+</a>
+  &ensp;
+  <a class="fitted item" href="faq.html">
+    <i class="question circle icon"></i>
+    SUPPORT
   </a>
-
-  <a class="right item">
-    <a class="item">
-      <div class="ui dropdown">
-        <div class="toptext">
-          <i class="user icon"></i>
-          Sign In
-        </div>
-      </div>
-    </a>
+  &ensp;
+  <a class="right fitted item">
+    <i class="user icon"></i>
+    SIGN IN
+  </a>
+  &emsp;
+  <a class="fitted item">
+    <i class="user plus icon"></i>
+    SIGN UP
   </a>
 </div>
 
@@ -58,7 +65,7 @@ CS 320 - Webapp Mockup
             Balance: $1000
           </div>
         </div>
-        <div class="ui bottom attached green button">
+        <div class="ui bottom attached color button">
           View
         </div>
       </div>
@@ -70,7 +77,7 @@ CS 320 - Webapp Mockup
             Balance: $500
           </div>
         </div>
-        <div class="ui bottom attached green button">
+        <div class="ui bottom attached color button">
           View
         </div>
       </div>
@@ -84,76 +91,59 @@ CS 320 - Webapp Mockup
         </div>
         <div class="ui bottom attached button">
           <i class="plus icon"></i>
-          Add Budget
+          Add
         </div>
       </div>
-      </div>
+    </div>
   </div>
-
-
 </div>
 </div>
 
 
-<!-- Footer -->
+<!-- footer -->
 <div class="footer">
-  <div class="ui container colorblocktop">
-    <div class="ui three column grid">
-      <div class="column">
-        ACCOUNT
-        <div class="column">
-          <div class="ui divider"></div>
-        </div>
-        <div class="column"><a>Sign In</a></div>
-        <div class="column"><a>Create Account</a></div>
-      </div>
-      <div class="column">
-        MAIN MENU
-        <div class="column">
-          <div class="ui divider"></div>
-        </div>
-        <div class="column"><a>Home</a></div>
-        <div class="column"><a>FAQ</a></div>
-      </div>
-      <div class="column">
-        CONNECT
-        <div class="column">
-          <div class="ui divider"></div>
-        </div>
-        <div class="column">Sign up for the latest updates</div>
-        <div class="column"><a>
-          <div class="ui action input">
-            <input type="text" placeholder="Enter email address">
-            <button class="ui button">Join</button>
-          </div>
-        </div>
-
-      </div>
+  <div class="ui centered grid">
+    <div class="login">
+      <a class="item">SIGN IN</a> | <a class="item">SIGN UP</a>
     </div>
-    <div class="ui one column grid">
-      <div class="column">
-        <div class="ui divider"></div>
-      </div>
-      <div class="column">
-        <a class="bottom-icon">
-          <i class="big facebook f icon"></i>
-        </a>
-        <a class="bottom-icon">
-          <i class="big twitter icon"></i>
-        </a>
-        <a class="bottom-icon">
-          <i class="big pinterest icon"></i>
-        </a>
-        <a class="bottom-icon">
-          <i class="big instagram icon"></i>
-        </a>
-      </div>
-      <div class="column">COPYRIGHT &copy; 2018</div>
-
+    <div class="fifteen wide column">
+      <div class="ui divider"></div>
     </div>
   </div>
+  <div class="fifteen wide column">
+    <a class="item">
+      <i class="large inverted facebook f icon"></i>
+    </a>
+    |
+    <a class="item">
+      <i class="large inverted twitter icon"></i>
+    </a>
+    |
+    <a class="item">
+      <i class="large inverted instagram icon"></i>
+    </a>
+    |
+    <a class="item">
+      <i class="large inverted rss icon"></i>
+    </a>
+    |
+    <a class="item">MEDIA INQUIRIES</a>
+  </div>
+  <div class="fifteen wide column links">
+    <a class="item">ABOUT US/OUR MISSION</a>
+    <a class="item" href="faq.html">SUPPORT</a> <a class="item">BLOG</a>
+    <a class="item">PARTNERS</a><br>
+    <a class="item">Terms of Service</a>
+    <a class="item">Privacy Policy</a>
+    <a class="item">Legal</a>
+    <a class="item">Sitemap</a>
+  </div>
+  <div class="fifteen wide column copyright">
+    COPYRIGHT &copy; 2018 BUDGETING APP INC.&ensp;ALL RIGHTS RESERVED.
+  </div>
 </div>
-
+</div>
+</div>
 
 </body>
 </html>
