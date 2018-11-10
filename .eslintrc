@@ -1,0 +1,19 @@
+{
+  "extends": "airbnb-base",
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module"
+  },
+  "rules": {
+    "max-len": ["error", 120],
+    "no-console": "off",
+    "prefer-arrow-callback": "off",
+    "no-plusplus": "off",
+    "linebreak-style": "off",
+    "func-names": "off",
+    "no-restricted-syntax": "off"
+  },
+  "globals": {
+    "_": true
+  }
+}
