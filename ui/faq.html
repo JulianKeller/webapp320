@@ -7,6 +7,7 @@
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script type="text/javascript"
           src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.js"></script>
+  <link rel="stylesheet" href="style-faq.css">
   <link rel="stylesheet" href="style-main.css">
 </head>
 <body>
@@ -38,9 +39,31 @@
   </a>
 </div>
 <!-- Middle section -->
-<div class="placeholder">
-  <div class="image"></div>
-  <h1>404: SUPPORT NOT FOUND</h1>
+<div class="ui centered grid" id="questions">
+  <div class="four wide column">
+    <div class="ui vertical fluid tabular menu">
+      <a class="active item" data-tab="faq">
+        FAQ
+      </a>
+      <a class="item" data-tab="support">
+        Member Support
+      </a>
+      <a class="item" data-tab="general">
+        General Questions
+      </a>
+    </div>
+  </div>
+  <div class="twelve wide stretched column" id="tabs">
+    <div class="ui active tab segment" data-tab="faq">
+      This is an stretched grid column. This segment will always match the tab height
+    </div>
+    <div class="ui tab segment" data-tab="support">
+      Test 1
+    </div>
+    <div class="ui tab segment" data-tab="general">
+      Test 2
+    </div>
+  </div>
 </div>
 <!-- footer -->
 <div class="footer">
@@ -86,5 +109,11 @@
 </div>
 </div>
 </div>
+
+<script>
+  $('.menu .item')
+      .tab()
+  ;
+</script>
 </body>
 </html>
