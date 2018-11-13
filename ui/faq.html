@@ -58,10 +58,24 @@
       This is an stretched grid column. This segment will always match the tab height
     </div>
     <div class="ui tab segment" data-tab="support">
-      Test 1
+      <div class="ui form">
+        <div class="field">
+
+        </div>
+      </div>
     </div>
     <div class="ui tab segment" data-tab="general">
-      Test 2
+      Have a different question? Feel free to drop us a message and a representative will reply to your inquiry ASAP!
+      <div class="ui form">
+        <div class="field">
+          <label>E-mail address</label>
+          <input type="text" name="email" placeholder="example@example.com">
+        </div>
+        <div class="field">
+          <label>Message</label>
+          <textarea name="message" placeholder="Your inquiry here..."></textarea>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -110,6 +124,11 @@
 </div>
 </div>
 
+<script>
+  $('select.dropdown')
+      .dropdown()
+  ;
+</script>
 <script>
   $('.menu .item')
       .tab()
