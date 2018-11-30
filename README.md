@@ -32,10 +32,13 @@ This program is best viewed in a web browser such as Google Chrome.
 ## Running the program
 
 Go to the webapp320 directory then:<br/>
-`cd app`<br/>
-`meteor run`
+'''
+cd budget
+meteor npm install
+meteor run
+'''
 
-
+Visit http://localhost:3000/ in browser to see page.
 ## Authors
 
 * **Julian Keller**  - [JulianKeller](https://github.com/JulianKeller)
