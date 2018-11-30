@@ -16,9 +16,9 @@ FlowRouter.route('/', {
   },
 });
 
-// Set up budget page rout
-FlowRouter.route('/budget', {
-  name: 'App.budget',
+// Set up budget page router
+FlowRouter.route('/budget/:_id', {
+  name: 'budget',
   action() {
     BlazeLayout.render('App_body', { main: 'budget' });
   },
