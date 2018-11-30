@@ -2,10 +2,6 @@
 ## Description
 A web application that helps people with budgeting.  Users will be able to create their own budget, place them into categories, as well as add money to the budget.
 
-## Authors
-
-* **Julian Keller**  - [JulianKeller](https://github.com/JulianKeller)
-* **Tyler Higgins**  - [TylerHiggins](https://github.com/tylerhiggins)
 
 ## Current Milestone
 Design Phase.
@@ -33,3 +29,8 @@ Go to the webapp320 directory then:<br/>
 `cd app`<br/>
 `meteor run`
 
+
+## Authors
+
+* **Julian Keller**  - [JulianKeller](https://github.com/JulianKeller)
+* **Tyler Higgins**  - [TylerHiggins](https://github.com/tylerhiggins)
