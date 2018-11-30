@@ -10,6 +10,7 @@ Design Phase.
 - [x] Finish Mockup for each of our sites<br/>
 - [ ] Convert to meteor (using meteor_mongo branch)
 - [ ] Add in Javascript Logic
+- [ ] Decide on app name
 - [ ] Create Logo
 - [ ] Decide on Project Name
 - [ ] Practice Presentation
