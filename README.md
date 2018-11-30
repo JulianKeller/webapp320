@@ -8,7 +8,10 @@ Design Phase.
 
 ## TODO
 Finish Mockup for each of our sites<br/>
-Work on converting to meteor (using meteor_mongo branch)
+- [ ] Convert to meteor (using meteor_mongo branch)
+- [ ] Add in Javascript Logic
+- [ ] Create Logo
+- [ ] Decide on Project Name
 
 ### Helpful Plantuml Links
 http://plantuml.com/sequence-diagram
