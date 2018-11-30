@@ -7,11 +7,13 @@ A web application that helps people with budgeting.  Users will be able to creat
 Design Phase.
 
 ## TODO
-Finish Mockup for each of our sites<br/>
+- [x] Finish Mockup for each of our sites<br/>
 - [ ] Convert to meteor (using meteor_mongo branch)
 - [ ] Add in Javascript Logic
 - [ ] Create Logo
 - [ ] Decide on Project Name
+- [ ] Practice Presentation
+- [ ] Write final project report
 
 ### Helpful Plantuml Links
 http://plantuml.com/sequence-diagram
