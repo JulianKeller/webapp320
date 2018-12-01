@@ -62,12 +62,8 @@
         </tbody>
       </table>
 
-      <!-- Add Category Button -->
-      <button class="ui category button">
-        <i class="plus icon"></i>
-        Add Item
-      </button>
 
+      <!-- Goals -->
       <h2 class="ui left aligned header">
         Goals
       </h2>
@@ -106,13 +102,13 @@
           <td>
             <div class="center">
               <!-- TODO get unique ID for the goal-->
-              <div class="ui indicating progress" data-value="{{item.saved}}" data-total="{{item.goal}}" id="goal.{{item.name}}">
+              <div class="ui indicating progress" data-value="{{item.saved}}" data-total="{{item.goal}}" id="{{item._id}}">
                 <div class="bar">
                   <div class="progress"></div>
                 </div>
                 <div id="label"></div>
                 <script>
-                  $('#goal.{{item.name}}')
+                  $('#{{item._id}}')
                       .progress('increment')
                   ;
                 </script>

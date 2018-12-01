@@ -9,26 +9,13 @@
           resetOnSuccess=true }}
 
       <form class="ui form">
-        <h3 class="ui dividing header">Update Contact</h3>
-
-        <div class="two fields">
+        <h3 class="ui dividing header">Add Goal</h3>
           <div class="field">
             {{>afQuickField name='name'}}
           </div>
           <div class="field">
             {{>afQuickField name='goal'}}
           </div>
-        </div>
-
-        <div class="field">
-          {{>afQuickField name='saved'}}
-        </div>
-
-        <div class="two fields">
-          <div class="field">
-            {{>afQuickField name='needed'}}
-          </div>
-        </div>
       </form>
       <button type="submit" class="ui button">Update</button>
   {{/autoForm}}
