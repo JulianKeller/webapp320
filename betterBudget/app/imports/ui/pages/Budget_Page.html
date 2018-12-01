@@ -65,7 +65,7 @@
       <!-- Add Category Button -->
       <button class="ui category button">
         <i class="plus icon"></i>
-        Add Category
+        Add Item
       </button>
 
       <h2 class="ui left aligned header">
@@ -73,64 +73,58 @@
       </h2>
 
 
-      <!--<table class="ui five column green table">-->
-        <!--<thead>-->
-        <!--<tr>-->
-          <!--<th>Item</th>-->
-          <!--<th>Goal</th>-->
-          <!--<th>Saved</th>-->
-          <!--<th>Needed</th>-->
-          <!--<th>Progress-->
-            <!--<a id="add" href="#">-->
-              <!--<i class="plus icon"></i>-->
-              <!--Add Goal-->
-            <!--</a>-->
-          <!--</th>-->
-        <!--</tr>-->
-        <!--</thead>-->
-        <!--<tbody>-->
-        <!--{{#each item in goalList}}-->
-        <!--<tr>-->
-          <!--<td class="selectable">-->
-            <!--<a href="#">{{item.name}}</a>-->
-          <!--</td>-->
-          <!--<td class="selectable">-->
-            <!--<a href="#">${{item.goal}}</a>-->
-          <!--</td>-->
+      <table class="ui five column green table">
+        <thead>
+        <tr>
+          <th>Item</th>
+          <th>Goal</th>
+          <th>Saved</th>
+          <th>Needed</th>
+          <th>Progress
+            <a id="add" href="{{ pathFor 'Add_Goal_Page' }}">
+              <i class="plus icon"></i>
+              Add Goal
+            </a>
+          </th>
+        </tr>
+        </thead>
+        <tbody>
+        {{#each item in goalList}}
+        <tr>
+          <td class="selectable">
+            <a href="#">{{item.name}}</a>
+          </td>
+          <td class="selectable">
+            <a href="#">${{item.goal}}</a>
+          </td>
 
-          <!--<td class="selectable">-->
-            <!--<a href="#">${{item.saved}}</a>-->
-          <!--</td>-->
-          <!--<td>${{item.needed}}</td>-->
+          <td class="selectable">
+            <a href="#">${{item.saved}}</a>
+          </td>
+          <td>${{item.needed}}</td>
 
-          <!--<td>-->
-            <!--<div class="center">-->
-              <!--&lt;!&ndash; TODO get unique ID for the goal&ndash;&gt;-->
-              <!--<div class="ui indicating progress" data-value="{{item.saved}}" data-total="{{item.goal}}" id="goal.{{item.name}}">-->
-                <!--<div class="bar">-->
-                  <!--<div class="progress"></div>-->
-                <!--</div>-->
-                <!--<div id="label"></div>-->
-                <!--<script>-->
-                  <!--$('#goal.{{item.name}}')-->
-                      <!--.progress('increment')-->
-                  <!--;-->
-                <!--</script>-->
-              <!--</div>-->
-            <!--</div>-->
-          <!--</td>-->
-        <!--</tr>-->
+          <td>
+            <div class="center">
+              <!-- TODO get unique ID for the goal-->
+              <div class="ui indicating progress" data-value="{{item.saved}}" data-total="{{item.goal}}" id="goal.{{item.name}}">
+                <div class="bar">
+                  <div class="progress"></div>
+                </div>
+                <div id="label"></div>
+                <script>
+                  $('#goal.{{item.name}}')
+                      .progress('increment')
+                  ;
+                </script>
+              </div>
+            </div>
+          </td>
+        </tr>
 
-        <!--{{/each}}-->
-        <!--</tbody>-->
-      <!--</table>-->
+        {{/each}}
+        </tbody>
+      </table>
 
-
-      <!-- Add Category Button -->
-      <button class="ui category button">
-        <i class="plus icon"></i>
-        Add Goal
-      </button>
 
     </div>
   </div>

@@ -1,37 +1,32 @@
-<template name="Edit_Stuff_Page">
+<template name="Add_Goal_Page">
   {{#If_Logged_In}}
     <div style="padding-top: 20px" class="ui form container">
       {{#autoForm
-      collection=stuffCollection
-      template="semanticUI"
-      id="EditStuffForm"
-      type="update"
-      doc=getDoc
-      buttonContent="Update"
-      }}
+          collection=goalCollection
+          template="semanticUI"
+          id="AddGoalForm"
+          type="insert"
+          resetOnSuccess=true }}
 
       <form class="ui form">
         <h3 class="ui dividing header">Update Contact</h3>
 
         <div class="two fields">
           <div class="field">
-            {{>afQuickField name='first'}}
+            {{>afQuickField name='name'}}
           </div>
           <div class="field">
-            {{>afQuickField name='last'}}
+            {{>afQuickField name='goal'}}
           </div>
         </div>
 
         <div class="field">
-          {{>afQuickField name='address'}}
+          {{>afQuickField name='saved'}}
         </div>
 
         <div class="two fields">
           <div class="field">
-            {{>afQuickField name='phone'}}
-          </div>
-          <div class="field">
-            {{>afQuickField name='email'}}
+            {{>afQuickField name='needed'}}
           </div>
         </div>
       </form>

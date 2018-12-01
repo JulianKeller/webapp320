@@ -22,17 +22,17 @@ FlowRouter.route('/faq', {
   },
 });
 
-FlowRouter.route('/add', {
+FlowRouter.route('/add-item', {
   name: 'Add_Item_Page',
   action() {
     BlazeLayout.render('App_Body', { main: 'Add_Item_Page' });
   },
 });
 
-FlowRouter.route('/testing', {
-  name: 'test',
+FlowRouter.route('/add-goal', {
+  name: 'Add_Goal_Page',
   action() {
-    BlazeLayout.render('App_Body', { main: 'test' });
+    BlazeLayout.render('App_Body', { main: 'Add_Goal_Page' });
   },
 });
 
