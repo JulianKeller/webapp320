@@ -1,10 +1,27 @@
 <template name="Budget_Page">
   <style>
-  #status-table {
-    border: none;
-    background: none;
-  }
-    
+    #status-table {
+      border: none;
+      background: none;
+    }
+
+    #add {
+      color: grey;
+      float: right;
+      padding-right: 5px;
+    }
+
+    #add:hover {
+      color: #089208;
+      float: right;
+      padding-right: 5px;
+    }
+
+    /* Force progress bar to vertically align*/
+    .center{
+      height: 24px;
+    }
+
   </style>
   <div class="center-block">
     <div class="ui container colorblocktop">
@@ -13,6 +30,7 @@
         Personal Budget
       </h1>
 
+    {{#if Template.subscriptionsReady}}
       <table class="ui three column status table" id="status-table">
         <thead></thead>
         <tr>
@@ -34,6 +52,7 @@
         </tr>
       </table>
 
+
       <table class="ui three column green table">
         <thead>
         <tr>
@@ -49,48 +68,51 @@
         </tr>
         </thead>
         <tbody>
+        {{#each item in categoryList}}
         <tr>
           <td class="selectable">
-            <a href="#">Rent</a>
+            <a href="#">{{item.name}}</a>
           </td>
           <td class="selectable">
-            <a href="#">$1000 due on the 1st</a>
+            <a href="#">{{item.description}}</a>
           </td>
           <td class="selectable">
-            <a href="#">$675</a>
+            <a href="#">${{item.amount}}</a>
           </td>
         </tr>
+        {{/each}}
         </tbody>
       </table>
 
-      <table class="ui three column green table">
-        <thead>
-        <tr>
-          <th>Expenses</th>
-          <th>Description</th>
-          <th class="selectable">
-            Balance
-            <a id="add" href="#">
-              <i class="plus icon"></i>
-              Add Item
-            </a>
-          </th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-          <td class="selectable">
-            <a href="#">Groceries</a>
-          </td>
-          <td class="selectable">
-            <a href="#">$100 per week</a>
-          </td>
-          <td class="selectable">
-            <a href="#">$275</a>
-          </td>
-        </tr>
-        </tbody>
-      </table>
+
+      <!--<table class="ui three column green table">-->
+        <!--<thead>-->
+        <!--<tr>-->
+          <!--<th>Expenses</th>-->
+          <!--<th>Description</th>-->
+          <!--<th class="selectable">-->
+            <!--Balance-->
+            <!--<a id="add" href="#">-->
+              <!--<i class="plus icon"></i>-->
+              <!--Add Item-->
+            <!--</a>-->
+          <!--</th>-->
+        <!--</tr>-->
+        <!--</thead>-->
+        <!--<tbody>-->
+        <!--<tr>-->
+          <!--<td class="selectable">-->
+            <!--<a href="#">Groceries</a>-->
+          <!--</td>-->
+          <!--<td class="selectable">-->
+            <!--<a href="#">$100 per week</a>-->
+          <!--</td>-->
+          <!--<td class="selectable">-->
+            <!--<a href="#">$275</a>-->
+          <!--</td>-->
+        <!--</tr>-->
+        <!--</tbody>-->
+      <!--</table>-->
 
       <!-- Add Category Button -->
       <button class="ui category button">
@@ -101,6 +123,7 @@
       <h2 class="ui left aligned header">
         Goals
       </h2>
+
 
       <table class="ui five column green table">
         <thead>
@@ -118,30 +141,30 @@
         </tr>
         </thead>
         <tbody>
+        {{#each item in goalList}}
         <tr>
           <td class="selectable">
-            <a href="#">New Car</a>
+            <a href="#">{{item.name}}</a>
           </td>
           <td class="selectable">
-            <a href="#">$4000</a>
+            <a href="#">${{item.goal}}</a>
           </td>
 
           <td class="selectable">
-            <a href="#">$4000</a>
+            <a href="#">${{item.saved}}</a>
           </td>
-          <td>
-            $0
-          </td>
+          <td>${{item.needed}}</td>
 
           <td>
             <div class="center">
-              <div class="ui indicating progress" data-value="4000" data-total="4000" id="goal1">
+              <!-- TODO get unique ID for the goal-->
+              <div class="ui indicating progress" data-value="{{item.saved}}" data-total="{{item.goal}}" id="goal.{{item.name}}">
                 <div class="bar">
                   <div class="progress"></div>
                 </div>
                 <div id="label"></div>
                 <script>
-                  $('#goal1')
+                  $('#goal.{{item.name}}')
                       .progress('increment')
                   ;
                 </script>
@@ -150,39 +173,10 @@
           </td>
         </tr>
 
-        <tr>
-          <td class="selectable">
-            <a href="#">Playstation 4</a>
-          </td>
-          <td class="selectable">
-            <a href="#">$300</a>
-          </td>
-
-          <td class="selectable">
-            <a href="#">$225</a>
-          </td>
-          <td>
-            $75
-          </td>
-          <td>
-            <div class="center">
-              <div class="ui indicating progress" data-value="225" data-total="300" id="goal2">
-                <div class="bar">
-                  <div class="progress"></div>
-                </div>
-                <!--<div class="label">$4000</div>-->
-                <script>
-                  $('#goal2')
-                      .progress('increment')
-                  ;
-                </script>
-              </div>
-            </div>
-          </td>
-        </tr>
-
+        {{/each}}
         </tbody>
       </table>
+
 
       <!-- Add Category Button -->
       <button class="ui category button">
@@ -190,45 +184,9 @@
         Add Goal
       </button>
 
+    {{else}}
+      {{> Loading}}
+    {{/if}}
     </div>
   </div>
-
-
-  <!--<div class="ui form container">-->
-    <!--{{#if Template.subscriptionsReady}}-->
-      <!--<table style="margin-top: 20px" class="ui celled table">-->
-        <!--<thead>-->
-        <!--<tr>-->
-          <!--<th>First</th>-->
-          <!--<th>Last</th>-->
-          <!--<th>Address</th>-->
-          <!--<th>Phone</th>-->
-          <!--<th>Email</th>-->
-          <!--&lt;!&ndash; If user is logged in &ndash;&gt;-->
-          <!--{{#if currentUser}}-->
-            <!--<th>Edit</th>-->
-          <!--{{/if}}-->
-        <!--</tr>-->
-        <!--</thead>-->
-
-        <!--<tbody>-->
-        <!--{{#each stuff in stuffList}}-->
-          <!--<tr>-->
-            <!--<td>{{stuff.first}}</td>-->
-            <!--<td>{{stuff.last}}</td>-->
-            <!--<td>{{stuff.address}}</td>-->
-            <!--<td>{{stuff.phone}}</td>-->
-            <!--<td>{{stuff.email}}</td>-->
-            <!--&lt;!&ndash; If user is logged in &ndash;&gt;-->
-            <!--{{#if currentUser}}-->
-              <!--<td><a href="{{pathFor 'Edit_Stuff_Page' _id=stuff._id}}">Edit</a></td>-->
-            <!--{{/if}}-->
-          <!--</tr>-->
-        <!--{{/each}}-->
-        <!--</tbody>-->
-      <!--</table>-->
-    <!--{{else}}-->
-      <!--{{> Loading}}-->
-    <!--{{/if}}-->
-  <!--</div>-->
 </template>

@@ -1,12 +1,19 @@
 import { Template } from 'meteor/templating';
-import { Stuff } from '../../api/stuff/stuff.js';
+import { Categories } from '../../api/collections/categories.js';
+import { Goals } from '../../api/collections/goals.js';
 
 Template.Budget_Page.helpers({
 
-  /**
-   * @returns {*} All of the Stuff documents.
+  /*
+   * @returns {*} All of the Categories documents.
    */
-  stuffList() {
-    return Stuff.find();
+  categoryList() {
+    return Categories.find();
+  },
+  /*
+   * @returns {*} All of the Categories documents.
+   */
+  goalList() {
+    return Goals.find();
   },
 });
