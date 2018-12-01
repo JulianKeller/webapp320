@@ -1,32 +1,13 @@
 import { Template } from 'meteor/templating';
-
-import { Categories } from '../../api/collections/categories.js';
-import { Goals } from '../../api/collections/goals.js';
-import { Summary } from '../../api/collections/summary.js';
+import { Stuff } from '../../api/stuff/stuff.js';
 
 Template.Budget_Page.helpers({
-  /*
-   * @returns {*} All of the Categories documents.
+
+  /**
+   * @returns {*} All of the Stuff documents.
    */
-  categoryList() {
-    return Categories.find();
-  },
-  /*
-   * @returns {*} All of the Goals documents.
-   */
-  // goalList() {
-  //   return Goals.find();
-  // },
-  /*
-   * @returns {*} All of the Goals documents.
-   */
-  summaryList() {
-    return Summary.find();
+  stuffList() {
+    return Stuff.find();
   },
 });
 
-Categories.allow({
-  insert: function () {
-    return true;
-  },
-});

@@ -23,6 +23,8 @@
     }
 
   </style>
+
+
   <div class="center-block">
     <div class="ui container colorblocktop">
       <h1 class="ui header">
@@ -44,7 +46,7 @@
         </tr>
         </thead>
         <tbody>
-        {{#each item in categoryList}}
+        {{#each item in stuffList}}
         <tr>
           <td class="selectable">
             <a href="#">{{item.name}}</a>
@@ -53,7 +55,7 @@
             <a href="#">{{item.description}}</a>
           </td>
           <td class="selectable">
-            <a href="#">${{item.amount}}</a>
+            <a href="#">${{item.balance}}</a>
           </td>
         </tr>
         {{/each}}

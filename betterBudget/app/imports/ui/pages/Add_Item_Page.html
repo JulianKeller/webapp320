@@ -2,14 +2,14 @@
   {{#If_Logged_In}}
     <div style="padding-top: 20px" class="ui form container">
       {{#autoForm
-          collection=categoriesCollection
+          collection=stuffCollection
           template="semanticUI"
-          id="AddItemForm"
+          id="AddStuffForm"
           type="insert"
           resetOnSuccess=true }}
 
         <form class="ui form">
-          <h3 class="ui dividing header">Add Item</h3>
+          <h3 class="ui dividing header">Add Contact</h3>
 
           <div class="two fields">
             <div class="field">
@@ -21,11 +21,10 @@
           </div>
 
           <div class="field">
-            {{>afQuickField name='amount'}}
+            {{>afQuickField name='balance'}}
           </div>
-          <button type="submit" class="ui button">Submit</button>
         </form>
-
+        <button type="submit" class="ui button">Submit</button>
       {{/autoForm}}
     </div>
   {{/If_Logged_In}}
