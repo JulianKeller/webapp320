@@ -5,6 +5,12 @@ import { SimpleSchema } from 'meteor/aldeed:simple-schema';
 
 export const Categories = new Mongo.Collection('Categories');
 
+// Categories.allow({
+//   insert: function () {
+//     return true;
+//   },
+// });
+
 /**
  * Create the schema for Stuff
  */
@@ -33,7 +39,7 @@ export const CategoriesSchema = new SimpleSchema({
     label: 'Amount',
     type: Number,
     optional: false,
-    max: 20,
+    max: 999999,
     autoform: {
       group: 'Add Category',
       placeholder: '$ Amount',

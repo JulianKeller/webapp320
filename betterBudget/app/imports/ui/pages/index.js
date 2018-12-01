@@ -1,5 +1,5 @@
-import './add-contact-page.html';
-import './add-contact-page.js';
+import './Add_Item_Page.html';
+import './Add_Item_Page.js';
 import './edit-contact-page.html';
 import './edit-contact-page.js';
 import './Budget_Page.html';

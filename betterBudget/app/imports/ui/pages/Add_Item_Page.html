@@ -1,0 +1,32 @@
+<template name="Add_Item_Page">
+  {{#If_Logged_In}}
+    <div style="padding-top: 20px" class="ui form container">
+      {{#autoForm
+          collection=categoriesCollection
+          template="semanticUI"
+          id="AddItemForm"
+          type="insert"
+          resetOnSuccess=true }}
+
+        <form class="ui form">
+          <h3 class="ui dividing header">Add Item</h3>
+
+          <div class="two fields">
+            <div class="field">
+              {{>afQuickField name='name'}}
+            </div>
+            <div class="field">
+              {{>afQuickField name='description'}}
+            </div>
+          </div>
+
+          <div class="field">
+            {{>afQuickField name='amount'}}
+          </div>
+          <button type="submit" class="ui button">Submit</button>
+        </form>
+
+      {{/autoForm}}
+    </div>
+  {{/If_Logged_In}}
+</template>
