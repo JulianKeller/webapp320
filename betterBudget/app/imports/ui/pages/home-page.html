@@ -1,0 +1,39 @@
+<template name="List_Stuff_Page">
+  <div class="ui form container">
+    {{#if Template.subscriptionsReady}}
+      <table style="margin-top: 20px" class="ui celled table">
+        <thead>
+        <tr>
+          <th>First</th>
+          <th>Last</th>
+          <th>Address</th>
+          <th>Phone</th>
+          <th>Email</th>
+          <!-- If user is logged in -->
+          {{#if currentUser}}
+            <th>Edit</th>
+          {{/if}}
+        </tr>
+        </thead>
+
+        <tbody>
+        {{#each stuff in stuffList}}
+          <tr>
+            <td>{{stuff.first}}</td>
+            <td>{{stuff.last}}</td>
+            <td>{{stuff.address}}</td>
+            <td>{{stuff.phone}}</td>
+            <td>{{stuff.email}}</td>
+            <!-- If user is logged in -->
+            {{#if currentUser}}
+              <td><a href="{{pathFor 'Edit_Stuff_Page' _id=stuff._id}}">Edit</a></td>
+            {{/if}}
+          </tr>
+        {{/each}}
+        </tbody>
+      </table>
+    {{else}}
+      {{> Loading}}
+    {{/if}}
+  </div>
+</template>

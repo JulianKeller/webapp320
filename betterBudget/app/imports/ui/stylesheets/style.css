@@ -1,0 +1,56 @@
+/* Crop Header banner image */
+#banner {
+  object-fit: cover;
+  object-position: center top;
+  width: 100%;
+  height: 200px;
+}
+
+/* Header menu padding*/
+.ui.borderless.inverted.menu {
+  margin-top: 0;
+  background-color: #355E53;
+  border-radius: 0;
+}
+
+.ui.borderless.inverted.menu a.item {
+  font-weight: bold;    /* Make menu font bold */
+}
+
+/* Home Page */
+.ui.celled.table {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+footer {
+  padding-bottom: 61px;  /* Add white space to bottom of the page */
+}
+
+/* Login Pop-UP Settings*/
+#login-dropdown-list {
+  /*font-family: Oswald;*/
+  font-size: 18px;  /* Login Button font size */
+}
+
+#login-buttons a {
+  color: white; /* Login Button font color */
+}
+
+#login-buttons .login-close-text {
+  color: black;   /* Login close button color */
+}
+
+/* Login Buttons background colors*/
+#login-buttons .login-button:hover, .accounts-dialog .login-button:hover {
+  background: #4A8067;
+}
+
+#login-buttons .login-button, .accounts-dialog .login-button {
+  background: #355E53;
+}
+
+#login-buttons #signup-link {
+  float: right;
+  color: black;
+}

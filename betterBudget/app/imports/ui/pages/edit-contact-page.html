@@ -1,0 +1,42 @@
+<template name="Edit_Stuff_Page">
+  {{#If_Logged_In}}
+    <div style="padding-top: 20px" class="ui form container">
+      {{#autoForm
+      collection=stuffCollection
+      template="semanticUI"
+      id="EditStuffForm"
+      type="update"
+      doc=getDoc
+      buttonContent="Update"
+      }}
+
+      <form class="ui form">
+        <h3 class="ui dividing header">Update Contact</h3>
+
+        <div class="two fields">
+          <div class="field">
+            {{>afQuickField name='first'}}
+          </div>
+          <div class="field">
+            {{>afQuickField name='last'}}
+          </div>
+        </div>
+
+        <div class="field">
+          {{>afQuickField name='address'}}
+        </div>
+
+        <div class="two fields">
+          <div class="field">
+            {{>afQuickField name='phone'}}
+          </div>
+          <div class="field">
+            {{>afQuickField name='email'}}
+          </div>
+        </div>
+      </form>
+      <button type="submit" class="ui button">Update</button>
+  {{/autoForm}}
+</div>
+  {{/If_Logged_In}}
+  </template>
