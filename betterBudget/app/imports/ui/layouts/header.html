@@ -1,17 +1,18 @@
 <template name="Header">
-  <!--<img id="banner" class="ui fluid image" src="/images/beach-banner.jpg">-->
-  <!-- Main Menu -->
-  <div class="ui green borderless inverted menu">
-    <div class="ui container">
-      <a class="item" href="{{pathFor 'Home_Page'}}">Home</a>
-      <!-- If user is logged in -->
-      {{#if currentUser}}
-        <a class="{{ isActiveRoute 'Budget_Page'}} item" href="{{ pathFor 'Budget_Page' }}">Budget</a>
-        <a class="{{ isActiveRoute 'Faq_Page'}} item" href="{{ pathFor 'Faq_Page' }}">FAQ</a>
-      {{else}}
-        <!--<a class="item" href="{{pathFor 'Budget_Page'}}"><h1>Friends</h1></a>-->
-      {{/if}}
-      <a href="#" class="right aligned item">{{> loginButtons align="right"}}</a>
-    </div>
+  <!-- topmenu -->
+  <div class="ui borderless topmenu menu">
+    <a class="fitted item" href="{{pathFor 'Home_Page'}}">
+      <i class="home icon"></i>
+      HOME
+    </a>
+    &ensp;<a class="fitted item" href="{{pathFor 'Budget_Page'}}">
+    <i class="alternate money bill icon"></i>
+    MY BUDGET
+  </a>
+    <a class="fitted item" href="{{pathFor 'Faq_Page'}}">
+      <i class="question circle icon"></i>
+      SUPPORT
+    </a>
+    <a id="signIn" href="#" class="right aligned item">{{> loginButtons align="right"}}</a>
   </div>
 </template>
