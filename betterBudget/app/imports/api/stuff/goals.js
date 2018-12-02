@@ -13,7 +13,7 @@ export const GoalsSchema = new SimpleSchema({
     label: 'Name',
     type: String,
     optional: false,
-    max: 50,
+    max: 9999999,
     autoform: {
       group: 'Add Goal',
       placeholder: 'Goal Name',
@@ -23,7 +23,7 @@ export const GoalsSchema = new SimpleSchema({
     label: 'Goal',
     type: Number,
     optional: false,
-    max: 50,
+    max: 9999999,
     autoform: {
       group: 'Add Goal',
       placeholder: '$ Goal Amount',
@@ -33,7 +33,7 @@ export const GoalsSchema = new SimpleSchema({
     label: 'Saved',
     type: Number,
     optional: true,
-    max: 50,
+    max: 9999999,
     autoform: {
       group: 'Add Goal',
       placeholder: '0',
@@ -43,7 +43,7 @@ export const GoalsSchema = new SimpleSchema({
     label: 'Needed',
     type: Number,
     optional: true,
-    max: 50,
+    max: 9999999,
     autoform: {
       group: 'Add Goal',
       placeholder: '0',

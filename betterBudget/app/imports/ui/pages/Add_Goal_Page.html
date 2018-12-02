@@ -10,11 +10,16 @@
 
       <form class="ui form">
         <h3 class="ui dividing header">Add Goal</h3>
-          <div class="field">
+          <div class="three fields">
+            <div class="field">
             {{>afQuickField name='name'}}
-          </div>
-          <div class="field">
+            </div>
+            <div class="field">
             {{>afQuickField name='goal'}}
+            </div>
+            <div class="field">
+              {{>afQuickField name='saved'}}
+            </div>
           </div>
       </form>
       <button type="submit" class="ui button">Update</button>

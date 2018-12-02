@@ -31,13 +31,48 @@
         Personal Budget
       </h1>
       <!--{{#if Template.subscriptionsReady}}-->
-      <table class="ui three column green table">
+
+      <!-- Summary -->
+      <!--<div style="padding-top: 20px" class="ui form container">-->
+        <!--{{#autoForm-->
+            <!--collection=summaryCollection-->
+            <!--template="semanticUI"-->
+            <!--id="SummaryForm"-->
+            <!--type="update"-->
+            <!--doc=getDoc-->
+            <!--buttonContent="Update"-->
+        <!--}}-->
+
+          <!--<form class="ui form">-->
+            <!--<div class="field">-->
+              <!--{{>afQuickField name='addBalance'}}-->
+            <!--</div>-->
+            <!--<button type="submit" class="ui button">Add Balance</button>-->
+          <!--</form>-->
+
+        <!--{{/autoForm}}-->
+      <!--</div>-->
+
+      <!--<div class="ui container">-->
+        <!--Container is Here:-->
+        <!--{{#each item in summaryList}}-->
+          <!--<h3>Balance ${{item.total}}</h3>-->
+        <!--{{/each}}-->
+        <!--Ends Here-->
+      <!--</div>-->
+
+
+
+      <!--Expenses-->
+      <table class="ui four column green table">
         <thead>
         <tr>
-          <th>Monthly Bills</th>
+          <th>Expense</th>
           <th>Description</th>
           <th class="selectable">
             Balance
+          </th>
+          <th class="selectable">
             <a id="add" href="{{ pathFor 'Add_Item_Page' }}">
               <i class="plus icon"></i>
               Add Item
@@ -56,6 +91,9 @@
           </td>
           <td class="selectable">
             <a href="#">${{item.balance}}</a>
+          </td>
+          <td>
+            <a href="{{pathFor 'Edit_Item_Page' _id=item._id}}">Edit</a>
           </td>
         </tr>
         {{/each}}

@@ -29,6 +29,13 @@ FlowRouter.route('/add-item', {
   },
 });
 
+FlowRouter.route('/stuff/:_id', {
+  name: 'Edit_Item_Page',
+  action() {
+    BlazeLayout.render('App_Body', { main: 'Edit_Item_Page' });
+  },
+});
+
 FlowRouter.route('/add-goal', {
   name: 'Add_Goal_Page',
   action() {
