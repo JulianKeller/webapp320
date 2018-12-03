@@ -5,10 +5,12 @@
       <i class="home icon"></i>
       HOME
     </a>
+    {{#if currentUser}}
     &ensp;<a class="fitted item" href="{{pathFor 'Budget_Page'}}">
     <i class="alternate money bill icon"></i>
     MY BUDGET
   </a>
+      {{/if}}
     <a class="fitted item" href="{{pathFor 'Faq_Page'}}">
       <i class="question circle icon"></i>
       SUPPORT
