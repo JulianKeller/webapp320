@@ -7,18 +7,32 @@ A web application that helps people with budgeting.  Users will be able to creat
 Design Phase.
 
 ## TODO
-- [x] Finish Mockup for each of our sites<br/>
-- [ ] Convert to meteor (using meteor_mongo branch)
+- [x] Finish Mockup for each of our sites
+- [x] Convert to meteor (using meteor_mongo branch)
 - [ ] Add in Javascript Logic
-- [ ] Decide on app name
+- [x] Decide on app name - Cash Flow
 - [ ] Create Logo
-- [ ] Decide on Project Name
+- [ ] Make Member Support Functional
+- [ ] Make General Questions Functional
+- [ ] Add edit buttons to goals section
+- [ ] Update edit goals page layout
+- [ ] Update edit items page layout
+- [ ] Fix edit button color on budget page
+- [ ] Add additional info to home page under main image
+- [ ] Change support page add category and add item buttons to reflect current buget page layout
+- [ ] Remove non-functioning footer buttons 
+- [ ] Write Testing Library and run tests
+
+### Non-App TODO
 - [ ] Practice Presentation
 - [ ] Write final project report
 
+
 ### Helpful Plantuml Links
 http://plantuml.com/sequence-diagram
+
 http://www.plantuml.com/plantuml/uml
+
 http://plantuml.com/skinparam
 
 ## Getting Started
