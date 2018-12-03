@@ -47,7 +47,7 @@ This program is best viewed in a web browser such as Google Chrome.
 
 Go to the webapp320 directory then:<br/>
 '''
-cd budget
+cd app/cashflow
 meteor npm install
 meteor run
 '''
