@@ -11,17 +11,18 @@ Design Phase.
 - [x] Convert to meteor (using meteor_mongo branch)
 - [ ] Add in Javascript Logic
 - [x] Decide on app name - Cash Flow
-- [ ] Create Logo
+- [x] Create Logo
 - [ ] Make Member Support Functional
 - [ ] Make General Questions Functional
 - [ ] Add edit buttons to goals section
 - [ ] Update edit goals page layout
 - [ ] Update edit items page layout
-- [ ] Fix edit button color on budget page
+- [x] Fix edit button color on budget page
 - [ ] Add additional info to home page under main image
 - [ ] Change support page add category and add item buttons to reflect current buget page layout
 - [ ] Remove non-functioning footer buttons 
 - [ ] Write Testing Library and run tests
+- [ ] Merge all stylesheets into single style.css sheet
 
 ### Non-App TODO
 - [ ] Practice Presentation

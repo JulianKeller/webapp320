@@ -37,16 +37,6 @@
   color: #F0F0F0;
 }
 
-/* Footer Grids*/
-/*.ui[class*="three column"].grid>.column:not(.row), .ui[class*="three column"].grid>.row>.column {*/
-  /*width: 33.33333333%;*/
-  /*padding: 55px 20px 30px 20px;*/
-  /*text-align: left;*/
-/*}*/
-/*.ui[class*="one column"].grid>.column:not(.row), .ui[class*="one column"].grid>.row>.column {*/
-  /*padding: 10px 20px 20px 20px;*/
-/*}*/
-
 /* Center grid items */
 .ui.container.colorblocktop {
   text-align: center;
@@ -120,9 +110,9 @@ h1.ui.header {
   background-color: #F4F6F5;
 }
 
-a {
-  color: white;
-}
+/*a {*/
+  /*color: blue;*/
+/*}*/
 
 
 #add {
