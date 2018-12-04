@@ -31,8 +31,17 @@ Template.Edit_Item_Page.helpers({
   },
 });
 
-// Template.Edit_Item_Page.events({
-//   'click .remove'() {
-//     // Stuff.remove(findOne(this._id));
-//   },
-// });
+Stuff.allow({
+  remove: function () {
+    return true;
+  },
+});
+
+
+Template.Edit_Item_Page.events({
+  'click button.ui.remove.button': function () {    // Remove Item from schema
+    const item = Stuff.findOne(FlowRouter.getParam('_id'));
+    Stuff.remove(item._id);
+  },
+});
+
