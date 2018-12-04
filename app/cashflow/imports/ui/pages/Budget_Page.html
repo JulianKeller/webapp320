@@ -32,37 +32,19 @@
       <h1 class="ui header">
         Personal Budget
       </h1>
-      <!--{{#if Template.subscriptionsReady}}-->
 
-      <!-- Summary -->
-      <!--<div style="padding-top: 20px" class="ui form container">-->
-        <!--{{#autoForm-->
-            <!--collection=summaryCollection-->
-            <!--template="semanticUI"-->
-            <!--id="SummaryForm"-->
-            <!--type="update"-->
-            <!--doc=getDoc-->
-            <!--buttonContent="Update"-->
-        <!--}}-->
+       <!--Summary -->
+      <div style="padding-top: 20px" class="ui form container">
+        LIST
+        {{#each item in summaryList}}
+          {{item.total}}
+        {{/each}}
+      </div>
 
-          <!--<form class="ui form">-->
-            <!--<div class="field">-->
-              <!--{{>afQuickField name='addBalance'}}-->
-            <!--</div>-->
-            <!--<button type="submit" class="ui button">Add Balance</button>-->
-          <!--</form>-->
-
-        <!--{{/autoForm}}-->
-      <!--</div>-->
-
-      <!--<div class="ui container">-->
-        <!--Container is Here:-->
-        <!--{{#each item in summaryList}}-->
-          <!--<h3>Balance ${{item.total}}</h3>-->
-        <!--{{/each}}-->
-        <!--Ends Here-->
-      <!--</div>-->
-
+      <div class="ui action input">
+        <input id="balance" type="text" placeholder="Search...">
+        <button onclick="displayBalance" class="ui button">Add Balance</button>
+      </div>
 
 
       <!--Expenses-->

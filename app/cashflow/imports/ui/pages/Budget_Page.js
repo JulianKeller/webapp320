@@ -18,12 +18,20 @@ Template.Budget_Page.helpers({
   goalList() {
     return Goals.find();
   },
+  /**
+   * @returns {*} All of the Stuff documents.
+   */
+  summaryList() {
+    return Summary.find();
+  },
+  // // Get users input value
+  // addBalance() {
+  //   let x = document.getElementById('balance').value;
+  //   document.getElementById('displayBalance').innerHTML = x;
+  // },
+
+  displayTotal() {
+    const items = Stuff.find();
+    console.log(items);
+  },
 });
-
-
-
-// Template.Budget_Page.events({
-//   'click .selectable': function () {
-//     FlowRouter.go('Home_Page');
-//   },
-// });

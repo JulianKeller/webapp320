@@ -16,9 +16,9 @@ AutoForm.hooks({
      * @param formType The form.
      * @param result The result of form submission.
      */
-    onSuccess: function onSuccess(formType, result) {
-      FlowRouter.go('Budget_Page');
-    },
+    // onSuccess: function onSuccess(formType, result) {
+    //   FlowRouter.go('Budget_Page');
+    // },
   },
 });
 
