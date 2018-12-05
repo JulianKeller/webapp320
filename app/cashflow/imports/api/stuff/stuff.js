@@ -22,7 +22,7 @@ export const StuffSchema = new SimpleSchema({
   description: {
     label: 'Description',
     type: String,
-    optional: false,
+    optional: true,
     max: 50,
     autoform: {
       group: 'Add Item',
@@ -36,7 +36,7 @@ export const StuffSchema = new SimpleSchema({
     max: 30,
     autoform: {
       group: 'Add Item',
-      placeholder: 'Balance',
+      placeholder: '$ Balance',
     },
   },
 });

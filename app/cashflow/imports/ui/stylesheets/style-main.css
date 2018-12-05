@@ -43,13 +43,27 @@
   font-size: 11px;
 }
 
-a:hover {
-  color: whitesmoke;
-}
 
 #login-name-link{
   color: #212121;
 }
 #login-sign-in-link{
   color: #212121;
+}
+
+/* Login button color */
+#login-buttons .login-button, .accounts-dialog .login-button {
+  background: #19934C;
+  border: none;
+}
+
+/* Login Buttons hover colors*/
+#login-buttons .login-button:hover, .accounts-dialog .login-button:hover {
+  background: #16C267;
+}
+
+/* Login button font */
+#login-dropdown-list {
+  /*font-family: Oswald;*/
+  font-weight: bold;  /* Login Button font size */
 }

@@ -1,6 +1,32 @@
 <template name="Add_Goal_Page">
+  <style>
+    .ui.raised.segment {
+      width: 75%;
+      /*text-align: center;*/
+      margin-left: auto;
+      margin-right: auto;
+      background: #F7F7F9;
+    }
+
+    .ui.dividing.header {
+      padding-top: 10px;
+    }
+
+    .ui.accordion {
+      padding-bottom: 5px;
+    }
+
+    .ui.container {
+      width: 75%;
+    }
+
+    .ui.form {
+      padding-bottom: 15px;
+    }
+  </style>
+
   {{#If_Logged_In}}
-    <div style="padding-top: 20px" class="ui form container">
+    <div style="padding-top: 20px" class="ui raised segment">
       {{#autoForm
           collection=goalCollection
           template="semanticUI"
@@ -9,7 +35,7 @@
           resetOnSuccess=true }}
 
       <form class="ui form">
-        <h3 class="ui dividing header">Add Goal</h3>
+        <h1 class="ui dividing header">Add Goal</h1>
           <div class="three fields">
             <div class="field">
             {{>afQuickField name='name'}}
@@ -22,7 +48,7 @@
             </div>
           </div>
       </form>
-      <button type="submit" class="ui button">Update</button>
+      <button type="submit" class="positive ui button">Update</button>
   {{/autoForm}}
 </div>
   {{/If_Logged_In}}

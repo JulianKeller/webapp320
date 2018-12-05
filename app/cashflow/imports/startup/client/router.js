@@ -1,13 +1,13 @@
 import { FlowRouter } from 'meteor/kadira:flow-router';
 import { BlazeLayout } from 'meteor/kadira:blaze-layout';
 
-  Accounts.onLogin(function () {
-    BlazeLayout.render('App_Body', { main: 'Budget_Page' });
-  });
+Accounts.onLogin(function () {
+  BlazeLayout.render('App_Body', { main: 'Budget_Page' });
+});
 
-  Accounts.onLogout(function () {
-    BlazeLayout.render('App_Body', { main: 'Home_Page' });
-  });
+Accounts.onLogout(function () {
+  BlazeLayout.render('App_Body', { main: 'Home_Page' });
+});
 
 
 FlowRouter.route('/', {
@@ -38,7 +38,7 @@ FlowRouter.route('/add-item', {
   },
 });
 
-FlowRouter.route('/stuff/:_id', {
+FlowRouter.route('/edit-item/:_id', {
   name: 'Edit_Item_Page',
   action() {
     BlazeLayout.render('App_Body', { main: 'Edit_Item_Page' });
@@ -49,6 +49,13 @@ FlowRouter.route('/add-goal', {
   name: 'Add_Goal_Page',
   action() {
     BlazeLayout.render('App_Body', { main: 'Add_Goal_Page' });
+  },
+});
+
+FlowRouter.route('/edit-goal/:_id', {
+  name: 'Edit_Goal_Page',
+  action() {
+    BlazeLayout.render('App_Body', { main: 'Edit_Goal_Page' });
   },
 });
 

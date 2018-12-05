@@ -26,7 +26,7 @@ AutoForm.hooks({
       if (Summary.find().count() === 0) {
         Summary.insert({ total: 0, available: 0, addBalance: 0 });
       }
-      // aggregate the stuff data
+      // sum up the stuff balance data
       const values = Stuff.find().map(function (doc) {
         return doc.balance;
       });
@@ -34,13 +34,7 @@ AutoForm.hooks({
       values.forEach(function (element) {
         sum += Number(element);
       });
-
-      Summary.update(
-          { total: { label: 'Total' } },
-          { $set: { total: sum } },
-      );
-      // console.log(values);
-      // update the summary schema
+      // update the summary schema here
       FlowRouter.go('Budget_Page');
     },
   },
