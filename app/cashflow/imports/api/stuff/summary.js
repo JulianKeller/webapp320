@@ -12,6 +12,7 @@ export const SummarySchema = new SimpleSchema({
   total: {
     label: 'Total',
     type: Number,
+    defaultValue: 0,
     optional: false,
     max: 9999999,
     autoform: {

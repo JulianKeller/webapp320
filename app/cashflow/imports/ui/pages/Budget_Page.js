@@ -24,14 +24,4 @@ Template.Budget_Page.helpers({
   summaryList() {
     return Summary.find();
   },
-  // // Get users input value
-  // addBalance() {
-  //   let x = document.getElementById('balance').value;
-  //   document.getElementById('displayBalance').innerHTML = x;
-  // },
-
-  displayTotal() {
-    const items = Stuff.find();
-    console.log(items);
-  },
 });
