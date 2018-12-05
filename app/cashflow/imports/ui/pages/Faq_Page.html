@@ -69,7 +69,8 @@
             template="semanticUI"
             id="AddQuestionForm"
             type="insert"
-            resetOnSuccess=false }}
+            resetOnSuccess=true
+        }}
         <form class="ui form">
           <div class="field">
             {{>afQuickField name='email'}}
@@ -77,8 +78,9 @@
           <div class="field">
             {{>afQuickField name='message'}}
           </div>
-          <button class="ui button" type="submit">Submit</button>
+
         </form>
+          <button class="ui button" type="submit">Submit</button>
             {{/autoForm}}
       </div>
     </div>

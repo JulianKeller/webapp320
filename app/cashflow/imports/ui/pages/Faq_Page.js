@@ -1,6 +1,6 @@
 import { AutoForm } from 'meteor/aldeed:autoform';
 import { FlowRouter } from 'meteor/kadira:flow-router';
-import {Template} from 'meteor/templating';
+import { Template } from 'meteor/templating';
 import { Question } from '../../api/stuff/question.js';
 
 AutoForm.hooks({
@@ -11,12 +11,12 @@ AutoForm.hooks({
   },
 });
 
-Template.Faq_Page.onRendered(function(){
+Template.Faq_Page.onRendered(function () {
   $('.menu .item').tab({});
 });
 
 Template.Faq_Page.helpers({
-  questionCollection(){
+  questionCollection() {
     return Question;
   },
 });
