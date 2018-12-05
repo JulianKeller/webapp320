@@ -1,7 +1,49 @@
 <template name="Summary_Template">
-  <div style="padding-top: 20px" class="ui form container">
-    <button>Get Total</button>
-    <p>${{total}}</p>
+  <style>
+    #inputBox {
+      /*background-color: red;*/
+      color: black;
+    }
+  </style>
+  <table class="ui inverted green three column table">
+    <thead>
+    <tr>
+      <th>Budget Total ${{total}}</th>
+      <th>Available ${{availabe}}</th>
+      <th>
+        <!--<form class="addBalance">-->
+            <!--<label class="ui label">$</label>-->
+            <!--<input type="number" name="userInput" placeholder="$ Add to Budget">-->
+            <!--<button type="submit" class="ui button">Enter</button>-->
+        <!--</form>-->
 
-  </div>
+        <!--<form class="addBalance">-->
+          <!--<input type="number" name="userInput" placeholder="$ Add to Balance">-->
+          <!--<button type="submit" class="ui button">Enter</button>-->
+        <!--</form>-->
+      </th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>
+        <form id="addBalance">
+          <!--<div class="ui labeled action input">-->
+            <!--<label class="ui label">$</label>-->
+            <input id="input" type="number" placeholder="$ Add to Budget">
+            <button type="submit" class="ui button">Enter</button>
+          <!--</div>-->
+        </form>
+      </td>
+      <td>
+        <form class="new-task">
+          <input id="inputBox" type="number" name="text" placeholder="$ Add to Balance" />
+          <button type="submit" class="ui button">Enter</button>
+        </form>
+      </td>
+      <td></td>
+    </tr>
+    </tbody>
+  </table>
 </template>

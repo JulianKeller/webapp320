@@ -3,25 +3,17 @@ import { ReactiveVar } from 'meteor/reactive-var';
 import { Summary } from '../../api/stuff/summary.js';
 import { Stuff } from '../../api/stuff/stuff';
 
-// import './main.html';
-
-Template.Summary_Template.onCreated(function helloOnCreated() {
+// create some locally global variables the helper functions can access
+Template.Summary_Template.onCreated(function totalOnCreated() {
   // total starts at 0
   this.total = new ReactiveVar(0);
+  this.available = new ReactiveVar(0);
 });
 
 Template.Summary_Template.helpers({
+  // returns the total of all the item balances
   total() {
-    return Template.instance().total.get();
-  },
-});
-
-// Get the total of the budget
-Template.Summary_Template.events({
-  'click button'(event, instance) {
-    // increment the total when button is clicked
-    // instance.total.set(instance.total.get() + 1);
-
+    const instance = Template.instance();   // get the local variable
     // add an item to the summary schema if the database is empty
     if (Summary.find().count() === 0) {
       Summary.insert({ total: 0, available: 0, addBalance: 0 });
@@ -34,8 +26,40 @@ Template.Summary_Template.events({
     values.forEach(function (element) {
       sum += Number(element);
     });
-    // update the summary schema here
     instance.total.set(sum);
+    return sum;
+  },
+
+  values(sum) {
+    const x = sum;
+    return {
+      class: 'total',
+      value: x,
+    };
+  },
+
+
+  availabe() {
+    const instance = Template.instance();
+    return instance.total.get();
   },
 });
 
+Template.Summary_Template.events({
+  // TODO edit this to work for taking amount and doing stuff
+  // TODO change text from white
+  'submit .new-task'(event) {
+    // Prevent default browser form submit
+    event.preventDefault();
+
+    // Get value from form element
+    const target = event.target;
+    const text = target.text.value;
+
+    console.log(text);
+    console.log(target);
+
+    // Clear form
+    target.text.value = '';
+  },
+});

@@ -22,19 +22,6 @@ AutoForm.hooks({
     //   FlowRouter.go('Budget_Page');
     // },
     onSuccess: function onSuccess(formType, result) {
-      // // add an item to the summary schema if the database is empty
-      // if (Summary.find().count() === 0) {
-      //   Summary.insert({ total: 0, available: 0, addBalance: 0 });
-      // }
-      // // sum up the stuff balance data
-      // const values = Stuff.find().map(function (doc) {
-      //   return doc.balance;
-      // });
-      // let sum = 0;
-      // values.forEach(function (element) {
-      //   sum += Number(element);
-      // });
-      // // update the summary schema here
       FlowRouter.go('Budget_Page');
     },
   },
