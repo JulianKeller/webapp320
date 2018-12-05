@@ -65,7 +65,7 @@ FlowRouter.notFound = {
   },
 };
 
-FlowRouter.route('/submitq', {
+FlowRouter.route('/submit-question', {
   name: 'SubmitQ_Page',
   action() {
     BlazeLayout.render('App_Body', { main: 'SubmitQ_Page' });

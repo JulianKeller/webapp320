@@ -64,17 +64,22 @@
         {{/if}}
       <div class="ui tab segment" data-tab="general">
         Have a different question? Feel free to drop us a message and a representative will reply to your inquiry ASAP!
+        {{#autoForm
+            collection=questionCollection
+            template="semanticUI"
+            id="AddQuestionForm"
+            type="insert"
+            resetOnSuccess=false }}
         <form class="ui form">
           <div class="field">
-            <label>E-mail address</label>
-            <input type="text" name="email" id="mail" placeholder="example@example.com">
+            {{>afQuickField name='email'}}
           </div>
           <div class="field">
-            <label>Message</label>
-            <textarea name="message" placeholder="Your inquiry here..."></textarea>
+            {{>afQuickField name='message'}}
           </div>
           <button class="ui button" type="submit">Submit</button>
         </form>
+            {{/autoForm}}
       </div>
     </div>
   </div>
