@@ -6,12 +6,6 @@
   padding-right: 50px;
 }
 
-.centered.placeholder{
-  text-align: center;
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
-
 .footer{
   background-color: #292929;
   padding-top: 50px;
@@ -32,10 +26,6 @@
 }
 .fifteen.wide.column{
   text-align: center;
-}
-
-.login{
-  color: #EAEAEA;
 }
 
 .item{

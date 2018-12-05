@@ -38,7 +38,7 @@
         to resolve the problem.
         <div class="ui form">
           <div class="field">
-            <div class="ui form">
+            <form class="ui form">
               <div class="field">
                 <label>Issue</label>
                 <select class="ui selection dropdown">
@@ -56,31 +56,27 @@
                 <label>Please provide details below, so we may better assist you:</label>
                 <textarea name="support" placeholder="Details here..."></textarea>
               </div>
-              <button class="ui button">Submit</button>
-            </div>
+              <button class="ui button" type="submit">Submit</button>
+            </form>
           </div>
         </div>
       </div>
         {{/if}}
       <div class="ui tab segment" data-tab="general">
         Have a different question? Feel free to drop us a message and a representative will reply to your inquiry ASAP!
-        <div class="ui form">
+        <form class="ui form">
           <div class="field">
             <label>E-mail address</label>
-            <input type="text" name="email" placeholder="example@example.com">
+            <input type="text" name="email" id="mail" placeholder="example@example.com">
           </div>
           <div class="field">
             <label>Message</label>
             <textarea name="message" placeholder="Your inquiry here..."></textarea>
           </div>
-          <button class="ui button">Submit</button>
-        </div>
+          <button class="ui button" type="submit">Submit</button>
+        </form>
       </div>
     </div>
   </div>
-  <script>
-    $('.menu .item')
-        .tab()
-    ;
-  </script>
+
 </template>

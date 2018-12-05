@@ -1,0 +1,14 @@
+<template name="Sub_Q">
+  <div class="ui centered container">
+    <h2>Test</h2>
+    <button class="ui button" href="{{ pathFor 'Home_Page' }}">
+      <i class="angle double left icon"></i>Back to Home</button>
+  </div>
+  <script>
+    window.onload = function() {
+      let email = localStorage.getItem('email');
+      document.getElementsByTagName('h2').value = 'Successfully received your inquiry! ' +
+          'We will E-mail you at '+ email + " as soon as possible!.";
+    }
+  </script>
+</template>

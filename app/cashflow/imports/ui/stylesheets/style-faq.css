@@ -14,6 +14,9 @@
 .link{
   color: #2D60B9;
 }
+.link:hover{
+  color: #089208;
+}
 
 #addFAQ{
   color: gray;

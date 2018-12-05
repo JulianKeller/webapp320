@@ -10,16 +10,19 @@
     "meteor-node-stubs": "~0.2.0"
   },
   "devDependencies": {
+    "@meteorjs/eslint-config-meteor": "^1.0.5",
     "autoprefixer": "^6.3.1",
+    "babel-eslint": "^10.0.1",
     "chai": "*",
     "docdash": "^0.3.0",
     "es6-enum": "^1.0.3",
     "eslint": "^3.19.0",
-    "eslint-config-airbnb": "^15.0.1",
-    "eslint-plugin-import": "^2.3.0",
-    "eslint-plugin-jsx-a11y": "^5.0.3",
-    "eslint-plugin-meteor": "^4.1.0",
-    "eslint-plugin-react": "^7.0.1"
+    "eslint-config-airbnb": "^15.1.0",
+    "eslint-import-resolver-meteor": "^0.4.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-meteor": "^4.2.2",
+    "eslint-plugin-react": "^7.11.1"
   },
   "postcss": {
     "plugins": {
