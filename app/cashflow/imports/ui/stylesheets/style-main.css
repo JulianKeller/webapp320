@@ -67,3 +67,9 @@
   /*font-family: Oswald;*/
   font-weight: bold;  /* Login Button font size */
 }
+.overimg {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  height: auto;
+}
