@@ -1,5 +1,5 @@
 #questions{
-  padding: 25px 25px 25px 25px
+  padding: 25px 25px 25px 25px;
 }
 
 #tabs{
@@ -13,4 +13,13 @@
 
 .link{
   color: #2D60B9;
+}
+
+#addFAQ{
+  color: gray;
+  background-color: #F2F2F2;
+  padding: 10px 10px 10px 10px;
+}
+#addFAQ:hover {
+  color: #089208;
 }

@@ -6,7 +6,6 @@ import './Budget_Page.html';
 import './Budget_Page.js';
 import './Home_Page.html';
 import './Faq_Page.html';
-import './Faq_Page.js';
 import './Edit_Item_Page.html';
 import './Edit_Item_Page.js';
 // import './Edit_Goal_Page.html';

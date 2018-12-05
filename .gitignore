@@ -20,3 +20,7 @@ node_modules/
 
 # Ignore the debug log generated when, for example, ESLint fails.
 npm-debug.log
+
+# Ignore other locally made directories
+betterbudget/
+budget/
