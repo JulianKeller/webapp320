@@ -36,7 +36,7 @@ export const GoalsSchema = new SimpleSchema({
     max: 9999999,
     autoform: {
       group: 'Add Goal',
-      placeholder: '0',
+      placeholder: '$ Amount Saved',
     },
   },
   needed: {
@@ -46,7 +46,7 @@ export const GoalsSchema = new SimpleSchema({
     max: 9999999,
     autoform: {
       group: 'Add Goal',
-      placeholder: '0',
+      placeholder: '$ Amount Needed',
     },
   },
 });

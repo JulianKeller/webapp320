@@ -8,5 +8,5 @@ import './Home_Page.html';
 import './Faq_Page.html';
 import './Edit_Item_Page.html';
 import './Edit_Item_Page.js';
-// import './Edit_Goal_Page.html';
-// import './Edit_Goal_Page.js';
+import './Edit_Goal_Page.html';
+import './Edit_Goal_Page.js';

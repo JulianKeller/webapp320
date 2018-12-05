@@ -7,14 +7,20 @@
 
     #add {
       color: grey;
-      float: right;
-      padding-right: 5px;
+      /*float: right;*/
+      /*padding-right: 5px;*/
     }
 
     #add:hover {
       color: #089208;
-      float: right;
-      padding-right: 5px;
+      /*float: right;*/
+      /*padding-right: 5px;*/
+    }
+
+    #edit {
+      color: grey;
+      /*float: right;*/
+      /*padding-right: 5px;*/
     }
 
     /* Force progress bar to vertically align*/
@@ -47,12 +53,6 @@
 
       <!--</div>-->
 
-      <!--<div class="ui action input">-->
-        <!--<input id="balance" type="text" placeholder="Search...">-->
-        <!--<button onclick="displayBalance" class="ui button">Add Balance</button>-->
-      <!--</div>-->
-
-
       <!--Expenses-->
       <table class="ui four column green table">
         <thead>
@@ -83,7 +83,7 @@
             <a href="#">${{item.balance}}</a>
           </td>
           <td>
-            <a href="{{pathFor 'Edit_Item_Page' _id=item._id}}">Edit</a>
+            <a id="edit" href="{{pathFor 'Edit_Item_Page' _id=item._id}}">Edit</a>
           </td>
         </tr>
         {{/each}}
@@ -97,19 +97,18 @@
       </h2>
 
 
-      <table class="ui five column green table">
+      <table class="ui six column green table">
         <thead>
         <tr>
           <th>Item</th>
           <th>Goal</th>
           <th>Saved</th>
           <th>Needed</th>
-          <th>Progress
-            <a id="add" href="{{ pathFor 'Add_Goal_Page' }}">
-              <i class="plus icon"></i>
-              Add Goal
-            </a>
-          </th>
+          <th>Progress</th>
+          <th><a id="add" href="{{ pathFor 'Add_Goal_Page' }}">
+            <i class="plus icon"></i>
+            Add Goal
+          </a></th>
         </tr>
         </thead>
         <tbody>
@@ -142,6 +141,9 @@
                 </script>
               </div>
             </div>
+          </td>
+          <td>
+            <a id="edit" href="{{pathFor 'Edit_Goal_Page' _id=item._id}}">Edit</a>
           </td>
         </tr>
 

@@ -1,4 +1,4 @@
-<template name="Edit_Item_Page">
+<template name="Edit_Goal_Page">
   <style>
     .ui.raised.segment {
       width: 75%;
@@ -25,59 +25,54 @@
     }
   </style>
 
-
     {{#If_Logged_In}}
       {{#autoForm
-          collection=stuffCollection
+          collection=goalsCollection
           template="semanticUI"
-          id="EditItemForm"
+          id="EditGoalForm"
           type="update"
           doc=getDoc
           buttonContent="Update"
       }}
       <div class="ui raised segment">
-
           <form class="ui form">
-            <h1 class="ui dividing header">Edit Item</h1>
+            <h3 class="ui dividing header">Edit Goal</h3>
 
-            <div class="two fields">
+            <div class="four fields">
               <div class="field">
               {{>afQuickField name='name'}}
               </div>
               <div class="field">
-                {{>afQuickField name='description'}}
+                {{>afQuickField name='goal'}}
               </div>
-            </div>
-
             <div class="field">
-              {{>afQuickField name='balance'}}
+              {{>afQuickField name='saved'}}
             </div>
-
+            <div class="field">
+              {{>afQuickField name='needed'}}
+            </div>
+            </div>
           </form>
-          <button id="button" type="submit" class="positive ui button">Save</button>
-
-        </div>
-
-
-      <div class="ui container">
-      <div class="ui accordion">
-        <div class="title">
-          <i class="dropdown icon"></i>
-          Delete Item
-        </div>
-        <div class="content">
-          <button id="button" class="negative ui remove button">Delete Item</button>
-        </div>
-        <script>
-          $('.ui.accordion')
-              .accordion()
-          ;
-        </script>
-      </div>
+          <button type="submit" class="ui button">Submit</button>
       </div>
         {{/autoForm}}
 
+    <!--Accordion delete button-->
+      <div class="ui container">
+        <div class="ui accordion">
+          <div class="title">
+            <i class="dropdown icon"></i>
+            Delete Item
+          </div>
+          <div class="content">
+            <button id="button" class="negative ui remove button">Delete Item</button>
+          </div>
+          <script>
+            $('.ui.accordion')
+                .accordion()
+            ;
+          </script>
+        </div>
+      </div>
     {{/If_Logged_In}}
-
-
 </template>
