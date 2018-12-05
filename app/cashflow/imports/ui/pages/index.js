@@ -12,3 +12,5 @@ import './Edit_Item_Page.js';
 import './SubmitQ_Page.html';
 import './Edit_Goal_Page.html';
 import './Edit_Goal_Page.js';
+import './Summary_Template.html';
+import './Summary_Template.js';
