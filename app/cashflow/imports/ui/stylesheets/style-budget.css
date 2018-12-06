@@ -71,11 +71,11 @@
   /*color: whitesmoke;*/
 }
 
-/* Add Category Button */
-.ui.category.button {
-  float: left;
-  /*background: #16B616;*/
-}
+/*!* Add Category Button *!*/
+/*.ui.category.button {*/
+  /*float: left;*/
+  /*!*background: #16B616;*!*/
+/*}*/
 
 /* Goal Progress Bar */
 .ui.five.column.table td{
@@ -108,23 +108,6 @@ h1.ui.header {
 /* Footer dividers */
 .ui.divider {
   background-color: #F4F6F5;
-}
-
-/*a {*/
-  /*color: blue;*/
-/*}*/
-
-
-#add {
-  color: grey;
-  float: right;
-  padding-right: 5px;
-}
-
-#add:hover {
-  color: #089208;
-  float: right;
-  padding-right: 5px;
 }
 
 #addColor {

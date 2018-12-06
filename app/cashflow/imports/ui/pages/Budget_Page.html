@@ -7,8 +7,8 @@
 
     #add {
       color: grey;
-      /*float: right;*/
-      /*padding-right: 5px;*/
+      float: right;
+      padding-right: 5px;
     }
 
     #add:hover {
@@ -19,8 +19,12 @@
 
     #edit {
       color: grey;
-      /*float: right;*/
-      /*padding-right: 5px;*/
+      float: right;
+      padding-right: 5px;
+    }
+
+    #edit:hover {
+      color: dodgerblue;
     }
 
     /* Force progress bar to vertically align*/
@@ -35,49 +39,66 @@
     a:hover {
       color: dodgerblue;
     }
+
+    .ui.header{
+      padding: 0;
+    }
+
+    hr {
+      background-color: whitesmoke;
+    }
   </style>
 
   <div class="center-block">
     <div class="ui container colorblocktop">
       <h1 class="ui header">
-        Personal Budget
+        {{currentUser.username}}'s Budget
       </h1>
 
        <!--Summary -->
         {{> Summary_Template}}
 
       <!--Expenses-->
-      <table class="ui four column green table">
+      <h2 class="ui left floated header">
+        Expenses
+      </h2>
+      
+      <table class="ui three column green table">
         <thead>
         <tr>
-          <th>Expense</th>
-          <th>Description</th>
-          <th class="selectable">
+          <th width="20%">Expense</th>
+          <th width="40%">Description</th>
+          <th width="20%">
             Balance
-          </th>
-          <th class="selectable">
             <a id="add" href="{{ pathFor 'Add_Item_Page' }}">
               <i class="plus icon"></i>
               Add Item
             </a>
           </th>
+          <!--<th width="20%">-->
+            <!--<a id="add" href="{{ pathFor 'Add_Item_Page' }}">-->
+              <!--<i class="plus icon"></i>-->
+              <!--Add Item-->
+            <!--</a>-->
+          <!--</th>-->
         </tr>
         </thead>
         <tbody>
         {{#each item in stuffList}}
         <tr>
-          <td class="selectable">
-            <a href="#">{{item.name}}</a>
-          </td>
-          <td class="selectable">
-            <a href="#">{{item.description}}</a>
-          </td>
-          <td class="selectable">
-            <a href="#">${{item.balance}}</a>
+          <td>
+            {{item.name}}
           </td>
           <td>
+            {{item.description}}
+          </td>
+          <td>
+            ${{item.balance}}
             <a id="edit" href="{{pathFor 'Edit_Item_Page' _id=item._id}}">Edit</a>
           </td>
+          <!--<td>-->
+            <!--<a id="edit" href="{{pathFor 'Edit_Item_Page' _id=item._id}}">Edit</a>-->
+          <!--</td>-->
         </tr>
         {{/each}}
         </tbody>
@@ -94,30 +115,32 @@
         <thead>
         <tr>
           <th>Item</th>
-          <th>Goal</th>
-          <th>Saved</th>
-          <th>Needed</th>
+          <th>$ Goal</th>
+          <th>Balance Saved</th>
+          <th>$ Needed</th>
           <th>Progress</th>
-          <th><a id="add" href="{{ pathFor 'Add_Goal_Page' }}">
+          <th>
+            <a id="add" href="{{ pathFor 'Add_Goal_Page' }}">
             <i class="plus icon"></i>
             Add Goal
-          </a></th>
+          </a>
+          </th>
         </tr>
         </thead>
         <tbody>
         {{#each item in goalList}}
         <tr>
-          <td class="selectable">
-            <a href="#">{{item.name}}</a>
+          <td>
+            {{item.name}}
           </td>
-          <td class="selectable">
-            <a href="#">${{item.goal}}</a>
+          <td>
+            ${{item.goal}}
           </td>
 
-          <td class="selectable">
-            <a href="#">${{item.saved}}</a>
+          <td>
+            ${{item.saved}}
           </td>
-          <td>${{item.needed}}</td>
+          <td>${{difference goal=item.goal saved=item.saved}}</td>
 
           <td>
             <div class="center">

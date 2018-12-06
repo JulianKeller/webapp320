@@ -1,7 +1,8 @@
 import { Template } from 'meteor/templating';
 import { ReactiveVar } from 'meteor/reactive-var';
-import { Summary } from '../../api/stuff/summary.js';
+// import { Summary } from '../../api/stuff/summary.js';
 import { Stuff } from '../../api/stuff/stuff';
+import { Goals } from '../../api/stuff/goals';
 
 // create some locally global variables the helper functions can access
 Template.Summary_Template.onCreated(function totalOnCreated() {
@@ -15,9 +16,9 @@ Template.Summary_Template.helpers({
   total() {
     const instance = Template.instance();   // get the local variable
     // add an item to the summary schema if the database is empty
-    if (Summary.find().count() === 0) {
-      Summary.insert({ total: 0, available: 0, addBalance: 0 });
-    }
+    // if (Summary.find().count() === 0) {
+    //   Summary.insert({ total: 0, available: 0, addBalance: 0 });
+    // }
     // sum up the stuff balance data
     const values = Stuff.find().map(function (doc) {
       return doc.balance;
@@ -26,40 +27,42 @@ Template.Summary_Template.helpers({
     values.forEach(function (element) {
       sum += Number(element);
     });
-    instance.total.set(sum);
-    return sum;
-  },
 
-  values(sum) {
-    const x = sum;
-    return {
-      class: 'total',
-      value: x,
-    };
-  },
+    // sum up the stuff balance data
+    const goalValues = Goals.find().map(function (doc) {
+      return doc.saved;
+    });
+    let goalSum = 0;
+    goalValues.forEach(function (element) {
+      goalSum += Number(element);
+    });
 
-
-  availabe() {
-    const instance = Template.instance();
+    instance.total.set(sum + goalSum);
     return instance.total.get();
+  },
+
+
+  available() {
+    const instance = Template.instance();
+    return instance.available.get();
   },
 });
 
 Template.Summary_Template.events({
-  // TODO edit this to work for taking amount and doing stuff
-  // TODO change text from white
-  'submit .new-task'(event) {
+  // get the balance to add to the budget from the user
+  'submit .account-balance'(event) {
     // Prevent default browser form submit
     event.preventDefault();
 
     // Get value from form element
     const target = event.target;
-    const text = target.text.value;
+    const add = target.add.value;
+    const instance = Template.instance();
 
-    console.log(text);
-    console.log(target);
+    // Set the value
+    instance.available.set(add);
 
     // Clear form
-    target.text.value = '';
+    target.add.value = '';
   },
 });

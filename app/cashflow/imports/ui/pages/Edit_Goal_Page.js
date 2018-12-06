@@ -22,6 +22,7 @@ AutoForm.hooks({
   },
 });
 
+
 Template.Edit_Goal_Page.helpers({
   getDoc() {
     return Goals.findOne(FlowRouter.getParam('_id'));
