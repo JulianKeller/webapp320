@@ -9,6 +9,7 @@
 
 .ui.form{
   padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .link{
@@ -26,3 +27,7 @@
 #addFAQ:hover {
   color: #089208;
 }
+
+/*#generalForm {*/
+  /*padding-bottom: 10px;*/
+/*}*/

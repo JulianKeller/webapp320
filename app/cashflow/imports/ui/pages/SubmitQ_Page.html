@@ -1,6 +1,25 @@
 <template name="SubmitQ_Page">
-  <div class="ui centered container">
-    <h2 id="message"></h2>
+  <style>
+    .ui.raised.segment {
+      width: 75%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .ui.icon.header {
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+  </style>
+  
+  <div class="ui raised segment">
+    <h1 class="ui icon header">
+      <i class="envelope outline icon"></i>
+      <div class="content">
+        Success!
+        <div class="sub header"><h2 id="message"></h2></div>
+      </div>
+    </h1>
     <a class="ui button" href="{{pathFor 'Home_Page'}}">
       <i class="angle double left icon"></i>
       Back to Home

@@ -20,8 +20,9 @@ export const GoalsSchema = new SimpleSchema({
     },
   },
   goal: {
-    label: 'Goal',
+    label: 'Goal Amount',
     type: Number,
+    decimal: true,
     optional: false,
     max: 9999999,
     autoform: {
@@ -30,9 +31,10 @@ export const GoalsSchema = new SimpleSchema({
     },
   },
   saved: {
-    label: 'Saved',
+    label: 'Amount Saved',
     type: Number,
-    optional: true,
+    decimal: true,
+    optional: false,
     max: 9999999,
     autoform: {
       group: 'Add Goal',
@@ -42,6 +44,7 @@ export const GoalsSchema = new SimpleSchema({
   needed: {
     label: 'Needed',
     type: Number,
+    decimal: true,
     optional: true,
     max: 9999999,
     autoform: {
