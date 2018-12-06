@@ -13,6 +13,7 @@ AutoForm.hooks({
 
 Template.Faq_Page.onRendered(function () {
   $('.menu .item').tab({});
+  $('.ui .accordion').accordion();
 });
 
 Template.Faq_Page.helpers({
