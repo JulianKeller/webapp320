@@ -9,23 +9,41 @@ Design Phase.
 ## TODO
 - [x] Finish Mockup for each of our sites
 - [x] Convert to meteor (using meteor_mongo branch)
-- [ ] Add in Javascript Logic
+- [x] Add in Javascript Logic
 - [x] Decide on app name - Cash Flow
 - [x] Create Logo
-- [ ] Make Member Support Functional
-- [ ] Make General Questions Functional
-- [ ] Add edit buttons to goals section
-- [ ] Update edit goals page layout
-- [ ] Update edit items page layout
+- [x] Make Member Support Functional
+- [x] Add edit buttons to goals section
+- [x] Update edit goals page layout
+- [x] Update edit items page layout
 - [x] Fix edit button color on budget page
-- [ ] Add additional info to home page under main image
+- [x] Add additional info to home page under main image
+- [x] Remove non-functioning footer buttons 
 - [ ] Change support page add category and add item buttons to reflect current buget page layout
-- [ ] Remove non-functioning footer buttons 
+- [ ] Make General Questions Functional
 - [ ] Write Testing Library and run tests
 - [ ] Merge all stylesheets into single style.css sheet
+- [ ] Add some theming to the no-permission page
+
+## Tests to Write or conduct
+- [ ] Tests all links
+- [ ] Test having multiple profiles and that the budget page displays the correct data
+- [ ] Test that the total balance is correct on the budget page.
+- [ ] Test Adding Expenses
+- [ ] Test Adding Goals
+- [ ] Test Editing Expenses
+- [ ] Test Editing Goals
+- [ ] Test Deleting Expenses
+- [ ] Test Deleting Goals
+- [ ] Test inputing incorrect data into number inputs. Such as more than two decimal places, strings, multiple decimals
+
+## Bugs to Fix
+- [ ] Fix responsive UI so that things render correctly for small screens
+- [ ] Make budget page not visible when logged out
+- [ ] On Add and Edit pages make money inputs only take 2 decimal floats
 
 ### Non-App TODO
-- [ ] Practice Presentation
+- [x] Practice Presentation
 - [ ] Write final project report
 
 
@@ -47,11 +65,11 @@ This program is best viewed in a web browser such as Google Chrome.
 ## Running the program
 
 Go to the webapp320 directory then:<br/>
-'''
+```
 cd app/cashflow
 meteor npm install
 meteor run
-'''
+```
 
 Visit http://localhost:3000/ in browser to see page.
 ## Authors
