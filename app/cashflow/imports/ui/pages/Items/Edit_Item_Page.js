@@ -1,7 +1,7 @@
 import { AutoForm } from 'meteor/aldeed:autoform';
 import { FlowRouter } from 'meteor/kadira:flow-router';
 import { Template } from 'meteor/templating';
-import { Goals } from '../../api/stuff/goals.js';
+import { Stuff } from '../../../api/stuff/stuff.js';
 
 /* eslint-disable object-shorthand, no-unused-vars */
 
@@ -10,9 +10,9 @@ import { Goals } from '../../api/stuff/goals.js';
  * See: https://github.com/aldeed/meteor-autoform#callbackshooks
  */
 AutoForm.hooks({
-  EditGoalForm: {
+  EditItemForm: {
     /**
-     * After successful form submission, go to List_Goals_Page.
+     * After successful form submission, go to List_Stuff_Page.
      * @param formType The form.
      * @param result The result of form submission.
      */
@@ -22,26 +22,26 @@ AutoForm.hooks({
   },
 });
 
-
-Template.Edit_Goal_Page.helpers({
+Template.Edit_Item_Page.helpers({
   getDoc() {
-    return Goals.findOne(FlowRouter.getParam('_id'));
+    return Stuff.findOne(FlowRouter.getParam('_id'));
   },
-  goalsCollection() {
-    return Goals;
+  stuffCollection() {
+    return Stuff;
   },
 });
 
-Goals.allow({
+Stuff.allow({
   remove: function () {
     return true;
   },
 });
 
-Template.Edit_Goal_Page.events({
+
+Template.Edit_Item_Page.events({
   'click button.ui.remove.button': function () {    // Remove Item from schema
-    const item = Goals.findOne(FlowRouter.getParam('_id'));
-    Goals.remove(item._id);
-    FlowRouter.go('Budget_Page');
+    const item = Stuff.findOne(FlowRouter.getParam('_id'));
+    Stuff.remove(item._id);
   },
 });
+

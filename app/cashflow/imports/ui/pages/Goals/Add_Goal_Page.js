@@ -1,7 +1,7 @@
 import { AutoForm } from 'meteor/aldeed:autoform';
 import { FlowRouter } from 'meteor/kadira:flow-router';
 import { Template } from 'meteor/templating';
-import { Goals } from '../../api/stuff/goals.js';
+import { Goals } from '../../../api/stuff/goals.js';
 
 /* eslint-disable object-shorthand, no-unused-vars */
 
