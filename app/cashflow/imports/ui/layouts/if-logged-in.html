@@ -1,13 +1,51 @@
 <template name="If_Logged_In">
+  <style>
+    .ui.container {
+      /*position: relative;*/
+      text-align: center;
+      color: white;
+      padding-top: 5%;
+      padding-bottom: 10%;
+      width: 50%;
+    }
+
+    /* Centered text */
+    .ui.huge.header {
+      /*position: absolute;*/
+      top: 25%;
+      left: 50%;
+      text-align: center;
+      /*transform: translate(-50%, -50%);*/
+      /*color: white;*/
+      font-size: 4em;
+    }
+
+    #sub {
+      font-size: 45px;
+      color: gray;
+      padding-bottom: 20px;
+    }
+
+  </style>
+
   {{#if authInProcess}}
     <p>loading ...</p>
   {{else}}
     {{#if canShow}}
       {{> UI.contentBlock }}
     {{else}}
-      <div style="padding-top: 40px" class="ui text container">
-        <p>You are not authorized to view this page.</p>
-        <p>Please login.</p>
+      <div class="ui container">
+        <h1 class="ui huge header">
+          You are Logged Out
+          <i class="red sign in icon"></i>
+        </h1>
+        <h3 id="sub">
+          Please sign in to view that page or go back to home.
+        </h3>
+        <a id="homeButton" class="ui large button" href="{{pathFor 'Home_Page'}}">
+          <i class="angle double left icon"></i>
+          Back to Home
+        </a>
       </div>
     {{/if}}
   {{/if}}

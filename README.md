@@ -22,7 +22,7 @@ Development Phase
 - [ ] Change support page add category and add item buttons to reflect current buget page layout
 - [ ] Make General Questions Functional
 - [ ] Write Testing Library and run tests
-- [ ] Add some theming to the no-permission page
+- [x] Add some theming to the no-permission page
 
 ## Tests to Write or conduct
 - [ ] Tests all links

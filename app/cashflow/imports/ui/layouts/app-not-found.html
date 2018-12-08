@@ -1,34 +1,44 @@
 <template name="App_Not_Found">
   <style>
-    .ui.raised.segment {
-      width: 75%;
-      margin-left: auto;
-      margin-right: auto;
+    .ui.container {
+      /*position: relative;*/
       text-align: center;
+      color: white;
+      padding-top: 5%;
+      padding-bottom: 10%;
+      width: 50%;
     }
 
-    .ui.icon.header {
-      padding-top: 10%;
-      padding-bottom: 15%;
+    /* Centered text */
+    .ui.huge.header {
+      /*position: absolute;*/
+      top: 25%;
+      left: 50%;
       text-align: center;
+      /*transform: translate(-50%, -50%);*/
+      /*color: white;*/
+      font-size: 4em;
     }
+
+    #sub {
+      font-size: 45px;
+      color: gray;
+      padding-bottom: 20px;
+    }
+
+
   </style>
-
-  <div class="ui raised segment">
-    <h1 class="ui icon header">
-      <i class="map marker red icon"></i>
-      <div class="content">
-        Page not found!
-        <h2 class="sub header">
-          The page you are looking for does not exist!
-          </h2>
-        </div>
-    </h1>
-    <div>
-    <a class="ui button" href="{{pathFor 'Home_Page'}}">
-      <i class="angle double left icon"></i>
-      Back to Home
-    </a>
-    </div>
-  </div>
+      <div class="ui container">
+        <h1 class="ui huge header">
+          Page not found!
+          <i class="brown map signs icon"></i>
+        </h1>
+        <h3 id="sub">
+          The page you are looking for does not exist.
+        </h3>
+        <a id="homeButton" class="ui large button" href="{{pathFor 'Home_Page'}}">
+          <i class="angle double left icon"></i>
+          Back to Home
+        </a>
+      </div>
 </template>
