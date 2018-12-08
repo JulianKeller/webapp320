@@ -1,5 +1,34 @@
 <template name="App_Not_Found">
-  <div style="padding-top: 20px" class="ui form container">
-    <p>Page not found.</p>
+  <style>
+    .ui.raised.segment {
+      width: 75%;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+    }
+
+    .ui.icon.header {
+      padding-top: 10%;
+      padding-bottom: 15%;
+      text-align: center;
+    }
+  </style>
+
+  <div class="ui raised segment">
+    <h1 class="ui icon header">
+      <i class="map marker red icon"></i>
+      <div class="content">
+        Page not found!
+        <h2 class="sub header">
+          The page you are looking for does not exist!
+          </h2>
+        </div>
+    </h1>
+    <div>
+    <a class="ui button" href="{{pathFor 'Home_Page'}}">
+      <i class="angle double left icon"></i>
+      Back to Home
+    </a>
+    </div>
   </div>
 </template>

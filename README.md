@@ -4,7 +4,7 @@ A web application that helps people with budgeting.  Users will be able to creat
 
 
 ## Current Milestone
-Design Phase.
+Development Phase
 
 ## TODO
 - [x] Finish Mockup for each of our sites
@@ -22,7 +22,6 @@ Design Phase.
 - [ ] Change support page add category and add item buttons to reflect current buget page layout
 - [ ] Make General Questions Functional
 - [ ] Write Testing Library and run tests
-- [ ] Merge all stylesheets into single style.css sheet
 - [ ] Add some theming to the no-permission page
 
 ## Tests to Write or conduct
@@ -41,6 +40,7 @@ Design Phase.
 - [ ] Fix responsive UI so that things render correctly for small screens
 - [ ] Make budget page not visible when logged out
 - [ ] On Add and Edit pages make money inputs only take 2 decimal floats
+- [x] Fixed an issue where all users shared the same expenses and goals.
 
 ### Non-App TODO
 - [x] Practice Presentation
