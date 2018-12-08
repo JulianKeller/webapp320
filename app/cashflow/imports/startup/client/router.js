@@ -71,3 +71,10 @@ FlowRouter.route('/submit-question', {
     BlazeLayout.render('App_Body', { main: 'SubmitQ_Page' });
   },
 });
+
+FlowRouter.route('/private-budget', {
+  name: 'privateBudget',
+  action() {
+    BlazeLayout.render('App_Body', { main: 'privateBudget' });
+  },
+});

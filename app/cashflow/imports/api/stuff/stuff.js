@@ -9,6 +9,19 @@ export const Stuff = new Mongo.Collection('Stuff');
  * Create the schema for Stuff
  */
 export const StuffSchema = new SimpleSchema({
+  owner: {
+    label: 'Owner',
+    type: String,
+    optional: false,
+    max: 50,
+    autoform: {
+      group: 'Add Item',
+      placeholder: 'user Id',
+    },
+    autoValue: function () {
+      return this.userId;
+    },
+  },
   name: {
     label: 'Name',
     type: String,

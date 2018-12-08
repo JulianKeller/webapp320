@@ -49,6 +49,6 @@ fabienb4:autoform-semantic-ui
 # For prototyping purposes, enable autopublish and insecure
 autopublish@1.0.7
 insecure@1.0.7
-# meteortoys:allthings
+meteortoys:allthings
 gwendall:auth-client-callbacks
 aldeed:delete-button

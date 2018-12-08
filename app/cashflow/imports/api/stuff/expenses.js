@@ -1,15 +1,14 @@
 import { Meteor } from 'meteor/meteor';
 import { Mongo } from 'meteor/mongo';
 import { check } from 'meteor/check';
-import { Stuff } from '../../api/stuff/stuff.js';
 
-// export const Stuff = new Mongo.Collection('stuff');
+export const Expenses = new Mongo.Collection('expenses');
 
 if (Meteor.isServer) {
   // This code only runs on the server
-  // Only publish stuff that are public or belong to the current user
-  Meteor.publish('stuff', function stuffPublication() {
-    return Stuff.find({
+  // Only publish expenses that are public or belong to the current user
+  Meteor.publish('expenses', function expensesPublication() {
+    return Expenses.find({
       $or: [
         { private: { $ne: true } },
         { owner: this.userId },
@@ -19,55 +18,55 @@ if (Meteor.isServer) {
 }
 
 Meteor.methods({
-  'stuff.insert'(text) {
+  'expenses.insert'(text) {
     check(text, String);
 
-    // Make sure the user is logged in before inserting a expense
+    // Make sure the user is logged in before inserting a task
     if (! Meteor.userId()) {
       throw new Meteor.Error('not-authorized');
     }
 
-    Stuff.insert({
+    Expenses.insert({
       text,
       createdAt: new Date(),
       owner: Meteor.userId(),
       username: Meteor.user().username,
     });
   },
-  'stuff.remove'(expenseId) {
-    check(expenseId, String);
+  'expenses.remove'(taskId) {
+    check(taskId, String);
 
-    const expense = Stuff.findOne(expenseId);
-    if (expense.private && expense.owner !== Meteor.userId()) {
-      // If the expense is private, make sure only the owner can delete it
+    const task = Expenses.findOne(taskId);
+    if (task.private && task.owner !== Meteor.userId()) {
+      // If the task is private, make sure only the owner can delete it
       throw new Meteor.Error('not-authorized');
     }
 
-    Stuff.remove(expenseId);
+    Expenses.remove(taskId);
   },
-  'stuff.setChecked'(expenseId, setChecked) {
-    check(expenseId, String);
+  'expenses.setChecked'(taskId, setChecked) {
+    check(taskId, String);
     check(setChecked, Boolean);
 
-    const expense = Stuff.findOne(expenseId);
-    if (expense.private && expense.owner !== Meteor.userId()) {
-      // If the expense is private, make sure only the owner can check it off
+    const task = Expenses.findOne(taskId);
+    if (task.private && task.owner !== Meteor.userId()) {
+      // If the task is private, make sure only the owner can check it off
       throw new Meteor.Error('not-authorized');
     }
 
-    Stuff.update(expenseId, { $set: { checked: setChecked } });
+    Expenses.update(taskId, { $set: { checked: setChecked } });
   },
-  'stuff.setPrivate'(expenseId, setToPrivate) {
-    check(expenseId, String);
+  'expenses.setPrivate'(taskId, setToPrivate) {
+    check(taskId, String);
     check(setToPrivate, Boolean);
 
-    const expense = Stuff.findOne(expenseId);
+    const task = Expenses.findOne(taskId);
 
-    // Make sure only the expense owner can make a expense private
-    if (expense.owner !== Meteor.userId()) {
+    // Make sure only the task owner can make a task private
+    if (task.owner !== Meteor.userId()) {
       throw new Meteor.Error('not-authorized');
     }
 
-    Stuff.update(expenseId, { $set: { private: setToPrivate } });
+    Expenses.update(taskId, { $set: { private: setToPrivate } });
   },
 });
