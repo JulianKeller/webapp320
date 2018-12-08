@@ -43,7 +43,7 @@ export const GoalsSchema = new SimpleSchema({
       placeholder: '$ Goal Amount',
     },
   },
-  saved: {
+  balance: {
     label: 'Amount Saved',
     type: Number,
     decimal: true,
