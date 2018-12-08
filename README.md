@@ -1,10 +1,10 @@
 # Budget Forecast
 ## Description
-A web application that helps people with budgeting.  Users will be able to create their own budget, place them into categories, as well as add money to the budget.
+A web application that helps people with budgeting.  Users are able to create their own budget to which they can add expenses and goals.
 
 
-## Current Milestone
-Development Phase
+## Current Phase
+Testing Phase
 
 ## TODO
 - [x] Finish Mockup for each of our sites
@@ -19,12 +19,16 @@ Development Phase
 - [x] Fix edit button color on budget page
 - [x] Add additional info to home page under main image
 - [x] Remove non-functioning footer buttons 
-- [ ] Change support page add category and add item buttons to reflect current buget page layout
+- [ ] Change support page add category and add item buttons to reflect current budget page layout
 - [ ] Make General Questions Functional
 - [ ] Write Testing Library and run tests
 - [x] Add some theming to the no-permission page
 
 ## Tests to Write or conduct
+After shutting down normal app, run tests with: 
+```
+meteor test --driver-package practicalmeteor:mocha
+```
 - [ ] Tests all links
 - [ ] Test having multiple profiles and that the budget page displays the correct data
 - [ ] Test that the total balance is correct on the budget page.

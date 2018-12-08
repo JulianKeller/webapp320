@@ -52,3 +52,5 @@ insecure@1.0.7
 meteortoys:allthings
 gwendall:auth-client-callbacks
 aldeed:delete-button
+meteortesting:mocha
+practicalmeteor:mocha
