@@ -12,6 +12,16 @@ import { Mongo } from 'meteor/mongo';
  */
 AutoForm.hooks({
   AddStuffForm: {
+    // before accepting, run the regex to check that the input is in currency format
+    before: {
+      insert: function (doc) {
+        const regex = /^[0-9]\d*(((,\d{3}){1})?(\.\d{2})?)$/;
+        if (regex.test(doc.balance)) {
+          return doc;
+        }
+        return false;
+      },
+    },
     /**
      * After successful form submission, go to List_Stuff_Page.
      * @param formType The form.

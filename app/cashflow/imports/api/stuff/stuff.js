@@ -44,13 +44,25 @@ export const StuffSchema = new SimpleSchema({
   },
   balance: {
     label: 'Balance',
+    // regEx: /[0-9]+(\.[0-9][0-9]?)?/,
     type: String,
+    // regEx: /[0-9]{1,3}(?:,?[0-9]{3})*(?:\.[0-9]{2})?$/,
+    decimal: true,
+    defaultValue: 0,
     optional: false,
-    max: 30,
+    max: 9999999999,
     autoform: {
       group: 'Add Item',
       placeholder: '$ Balance',
     },
+    // custom: function () {
+    //   if (this.field('balance') === '3') {
+    //     console.log('got here');
+    //     return 'required';
+    //   }
+    //   // console.log(this.field('balance') == '3');
+    //   return this.field('balance');
+    // },
   },
 });
 

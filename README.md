@@ -19,10 +19,10 @@ Testing Phase
 - [x] Fix edit button color on budget page
 - [x] Add additional info to home page under main image
 - [x] Remove non-functioning footer buttons 
+- [x] Add some theming to the no-permission page
 - [ ] Change support page add category and add item buttons to reflect current budget page layout
 - [ ] Make General Questions Functional
 - [ ] Write Testing Library and run tests
-- [x] Add some theming to the no-permission page
 
 ## Tests to Write or conduct
 After shutting down normal app, run tests with: 
@@ -68,7 +68,7 @@ This program is best viewed in a web browser such as Google Chrome.
 
 ## Running the program
 
-Go to the webapp320 directory then:<br/>
+Go to the webapp320 directory then:
 ```
 cd app/cashflow
 meteor npm install

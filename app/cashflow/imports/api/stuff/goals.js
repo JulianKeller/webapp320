@@ -26,7 +26,7 @@ export const GoalsSchema = new SimpleSchema({
     label: 'Name',
     type: String,
     optional: false,
-    max: 9999999,
+    max: 50,
     autoform: {
       group: 'Add Goal',
       placeholder: 'Goal Name',

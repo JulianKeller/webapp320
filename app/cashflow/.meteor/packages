@@ -54,3 +54,4 @@ gwendall:auth-client-callbacks
 aldeed:delete-button
 meteortesting:mocha
 practicalmeteor:mocha
+practicalmeteor:chai

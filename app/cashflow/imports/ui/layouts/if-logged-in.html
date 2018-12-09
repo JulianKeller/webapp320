@@ -1,6 +1,6 @@
 <template name="If_Logged_In">
   <style>
-    .ui.container {
+    .ui.notification.container {
       /*position: relative;*/
       text-align: center;
       color: white;
@@ -34,7 +34,7 @@
     {{#if canShow}}
       {{> UI.contentBlock }}
     {{else}}
-      <div class="ui container">
+      <div class="ui notification container">
         <h1 class="ui huge header">
           You are Logged Out
           <i class="red sign in icon"></i>

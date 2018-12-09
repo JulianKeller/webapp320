@@ -11,6 +11,16 @@ import { Goals } from '../../../api/stuff/goals.js';
  */
 AutoForm.hooks({
   EditGoalForm: {
+    // before accepting, run the regex to check that the input is in currency format
+    before: {
+      update: function (doc) {
+        const regex = /^[0-9]\d*(((,\d{3}){1})?(\.\d{2})?)$/;
+        if (regex.test(doc.$set.balance) && regex.test(doc.$set.goal)) {
+          return doc;
+        }
+        return false;
+      },
+    },
     /**
      * After successful form submission, go to List_Goals_Page.
      * @param formType The form.
