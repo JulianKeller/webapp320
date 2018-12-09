@@ -29,6 +29,7 @@ After shutting down normal app, run tests with:
 ```
 meteor test --driver-package practicalmeteor:mocha
 ```
+You can drop a file-name.test.js file anywhere and meteor seems to run it fine.
 - [ ] Tests all links
 - [ ] Test having multiple profiles and that the budget page displays the correct data
 - [ ] Test that the total balance is correct on the budget page.
@@ -42,8 +43,8 @@ meteor test --driver-package practicalmeteor:mocha
 
 ## Bugs to Fix
 - [ ] Fix responsive UI so that things render correctly for small screens
-- [ ] Make budget page not visible when logged out
-- [ ] On Add and Edit pages make money inputs only take 2 decimal floats
+- [x] Make budget page not visible when logged out
+- [x] On Add and Edit pages make money inputs only take 2 decimal floats
 - [x] Fixed an issue where all users shared the same expenses and goals.
 
 ### Non-App TODO
