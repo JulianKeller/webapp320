@@ -20,6 +20,7 @@ Testing Phase
 - [x] Add additional info to home page under main image
 - [x] Remove non-functioning footer buttons 
 - [x] Add some theming to the no-permission page
+- [ ] Ensure functions test for edge cases
 - [ ] Change support page add category and add item buttons to reflect current budget page layout
 - [ ] Make General Questions Functional
 - [ ] Write Testing Library and run tests
