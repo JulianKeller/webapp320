@@ -1,0 +1,157 @@
+<template name="Budget_Page">
+    <style>
+    #status-table {
+        border: none;
+        background: none;
+    }
+
+    #add {
+        color: grey;
+        float: right;
+        padding-right: 5px;
+    }
+
+    #add:hover {
+        color: #089208;
+        /*float: right;*/
+        /*padding-right: 5px;*/
+    }
+
+    #edit {
+        color: grey;
+        float: right;
+        padding-right: 5px;
+    }
+
+    #edit:hover {
+        color: dodgerblue;
+    }
+
+    /* Force progress bar to vertically align*/
+    .center {
+        height: 24px;
+    }
+
+    a {
+        color: gray;
+    }
+
+    a:hover {
+        color: dodgerblue;
+    }
+
+    .ui.header {
+        padding: 0;
+    }
+
+    hr {
+        background-color: whitesmoke;
+    }
+    </style>
+    {{#If_Logged_In}}
+    <div class="center-block">
+        <div class="ui container colorblocktop">
+            <h1 class="ui header">
+        {{currentUser.username}}'s Budget
+      </h1>
+            <!-- Balances Total -->
+            {{> Summary_Template}}
+            <!--Expenses-->
+            <h2 class="ui left floated header">
+        Expenses
+      </h2>
+            <!-- Expenses Table -->
+            <table class="ui three column green table">
+                <thead>
+                    <tr>
+                        <th width="20%">Expense</th>
+                        <th width="40%">Description</th>
+                        <th width="20%">
+                            Balance
+                            <a id="add" href="{{ pathFor 'Add_Item_Page' }}">
+              <i class="plus icon"></i>
+              Add Item
+            </a>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each item in stuffList}}
+                    {{#if isOwner user=item.owner}}
+                    <tr>
+                        <td>
+                            {{item.name}}
+                        </td>
+                        <td>
+                            {{item.description}}
+                        </td>
+                        <td>
+                            ${{item.balance}}
+                            <a id="edit" href="{{pathFor 'Edit_Item_Page' _id=item._id}}">Edit</a>
+                        </td>
+                    </tr>
+                    {{/if}}
+                    {{/each}}
+                </tbody>
+            </table>
+            <!-- Goals -->
+            <h2 class="ui left aligned header">
+        Goals
+      </h2>
+            <!-- Goals Table -->
+            <table class="ui six column green table">
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>$ Goal</th>
+                        <th>Balance</th>
+                        <th>Needed</th>
+                        <th>Progress</th>
+                        <th>
+                            <a id="add" href="{{ pathFor 'Add_Goal_Page' }}">
+                              <i class="plus icon"></i>
+                              Add Goal
+                            </a>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each item in goalList}}
+                    {{#if isOwner user=item.owner}}
+                    <tr>
+                        <td>
+                            {{item.name}}
+                        </td>
+                        <td>
+                            ${{item.goal}}
+                        </td>
+                        <td>
+                            ${{item.balance}}
+                        </td>
+                        <td>${{difference goal=item.goal saved=item.balance}}</td>
+                        <td>
+                            <div class="center">
+                                <div class="ui indicating progress" data-value="{{item.balance}}" data-total="{{item.goal}}" id="{{item._id}}">
+                                    <div class="bar">
+                                        <div class="progress"></div>
+                                    </div>
+                                    <div id="label"></div>
+                                    <script>
+                                    $('#{{item._id}}')
+                                        .progress('increment');
+                                    </script>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <a id="edit" href="{{pathFor 'Edit_Goal_Page' _id=item._id}}">Edit</a>
+                        </td>
+                    </tr>
+                    {{/if}}
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    {{/If_Logged_In}}
+</template>
