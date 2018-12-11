@@ -1,15 +1,27 @@
-import { Template } from 'meteor/templating';
+// import { Template } from 'meteor/templating';
 import { Stuff } from '../../../api/stuff/stuff.js';
-import { assert } from './meteor/practicalmeteor:chai';
+import { assert } from 'meteor/practicalmeteor:chai';
 
-// These imports give errors
+// All of these  imports give errors
+// import 'app/cashflow/imports/ui/pages/Budget/Budget_Page.html';
+// import 'app/cashflow/imports/ui/pages/Budget/Budget_Page.js';
+
+// import '../../../../pages/Budget/Budget_Page.html';
+// import '../../../../pages/Budget/Budget_Page.js';
+
+// import '../Budget_Page.html';
+// import '../Budget_Page';
+
 // import './Budget_Page.html';
 // import './Budget_Page';
 
-// Test helpers with Template.Budget_Page.__helpers[' difference']();
+// import 'Budget_Page.html';
+// import 'Budget_Page';
+
 
 /* eslint-env mocha */
 
+// Test helpers with Template.Budget_Page.__helpers[' difference']();
 // Just a simple test to test that testing is working
 describe('Budget Page', function () {
   // test adding an expense
