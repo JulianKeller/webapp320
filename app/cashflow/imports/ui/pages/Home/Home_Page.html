@@ -1,71 +1,70 @@
 <template name="Home_Page">
-  <style>
+    <style>
     .ui.centered.grid {
-      position: relative;
-      text-align: center;
-      color: white;
+        position: relative;
+        text-align: center;
+        color: white;
     }
+
     #homeImage {
-      filter: brightness(70%);
-      object-fit: cover;
-      object-position: 50% 0;
-      width: 100%;
-      height: 600px;
+        filter: brightness(70%);
+        object-fit: cover;
+        object-position: 50% 0;
+        width: 100%;
+        height: 600px;
     }
+
     /* Centered text */
     .ui.huge.header {
-      position: absolute;
-      top: 25%;
-      left: 50%;
-      text-align: center;
-      transform: translate(-50%, -50%);
-      color: white;
-      /*font-size: 5em;*/
+        position: absolute;
+        top: 25%;
+        left: 50%;
+        text-align: center;
+        transform: translate(-50%, -50%);
+        color: white;
+        /*font-size: 5em;*/
     }
 
     #main {
-      font-size: 5em;
+        font-size: 5em;
     }
 
     #sub {
-      color: white;
-      font-size: .5em;
+        color: white;
+        font-size: .5em;
     }
 
     #homeText {
-      width: 75%;
-      text-align: center;
-      padding-top: 40px;
-      padding-bottom: 40px;
+        width: 75%;
+        text-align: center;
+        padding-top: 40px;
+        padding-bottom: 40px;
     }
 
     #iconHeader {
-      font-size: 35px;
+        font-size: 35px;
     }
 
     #sub2 {
-      /*color: white;*/
-      font-size: 20px;
+        /*color: white;*/
+        font-size: 20px;
     }
-
-
-  </style>
-  <!-- center title/image -->
-  <div class="ui centered grid">
-    <img src="/images/logo.png">
-  </div>
-  <div class="ui fluid image">
-    <img id="homeImage" src="/images/laptop_guy.jpg"/>
-    <h1 id="main" class="ui huge header">
-      Simplified Budgeting
-      <div id="sub" class="sub header">
-        Cashflow makes it easy to keep track of expenses.
-      </div>
-    </h1>
-  </div>
-
-  <div id="homeText" class="ui container">
-    <h1 id="iconHeader" class="ui icon header">
+    </style>
+    <!-- center title/image -->
+    <div class="ui centered grid">
+        <img src="/images/logo.png">
+    </div>
+        <div class="ui fluid image">
+            <img id="homeImage" src="/images/laptop_guy.jpg"/>
+            <h1 id="main" class="ui huge header">
+              Simplified Budgeting
+              <div id="sub" class="sub header">
+                Cashflow makes it easy to keep track of expenses.
+              </div>
+            </h1>
+        </div>
+        <div id="homeText" class="ui container">
+            <h1 id="iconHeader" class="ui icon header">
       <i class="money bill alternate outline icon"></i>
       It's time your money worked for you!
       <div id="sub2" class="sub header">
@@ -73,7 +72,5 @@
         by clicking the sign-in button to create your account.
       </div>
     </h1>
-
-  </div>
-
+        </div>
 </template>

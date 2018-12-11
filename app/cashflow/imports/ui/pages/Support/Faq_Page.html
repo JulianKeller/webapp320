@@ -1,106 +1,104 @@
 <template name="Faq_Page">
-  <div class="ui centered grid" id="questions">
-    <div class="four wide column">
-      <div class="ui vertical fluid tabular menu">
-        <a class="active item" data-tab="faq">
+    <div class="ui centered grid" id="questions">
+        <div class="four wide column">
+            <div class="ui vertical fluid tabular menu">
+                <a class="active item" data-tab="faq">
           FAQ
         </a>
-        {{#if currentUser}}
-        <a class="item" data-tab="support">
+                {{#if currentUser}}
+                <a class="item" data-tab="support">
           Member Support
         </a>
-        {{/if}}
-        <a class="item" data-tab="general">
+                {{/if}}
+                <a class="item" data-tab="general">
           General Questions
         </a>
-      </div>
-    </div>
-    <div class="twelve wide stretched column" id="tabs">
-      <div class="ui active tab segment" data-tab="faq">
-        <div class="ui accordion">
-          <div class="title">
-            <i class="dropdown icon"></i>
-        <b>Your site isn't displaying correctly for me, why?</b><br>
-          </div>
-          <div class="content">
-        A: We only officially support current releases of
-        <a class="link" href="https://www.mozilla.org/en-US/firefox/">Mozilla Firefox</a>,
-        <a class="link" href="https://www.google.com/chrome/">Google Chrome</a>, and
-        <a class="link" href="https://www.apple.com/safari/">Apple Safari</a> platforms. We <b><u>do not</u></b>
-        officially support nor recommend Microsoft Edge or Internet Explorer.<br><br>
-          </div>
-          <div class="title">
-            <i class="dropdown icon"></i>
-        <b>How do I create a new budget?</b><br>
-          </div>
-          <div class="content">
-        A: On the top-right corner of the category, you click the
-        <a id="addFAQ"><i class="plus icon"></i>Add Item</a> link and it
-        will prompt you for the new item.<br><br>
-          </div>
-          <div class="title">
-            <i class="dropdown icon"></i>
-        <b>How do I create a new goal?</b><br>
-          </div>
-          <div class="content">
-        A: Below the "Expenses" table there is another table named "Goals". It is similar to
-        adding an item. Click <a id="addFAQ"><i class="plus icon"></i>Add Goal</a>
-          </div>
+            </div>
         </div>
-      </div>
-      {{#if currentUser}}
-      <div class="ui tab segment" data-tab="support">
-        If you are having technical issues or have a specific question about your account,
-        please fill out the form below and we will assign a support ticket and work with you
-        to resolve the problem.
-        <div class="ui form">
-          <div class="field">
-            <form class="ui form">
-              <div class="field">
-                <label>Issue</label>
-                <select class="ui selection dropdown">
-                  <option value="">Select Issue</option>
-                  <option value="1">My budget(s) are not displaying correctly.</option>
-                  <option value="2">I cannot create a new category.</option>
-                  <option value="3">I cannot create a new item.</option>
-                  <option value="4">I cannot add to my budget.</option>
-                  <option value="5">I'm having trouble updating my information.</option>
-                  <option value="6">I'd like to cancel my account.</option>
-                  <option value="7">Other (please describe below).</option>
-                </select>
-              </div>
-              <div class="field">
-                <label>Please provide details below, so we may better assist you:</label>
-                <textarea name="support" placeholder="Details here..."></textarea>
-              </div>
-              <button class="ui button" type="submit">Submit</button>
-            </form>
-          </div>
+        <div class="twelve wide stretched column" id="tabs">
+            <div class="ui active tab segment" data-tab="faq">
+                <div class="ui accordion">
+                    <div class="title">
+                        <i class="dropdown icon"></i>
+                        <b>Your site isn't displaying correctly for me, why?</b><br>
+                    </div>
+                    <div class="content">
+                        A: We only officially support current releases of
+                        <a class="link" href="https://www.mozilla.org/en-US/firefox/">Mozilla Firefox</a>,
+                        <a class="link" href="https://www.google.com/chrome/">Google Chrome</a>, and
+                        <a class="link" href="https://www.apple.com/safari/">Apple Safari</a> platforms. We <b><u>do not</u></b>
+                        officially support nor recommend Microsoft Edge or Internet Explorer.<br><br>
+                    </div>
+                    <div class="title">
+                        <i class="dropdown icon"></i>
+                        <b>How do I create a new budget?</b><br>
+                    </div>
+                    <div class="content">
+                        A: On the top-right corner of the category, you click the
+                        <a id="addFAQ"><i class="plus icon"></i>Add Item</a> link and it
+                        will prompt you for the new item.<br><br>
+                    </div>
+                    <div class="title">
+                        <i class="dropdown icon"></i>
+                        <b>How do I create a new goal?</b><br>
+                    </div>
+                    <div class="content">
+                        A: Below the "Expenses" table there is another table named "Goals". It is similar to
+                        adding an item. Click <a id="addFAQ"><i class="plus icon"></i>Add Goal</a>
+                    </div>
+                </div>
+            </div>
+            {{#if currentUser}}
+            <div class="ui tab segment" data-tab="support">
+                If you are having technical issues or have a specific question about your account,
+                please fill out the form below and we will assign a support ticket and work with you
+                to resolve the problem.
+                <div class="ui form">
+                    <div class="field">
+                        <form class="ui form">
+                            <div class="field">
+                                <label>Issue</label>
+                                <select class="ui selection dropdown">
+                                    <option value="">Select Issue</option>
+                                    <option value="1">My budget(s) are not displaying correctly.</option>
+                                    <option value="2">I cannot create a new category.</option>
+                                    <option value="3">I cannot create a new item.</option>
+                                    <option value="4">I cannot add to my budget.</option>
+                                    <option value="5">I'm having trouble updating my information.</option>
+                                    <option value="6">I'd like to cancel my account.</option>
+                                    <option value="7">Other (please describe below).</option>
+                                </select>
+                            </div>
+                            <div class="field">
+                                <label>Please provide details below, so we may better assist you:</label>
+                                <textarea name="support" placeholder="Details here..."></textarea>
+                            </div>
+                            <button class="ui button" type="submit">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            {{/if}}
+            <div class="ui tab segment" data-tab="general">
+                Have a different question? Feel free to drop us a message and a representative will reply to your inquiry ASAP!
+                {{#autoForm
+                collection=questionCollection
+                template="semanticUI"
+                id="AddQuestionForm"
+                type="insert"
+                resetOnSuccess=true
+                }}
+                <form id="generalForm" class="ui form">
+                    <div class="field">
+                        {{>afQuickField name='email'}}
+                    </div>
+                    <div class="field">
+                        {{>afQuickField name='message'}}
+                    </div>
+                </form>
+                <button class="ui button" type="submit">Submit</button>
+                {{/autoForm}}
+            </div>
         </div>
-      </div>
-        {{/if}}
-      <div class="ui tab segment" data-tab="general">
-        Have a different question? Feel free to drop us a message and a representative will reply to your inquiry ASAP!
-        {{#autoForm
-            collection=questionCollection
-            template="semanticUI"
-            id="AddQuestionForm"
-            type="insert"
-            resetOnSuccess=true
-        }}
-        <form id="generalForm" class="ui form">
-          <div class="field">
-            {{>afQuickField name='email'}}
-          </div>
-          <div class="field">
-            {{>afQuickField name='message'}}
-          </div>
-
-        </form>
-        <button class="ui button" type="submit">Submit</button>
-            {{/autoForm}}
-      </div>
     </div>
-  </div>
-
 </template>

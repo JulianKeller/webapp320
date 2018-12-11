@@ -46,6 +46,8 @@ Test Ideas
 
 ## Bugs to Fix
 - [ ] Fix text/buttons from overlapping on FAQ page
+- [ ] Budget Page total can have more than 2 decimals after float
+- [ ] Budget Page goals progress bar rounds up 1%
 - [x] Make budget page not visible when logged out
 - [x] On Add and Edit pages make money inputs only take 2 decimal floats
 - [x] Fixed an issue where all users shared the same expenses and goals.

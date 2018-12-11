@@ -1,75 +1,85 @@
-.topmenu.menu{
-  box-shadow: none;
-  border: none;
-  background-color: #F7F7F9;
-  padding-left: 50px;
-  padding-right: 50px;
+.topmenu.menu {
+    box-shadow: none;
+    border: none;
+    background-color: #F7F7F9;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
-.footer{
-  background-color: #292929;
-  padding-top: 50px;
-  padding-bottom: 50px;
+.footer {
+    background-color: #292929;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
-.wide.column{
-  color: #EAEAEA;
-  text-align: left;
-  font-weight: bold;
+
+.wide.column {
+    color: #EAEAEA;
+    text-align: left;
+    font-weight: bold;
 }
+
 .ui.divider:not(.vertical):not(.horizontal) {
-  border-top: 1px solid rgba(34,36,38,.15);
-  border-bottom: 2px solid rgb(234, 234, 234);
-}
-.massive.menu{
-  padding-left: 325px;
-  background-color: #292929;
-}
-.fifteen.wide.column{
-  text-align: center;
+    border-top: 1px solid rgba(34, 36, 38, .15);
+    border-bottom: 2px solid rgb(234, 234, 234);
 }
 
-.item{
-  padding-left: 5px;
-  padding-right: 5px;
-  color: #EAEAEA;
-}
-.links{
-  padding-top: 25px;
-  font-size: 11px;
+.massive.menu {
+    padding-left: 325px;
+    background-color: #292929;
 }
 
-.copyright{
-  padding-top: 25px;
-  font-size: 11px;
+.fifteen.wide.column {
+    text-align: center;
+}
+
+.item {
+    padding-left: 5px;
+    padding-right: 5px;
+    color: #EAEAEA;
+}
+
+.links {
+    padding-top: 25px;
+    font-size: 11px;
+}
+
+.copyright {
+    padding-top: 25px;
+    font-size: 11px;
 }
 
 
-#login-name-link{
-  color: #212121;
+#login-name-link {
+    color: #212121;
 }
-#login-sign-in-link{
-  color: #212121;
+
+#login-sign-in-link {
+    color: #212121;
 }
 
 /* Login button color */
-#login-buttons .login-button, .accounts-dialog .login-button {
-  background: #19934C;
-  border: none;
+#login-buttons .login-button,
+.accounts-dialog .login-button {
+    background: #19934C;
+    border: none;
 }
 
 /* Login Buttons hover colors*/
-#login-buttons .login-button:hover, .accounts-dialog .login-button:hover {
-  background: #16C267;
+#login-buttons .login-button:hover,
+.accounts-dialog .login-button:hover {
+    background: #16C267;
 }
 
 /* Login button font */
 #login-dropdown-list {
-  /*font-family: Oswald;*/
-  font-weight: bold;  /* Login Button font size */
+    /*font-family: Oswald;*/
+    font-weight: bold;
+    /* Login Button font size */
 }
+
 .overimg {
-  position: absolute;
-  bottom: 0px;
-  width: 100%;
-  height: auto;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: auto;
 }

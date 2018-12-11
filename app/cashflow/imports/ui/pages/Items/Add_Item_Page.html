@@ -1,6 +1,6 @@
 <template name="Add_Item_Page">
-  <style>
-    .ui.raised.segment {
+    <style>
+        .ui.raised.segment {
       width: 75%;
       margin-left: auto;
       margin-right: auto;
@@ -23,34 +23,30 @@
       padding-bottom: 15px;
     }
   </style>
-
-  {{#If_Logged_In}}
+    {{#If_Logged_In}}
     <div class="ui raised segment">
-      {{#autoForm
-          collection=stuffCollection
-          template="semanticUI"
-          id="AddStuffForm"
-          type="insert"
-          resetOnSuccess=true }}
-
+        {{#autoForm
+        collection=stuffCollection
+        template="semanticUI"
+        id="AddStuffForm"
+        type="insert"
+        resetOnSuccess=true }}
         <form class="ui form">
-          <h1 class="ui dividing header">Add Budget Item</h1>
-
-          <div class="two fields">
-            <div class="field">
-              {{>afQuickField name='name'}}
+            <h1 class="ui dividing header">Add Budget Item</h1>
+            <div class="two fields">
+                <div class="field">
+                    {{>afQuickField name='name'}}
+                </div>
+                <div class="field">
+                    {{>afQuickField name='description'}}
+                </div>
             </div>
             <div class="field">
-              {{>afQuickField name='description'}}
+                {{>afQuickField name='balance' step='0.01'}}
             </div>
-          </div>
-
-          <div class="field">
-            {{>afQuickField name='balance' step='0.01'}}
-          </div>
         </form>
         <button type="submit" class="positive ui button">Submit</button>
-      {{/autoForm}}
+        {{/autoForm}}
     </div>
-  {{/If_Logged_In}}
+    {{/If_Logged_In}}
 </template>

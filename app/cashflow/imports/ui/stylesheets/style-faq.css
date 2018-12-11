@@ -1,33 +1,31 @@
-#questions{
-  padding: 25px 25px 25px 25px;
+#questions {
+    padding: 25px 25px 25px 25px;
 }
 
-#tabs{
-  color: #212121;
-  font-weight: normal;
+#tabs {
+    color: #212121;
+    font-weight: normal;
 }
 
-.ui.form{
-  padding-top: 10px;
-  padding-bottom: 10px;
+.ui.form {
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
-.link{
-  color: #2D60B9;
-}
-.link:hover{
-  color: #089208;
+.link {
+    color: #2D60B9;
 }
 
-#addFAQ{
-  color: gray;
-  background-color: #F2F2F2;
-  padding: 10px 10px 10px 10px;
+.link:hover {
+    color: #089208;
 }
+
+#addFAQ {
+    color: gray;
+    background-color: #F2F2F2;
+    padding: 10px 10px 10px 10px;
+}
+
 #addFAQ:hover {
-  color: #089208;
+    color: #089208;
 }
-
-/*#generalForm {*/
-  /*padding-bottom: 10px;*/
-/*}*/
