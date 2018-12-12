@@ -53,30 +53,24 @@
                 If you are having technical issues or have a specific question about your account,
                 please fill out the form below and we will assign a support ticket and work with you
                 to resolve the problem.
-                <div class="ui form">
+              {{#autoForm
+                  collection=supportCollection
+                  template="semanticUI"
+                  id="AddSupportForm"
+                  type="insert"
+                  resetOnSuccess=true
+              }}
+                <form id="supportForm" class="ui form">
                     <div class="field">
-                        <form class="ui form">
-                            <div class="field">
-                                <label>Issue</label>
-                                <select class="ui selection dropdown">
-                                    <option value="">Select Issue</option>
-                                    <option value="1">My budget(s) are not displaying correctly.</option>
-                                    <option value="2">I cannot create a new category.</option>
-                                    <option value="3">I cannot create a new item.</option>
-                                    <option value="4">I cannot add to my budget.</option>
-                                    <option value="5">I'm having trouble updating my information.</option>
-                                    <option value="6">I'd like to cancel my account.</option>
-                                    <option value="7">Other (please describe below).</option>
-                                </select>
-                            </div>
-                            <div class="field">
-                                <label>Please provide details below, so we may better assist you:</label>
-                                <textarea name="support" placeholder="Details here..."></textarea>
-                            </div>
-                            <button class="ui button" type="submit">Submit</button>
-                        </form>
+                        {{>afQuickField name='issue' type=select options=options}}
                     </div>
-                </div>
+
+                      <div class="field">
+                        {{>afQuickField name='details'}}
+                      </div>
+                </form>
+                <button class="ui button" type="submit">Submit</button>
+              {{/autoForm}}
             </div>
             {{/if}}
             <div class="ui tab segment" data-tab="general">
