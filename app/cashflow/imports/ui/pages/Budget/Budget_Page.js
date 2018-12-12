@@ -21,15 +21,15 @@ Template.Budget_Page.helpers({
     return Stuff.find();
   },
   /**
-   * @returns {*} All of the Stuff documents.
+   * @returns {*} All of the Goals documents.
    */
   goalList() {
     return Goals.find();
   },
 
   // return the difference between the goal and the saved
-  difference(item) {
-    return item.hash.goal - item.hash.saved;
+  difference(goal, balance) {
+    return Math.round((goal - balance) * 100) / 100;
   },
 
   // check if the current user is the owner of the budget data

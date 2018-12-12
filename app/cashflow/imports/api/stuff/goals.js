@@ -1,5 +1,6 @@
 import { Mongo } from 'meteor/mongo';
 import { SimpleSchema } from 'meteor/aldeed:simple-schema';
+import { Random } from 'meteor/random';
 
 /* eslint-disable object-shorthand */
 
@@ -19,6 +20,10 @@ export const GoalsSchema = new SimpleSchema({
       placeholder: 'user Id',
     },
     autoValue: function () {
+      // set random user id for testing
+      if (this.userId == null) {
+        return Random.id();
+      }
       return this.userId;
     },
   },
