@@ -20,29 +20,29 @@ Testing Phase
 - [x] Add additional info to home page under main image
 - [x] Remove non-functioning footer buttons 
 - [x] Add some theming to the no-permission page
-- [ ] Ensure functions test for edge cases
 - [x] Change support page add category and add item buttons to reflect current budget page layout
 - [x] Make General Questions Functional
+- [ ] Ensure functions test for edge cases
 - [ ] Write Testing Library and run tests
 
-## Tests to Write or conduct
+## Testing TODO
 After shutting down normal app, run tests with: 
 ```
 meteor test --driver-package practicalmeteor:mocha
 ```
 You can drop a file-name.test.js file anywhere and meteor seems to run it fine.
 
-Test Ideas
+### Tests
+- [x] Test Budget Page Page functions
+- [x] Test Summary Template functions
+- [x] Test Add Goal Page functions
+- [ ] Test Add Item Page functions
 - [ ] Tests all links
-- [ ] Test having multiple profiles and that the budget page displays the correct data
-- [ ] Test that the total balance is correct on the budget page.
-- [ ] Test Adding Expenses
-- [ ] Test Adding Goals
-- [ ] Test Editing Expenses
-- [ ] Test Editing Goals
-- [ ] Test Deleting Expenses
-- [ ] Test Deleting Goals
-- [ ] Test inputing incorrect data into number inputs. Such as more than two decimal places, strings, multiple decimals
+- [ ] Test Edit Goal Page functions
+- [ ] Test Edit Item Page functions
+- [ ] Test Add Item Page functions
+- [ ] Test Support Page Schemas
+*Note: 
 
 ## Bugs to Fix
 - [ ] Fix text/buttons from overlapping on FAQ page
