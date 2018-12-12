@@ -5,6 +5,14 @@ import { Goals } from '../../../api/stuff/goals.js';
 
 /* eslint-disable object-shorthand, no-unused-vars */
 
+export function update(doc) {
+  const regex = /^[0-9]\d*(((,\d{3}){1})?(\.\d{2})?)$/;
+  if (regex.test(doc.$set.balance) && regex.test(doc.$set.goal)) {
+    return doc;
+  }
+  return false;
+}
+
 /**
  * After successful edit, go to List page.
  * See: https://github.com/aldeed/meteor-autoform#callbackshooks
@@ -14,11 +22,7 @@ AutoForm.hooks({
     // before accepting, run the regex to check that the input is in currency format
     before: {
       update: function (doc) {
-        const regex = /^[0-9]\d*(((,\d{3}){1})?(\.\d{2})?)$/;
-        if (regex.test(doc.$set.balance) && regex.test(doc.$set.goal)) {
-          return doc;
-        }
-        return false;
+        return update(doc);
       },
     },
     /**
