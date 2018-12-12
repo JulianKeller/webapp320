@@ -6,7 +6,7 @@ import { Meteor } from 'meteor/meteor';
 import './Summary_Template.html';
 
 // sum up the balances from a document Array
-function sumBalance(docArray) {
+export function sumBalance(docArray) {
   let result = 0;
   const balances = docArray.map(function (doc) {   // get an array of the users balances
     return doc.balance;

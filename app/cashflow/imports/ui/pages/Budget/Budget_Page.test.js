@@ -57,11 +57,22 @@ describe('Budget Page Helpers', function (){
     import './Budget_Page.html';
     import './Budget_Page.js';
 
+    beforeEach(function () {
+      emptyDatabase(Stuff);   // Empty Database before each test
+      emptyDatabase(Goals);
+    });
+
+    afterEach(function () {
+      emptyDatabase(Stuff);   // Empty Database after each test
+      emptyDatabase(Goals);
+    });
+
     it('Difference function subtracts correctly', function () {
       // define the helper function
       function diff(goal, balance) {
         return Template.Budget_Page.__helpers[' difference'](goal, balance);
       }
+
       // basic subtraction
       assert.equal(diff(0, 0), 0);
       assert.equal(diff(0, 1), -1);
@@ -79,7 +90,10 @@ describe('Budget Page Helpers', function (){
       function stuffList() {
         return Template.Budget_Page.__helpers[' stuffList']();
       }
-      assert.equal(stuffList().count(), Stuff.find().count());
+
+      assert.equal(stuffList()
+        .count(), Stuff.find()
+        .count());
 
       // add item to Stuff database
       Stuff.insert({
@@ -89,7 +103,9 @@ describe('Budget Page Helpers', function (){
       });
 
       // verify that the correct database is returned
-      assert.equal(stuffList().count(), Stuff.find().count());
+      assert.equal(stuffList()
+        .count(), Stuff.find()
+        .count());
     });
 
     it('goalList returns the Goals schema', function () {
@@ -97,7 +113,10 @@ describe('Budget Page Helpers', function (){
       function goalList() {
         return Template.Budget_Page.__helpers[' goalList']();
       }
-      assert.equal(goalList().count(), Goals.find().count());
+
+      assert.equal(goalList()
+        .count(), Goals.find()
+        .count());
 
       // add item to Stuff database
       Goals.insert({
@@ -108,7 +127,10 @@ describe('Budget Page Helpers', function (){
       });
 
       // verify that the correct database is returned
-      assert.equal(goalList().count(), Goals.find().count());
+      assert.equal(goalList()
+        .count(), Goals.find()
+        .count());
     });
   }
+
 });
