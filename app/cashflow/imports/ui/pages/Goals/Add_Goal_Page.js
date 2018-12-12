@@ -2,9 +2,16 @@ import { AutoForm } from 'meteor/aldeed:autoform';
 import { FlowRouter } from 'meteor/kadira:flow-router';
 import { Template } from 'meteor/templating';
 import { Goals } from '../../../api/stuff/goals.js';
-// import { Error } from './meteor-v1.3.1';
 
 /* eslint-disable object-shorthand, no-unused-vars */
+
+export function insert(doc) {
+  const regex = /^[0-9]\d*(((,\d{3}){1})?(\.\d{2})?)$/;
+  if (regex.test(doc.balance) && regex.test(doc.goal)) {
+    return doc;
+  }
+  return false;
+}
 
 /**
  * After successful addition of a new Stuff document, go to List page.
@@ -15,15 +22,11 @@ AutoForm.hooks({
     // before accepting, run the regex to check that the input is in currency format
     before: {
       insert: function (doc) {
-        const regex = /^[0-9]\d*(((,\d{3}){1})?(\.\d{2})?)$/;
-        if (regex.test(doc.balance) && regex.test(doc.goal)) {
-          return doc;
-        }
-        return false;
+        return insert(doc);
       },
     },
     /**
-     * After successful form submission, go to List_Stuff_Page.
+     * After successful form submission, go to Budget_Page.
      * @param formType The form.
      * @param result The result of form submission.
      */
