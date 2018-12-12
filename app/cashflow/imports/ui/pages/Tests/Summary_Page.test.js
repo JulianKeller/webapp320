@@ -16,9 +16,9 @@ function emptyDatabase(db) {
 // Test the Summary
 describe('Summary Template', function (){
   if (Meteor.isClient) {
-    import './Summary_Template.html';
-    import './Summary_Template.js';
-    import { sumBalance } from './Summary_Template';
+    import '../Budget/Summary_Template.html';
+    import '../Budget/Summary_Template.js';
+    import { sumBalance } from '../Budget/Summary_Template';
 
     beforeEach(function () {
       emptyDatabase(Stuff);   // Empty Database before each test

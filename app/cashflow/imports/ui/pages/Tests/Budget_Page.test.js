@@ -16,46 +16,50 @@ function emptyDatabase(db) {
 
 // Test Adding and Removing items from the Database on both Client and Server Sides
 describe('Budget Page Databases', function () {
-  beforeEach(function () {
-    emptyDatabase(Stuff);   // Empty Database before each test
-    emptyDatabase(Goals);
-  });
-
-  afterEach(function () {
-    emptyDatabase(Stuff);   // Empty Database after each test
-    emptyDatabase(Goals);
-  });
-
-  it('Add then remove an expense from the Stuff database', function () {
-    Stuff.insert({
-      name: 'test expense',
-      description: 'test description',
-      balance: 10,
+    beforeEach(function () {
+      emptyDatabase(Stuff);   // Empty Database before each test
+      emptyDatabase(Goals);
     });
-    const item = Stuff.findOne({ name: 'test expense' });
-    assert.equal(Stuff.find().count(), 1);
-    Stuff.remove(item._id);
-    assert.equal(Stuff.find().count(), 0);
-  });
 
-  it('Add then remove an expense from the Goals database', function () {
-    Goals.insert({
-      name: 'test goal',
-      goal: 100,
-      balance: 10,
-      needed: 90,
+    afterEach(function () {
+      emptyDatabase(Stuff);   // Empty Database after each test
+      emptyDatabase(Goals);
     });
-    const item = Goals.findOne({ name: 'test goal' });
-    assert.equal(Goals.find().count(), 1);
-    Goals.remove(item._id);
-    assert.equal(Goals.find().count(), 0);
-  });
+
+    it('Add then remove an expense from the Stuff database', function () {
+      Stuff.insert({
+        name: 'test expense',
+        description: 'test description',
+        balance: 10,
+      });
+      const item = Stuff.findOne({ name: 'test expense' });
+      assert.equal(Stuff.find()
+        .count(), 1);
+      Stuff.remove(item._id);
+      assert.equal(Stuff.find()
+        .count(), 0);
+    });
+
+    it('Add then remove an expense from the Goals database', function () {
+      Goals.insert({
+        name: 'test goal',
+        goal: 100,
+        balance: 10,
+        needed: 90,
+      });
+      const item = Goals.findOne({ name: 'test goal' });
+      assert.equal(Goals.find()
+        .count(), 1);
+      Goals.remove(item._id);
+      assert.equal(Goals.find()
+        .count(), 0);
+    });
 });
 
 describe('Budget Page Helpers', function (){
   if (Meteor.isClient) {
-    import './Budget_Page.html';
-    import './Budget_Page.js';
+    import '../Budget/Budget_Page.html';
+    import '../Budget/Budget_Page.js';
 
     beforeEach(function () {
       emptyDatabase(Stuff);   // Empty Database before each test

@@ -35,7 +35,7 @@ Template.Summary_Template.helpers({
     const expenses = Stuff.find({ owner: Meteor.userId() }).fetch();
     const goals = Goals.find({ owner: Meteor.userId() }).fetch();
     instance.total.set(sumBalance(expenses) + sumBalance(goals));     // update the reactive variable
-    return instance.total.get();
+    return Math.round((instance.total.get()) * 100) / 100;            // prevent overflow of digits after decimal
   },
 
   // check if the current user is the owner of the budget data
