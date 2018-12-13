@@ -63,5 +63,27 @@ describe('Summary Template', function (){
       assert.equal(sumBalance(Goals.find()), 4137.10);
     });
 
+    it('Adding totals of 100 balances should take no longer than 300ms', function(done){
+      // add 50 items to each database
+      for (let i = 0; i < 50; i++) {
+        Stuff.insert({
+          name: 'test expense' + i,
+          description: 'test description',
+          balance: 0.01,
+        });
+        Goals.insert({
+          name: 'test goal' + i,
+          goal: 100.00,
+          balance: 10.25,
+        });
+      }
+
+      this.timeout(300);
+      this.slow(0);
+      sumBalance(Goals.find());
+      sumBalance(Stuff.find());
+      done();
+    });
+
   }
 });

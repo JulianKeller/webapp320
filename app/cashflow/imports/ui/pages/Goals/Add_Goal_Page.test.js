@@ -2,8 +2,6 @@ import { Meteor } from 'meteor/meteor';
 import { Stuff } from '../../../api/stuff/stuff.js';
 import { Goals } from '../../../api/stuff/goals.js';
 import { assert } from 'meteor/practicalmeteor:chai';
-import { Question } from '../../../api/stuff/question';
-import { Support } from '../../../api/stuff/support';
 
 /* global describe, afterEach, beforeEach, it */
 /* eslint-env mocha */
@@ -134,6 +132,34 @@ describe('Add Goal Page', function () {
         return Template.Add_Goal_Page.__helpers[' goalCollection']();
       }
       assert.equal(goalCollection(), Goals);
+    });
+
+    it('Checking valid input against regex should take no longer than 5ms', function(done){
+      // insert item into database
+      Goals.insert({
+        name: 'test 1',
+        goal: 123456.98,
+        balance: 0,
+      });
+      let test = Goals.findOne({ name: 'test 1' });
+      this.timeout(5);
+      this.slow(0);
+      insert(test);
+      done();
+    });
+
+    it('Checking invalid input against regex should take no longer than 5ms', function(done){
+      // insert item into database
+      Goals.insert({
+        name: 'test 1',
+        goal: 123456.98324,
+        balance: 0,
+      });
+      let test = Goals.findOne({ name: 'test 1' });
+      this.timeout(5);
+      this.slow(0);
+      insert(test);
+      done();
     });
   }
 });

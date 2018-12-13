@@ -1,7 +1,6 @@
 import { Meteor } from 'meteor/meteor';
 import { Stuff } from '../../../api/stuff/stuff.js';
 import { assert } from 'meteor/practicalmeteor:chai';
-import { Goals } from '../../../api/stuff/goals';
 
 /* global describe, afterEach, beforeEach, it, expect */
 /* eslint-env mocha */
@@ -133,5 +132,34 @@ describe('Add Item (Expense) Page', function () {
       }
       assert.equal(stuffCollection(), Stuff);
     });
+
+    it('Checking valid input against regex should take no longer than 5ms', function(done){
+      // insert item into database
+      Stuff.insert({
+        name: 'test 1',
+        description: 'test',
+        balance: 123456.10,
+      });
+      let test = Stuff.findOne({ name: 'test 1' });
+      this.timeout(5);
+      this.slow(0);
+      insert(test);
+      done();
+    });
+
+    it('Checking invalid input against regex should take no longer than 5ms', function(done){
+      // insert item into database
+      Stuff.insert({
+        name: 'test 1',
+        description: 'test',
+        balance: 12310.160,
+      });
+      let test = Stuff.findOne({ name: 'test 1' });
+      this.timeout(5);
+      this.slow(0);
+      insert(test);
+      done();
+    });
+
   }
 });

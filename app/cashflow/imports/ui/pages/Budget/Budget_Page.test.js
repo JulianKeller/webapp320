@@ -41,7 +41,7 @@ describe('Budget Page Databases', function () {
       .count(), 0);
   });
 
-  it('Add then remove an expense from the Goals database', function () {
+  it('Add then remove a goal from the Goals database', function () {
     Goals.insert({
       name: 'test goal',
       goal: 100,
@@ -49,31 +49,12 @@ describe('Budget Page Databases', function () {
       needed: 90,
     });
     const item = Goals.findOne({ name: 'test goal' });
-    assert.equal(Goals.find()
-      .count(), 1);
+    assert.equal(Goals.find().count(), 1);
     Goals.remove(item._id);
     assert.equal(Goals.find()
       .count(), 0);
   });
-  this.slow(0);
-  it('Adding and removing 2 items should take no longer than 20ms', function() {
-    Stuff.insert({
-      name: 'test expense',
-      description: 'test description',
-      balance: 10,
-    });
-    Goals.insert({
-      name: 'test goal',
-      goal: 100,
-      balance: 10,
-      needed: 90,
-    });
-    const stuffItem = Stuff.findOne({ name: 'test expense'} );
-    const goalItem = Goals.findOne({ name: 'test goal' });
-    Stuff.remove(stuffItem._id);
-    Goals.remove(goalItem._id);
-    this.timeout(20);
-  });
+
 });
 
 describe('Budget Page Helpers', function () {
@@ -151,6 +132,26 @@ describe('Budget Page Helpers', function () {
       // verify that the correct database is returned
       assert.equal(goalList().count(), Goals.find().count());
     });
-  }
 
+    this.slow(0);
+    it('Adding and removing 2 items should take no longer than 20ms', function(done) {
+      Stuff.insert({
+        name: 'test expense',
+        description: 'test description',
+        balance: 10,
+      });
+      Goals.insert({
+        name: 'test goal',
+        goal: 100,
+        balance: 10,
+        needed: 90,
+      });
+      const stuffItem = Stuff.findOne({ name: 'test expense'} );
+      const goalItem = Goals.findOne({ name: 'test goal' });
+      Stuff.remove(stuffItem._id);
+      Goals.remove(goalItem._id);
+      this.timeout(20);
+      done();
+    });
+  }
 });
