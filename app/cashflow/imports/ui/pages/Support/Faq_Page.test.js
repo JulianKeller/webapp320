@@ -49,6 +49,22 @@ describe('FAQ Page Databases', function () {
     Support.remove(item._id);
     assert.equal(Support.find().count(), 0);
   });
+  this.slow(0);
+  it('Adding and removing a question and support item should take no longer than 20ms', function(){
+    Question.insert({
+      email: 'test@test.com',
+      message: 'test message',
+    });
+    Support.insert({
+      issue: 'test issue',
+      details: 'test details',
+    });
+    const questionI = Question.findOne({ email: 'test@test.com' });
+    const supportI = Support.findOne({ issue: 'test issue' });
+    Question.remove(questionI._id);
+    Support.remove(supportI._id);
+    this.timeout(20);
+  });
 });
 
 describe('FAQ Page Helpers', function (){
