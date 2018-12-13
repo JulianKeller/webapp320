@@ -22,6 +22,7 @@ meteor npm install
 ```
 
 ## Running the Program
+From the ../app/cashflow directory run:
 ```
 meteor
 ```
