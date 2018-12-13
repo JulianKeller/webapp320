@@ -5,7 +5,7 @@ Accounts.onLogin(function () {
   BlazeLayout.render('App_Body', { main: 'Budget_Page' });
 });
 
-Accounts.onLogout( function () {
+Accounts.onLogout(function () {
   BlazeLayout.render('App_Body', { main: 'Home_Page' });
 });
 
