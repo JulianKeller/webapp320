@@ -5,12 +5,6 @@ import { Question } from '../../../api/stuff/question.js';
 import { Support } from '../../../api/stuff/support.js';
 
 AutoForm.hooks({
-  before: {
-    insert: function (doc) {
-      console.log(doc);
-      return doc;
-    },
-  },
   AddQuestionForm: {
     onSuccess: function onSuccess(formType, result) {
       FlowRouter.go('SubmitQ_Page');
@@ -18,7 +12,6 @@ AutoForm.hooks({
   },
   AddSupportForm: {
     onSuccess: function onSuccess(formType, result) {
-      console.log('got onSuccess');
       FlowRouter.go('SubmitQ_Page');
     },
   },
@@ -26,8 +19,10 @@ AutoForm.hooks({
 
 // Javascript for Semantic UI elements
 Template.Faq_Page.onRendered(function () {
-  $('.menu .item').tab({});
-  $('.ui .accordion').accordion();
+  $('.menu .item')
+    .tab({});
+  $('.ui .accordion')
+    .accordion();
 });
 
 Template.Faq_Page.helpers({
@@ -50,10 +45,3 @@ Template.Faq_Page.helpers({
     return Support;
   },
 });
-
-// Template.registerHelper('options', function () {
-//   return [
-//     { label: 'option 1', value: 'value 1' },
-//     { label: 'option 2', value: 'value 2' },
-//   ];
-// });

@@ -18,7 +18,6 @@ export function sumBalance(docArray) {
   return result;
 }
 
-
 // create some locally global variables the helper functions can access
 Template.Summary_Template.onCreated(function totalOnCreated() {
   // total starts at 0
@@ -32,8 +31,10 @@ Template.Summary_Template.helpers({
   total() {
     const instance = Template.instance();   // get the local variable
     // get current users item and goal balances from the database
-    const expenses = Stuff.find({ owner: Meteor.userId() }).fetch();
-    const goals = Goals.find({ owner: Meteor.userId() }).fetch();
+    const expenses = Stuff.find({ owner: Meteor.userId() })
+      .fetch();
+    const goals = Goals.find({ owner: Meteor.userId() })
+      .fetch();
     instance.total.set(sumBalance(expenses) + sumBalance(goals));     // update the reactive variable
     return Math.round((instance.total.get()) * 100) / 100;            // prevent overflow of digits after decimal
   },

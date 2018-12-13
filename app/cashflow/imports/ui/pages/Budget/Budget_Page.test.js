@@ -14,7 +14,6 @@ function emptyDatabase(db) {
     });
 }
 
-
 // Test Adding and Removing items from the Database on both Client and Server Sides
 describe('Budget Page Databases', function () {
   beforeEach(function () {
@@ -49,12 +48,12 @@ describe('Budget Page Databases', function () {
       needed: 90,
     });
     const item = Goals.findOne({ name: 'test goal' });
-    assert.equal(Goals.find().count(), 1);
+    assert.equal(Goals.find()
+      .count(), 1);
     Goals.remove(item._id);
     assert.equal(Goals.find()
       .count(), 0);
   });
-
 });
 
 describe('Budget Page Helpers', function () {
@@ -119,7 +118,9 @@ describe('Budget Page Helpers', function () {
         return Template.Budget_Page.__helpers[' goalList']();
       }
 
-      assert.equal(goalList().count(), Goals.find().count());
+      assert.equal(goalList()
+        .count(), Goals.find()
+        .count());
 
       // add item to Stuff database
       Goals.insert({
@@ -130,11 +131,13 @@ describe('Budget Page Helpers', function () {
       });
 
       // verify that the correct database is returned
-      assert.equal(goalList().count(), Goals.find().count());
+      assert.equal(goalList()
+        .count(), Goals.find()
+        .count());
     });
 
     this.slow(0);
-    it('Adding and removing 2 items should take no longer than 20ms', function(done) {
+    it('Adding and removing 2 items should take no longer than 20ms', function (done) {
       Stuff.insert({
         name: 'test expense',
         description: 'test description',
@@ -146,11 +149,30 @@ describe('Budget Page Helpers', function () {
         balance: 10,
         needed: 90,
       });
-      const stuffItem = Stuff.findOne({ name: 'test expense'} );
+      const stuffItem = Stuff.findOne({ name: 'test expense' });
       const goalItem = Goals.findOne({ name: 'test goal' });
       Stuff.remove(stuffItem._id);
       Goals.remove(goalItem._id);
       this.timeout(20);
+      done();
+    });
+
+    it('Adding 500 items to the database should take no longer than 1000ms', function (done) {
+      // add items to each database
+      for (let i = 0; i < 250; i++) {
+        Stuff.insert({
+          name: 'test expense' + i,
+          description: 'test description',
+          balance: 0.01,
+        });
+        Goals.insert({
+          name: 'test goal' + i,
+          goal: 100.00,
+          balance: 10.25,
+        });
+      }
+      this.timeout(1000);
+      this.slow(0);
       done();
     });
   }

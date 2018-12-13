@@ -8,13 +8,14 @@ import { assert } from 'meteor/practicalmeteor:chai';
 
 // empty the database
 function emptyDatabase(db) {
-  db.find().forEach(function (item) {
-    db.remove(item._id);
-  });
+  db.find()
+    .forEach(function (item) {
+      db.remove(item._id);
+    });
 }
 
 // Test the Summary
-describe('Summary Template', function (){
+describe('Summary Template', function () {
   if (Meteor.isClient) {
     import './Summary_Template.html';
     import '../Budget/Summary_Template.js';
@@ -42,9 +43,7 @@ describe('Summary Template', function (){
         description: 'test description',
         balance: 2.99,
       });
-
       assert.equal(sumBalance(Stuff.find()), 3.00);
-
     });
 
     it('The balances of the Goals schema total up correctly', function () {
@@ -59,11 +58,10 @@ describe('Summary Template', function (){
         goal: 100,
         balance: 4123.43,
       });
-
       assert.equal(sumBalance(Goals.find()), 4137.10);
     });
 
-    it('Adding totals of 100 balances should take no longer than 300ms', function(done){
+    it('Adding totals of 100 balances should take no longer than 300ms', function (done) {
       // add 50 items to each database
       for (let i = 0; i < 50; i++) {
         Stuff.insert({
@@ -77,13 +75,11 @@ describe('Summary Template', function (){
           balance: 10.25,
         });
       }
-
       this.timeout(300);
       this.slow(0);
       sumBalance(Goals.find());
       sumBalance(Stuff.find());
       done();
     });
-
   }
 });

@@ -1,9 +1,9 @@
 # Cash Flow
 ## Description
-A web application that helps people with budgeting.  Users are able to create their own budget to which they can add expenses and goals.
+Cash Flow is a simple web app designed to assist users in financial budgeting and planning for future expenses.
 
 ## Current Phase
-Testing Phase
+Completed Phase
 
 ## Getting Started
 

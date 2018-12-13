@@ -8,11 +8,11 @@ import { assert } from 'meteor/practicalmeteor:chai';
 
 // empty the database
 function emptyDatabase(db) {
-  db.find().forEach(function (item) {
-    db.remove(item._id);
-  });
+  db.find()
+    .forEach(function (item) {
+      db.remove(item._id);
+    });
 }
-
 
 // Test Adding and Removing items from the Database on both Client and Server Sides
 describe('FAQ Page Databases', function () {
@@ -32,9 +32,11 @@ describe('FAQ Page Databases', function () {
       message: 'test message',
     });
     const item = Question.findOne({ email: 'test@test.com' });
-    assert.equal(Question.find().count(), 1);
+    assert.equal(Question.find()
+      .count(), 1);
     Question.remove(item._id);
-    assert.equal(Question.find().count(), 0);
+    assert.equal(Question.find()
+      .count(), 0);
   });
 
   it('Add then remove a support question from the Support database', function () {
@@ -43,15 +45,17 @@ describe('FAQ Page Databases', function () {
       details: 'test details',
     });
     const item = Support.findOne({ issue: 'test issue' });
-    assert.equal(Support.find().count(), 1);
+    assert.equal(Support.find()
+      .count(), 1);
 
     console.log(item);
     Support.remove(item._id);
-    assert.equal(Support.find().count(), 0);
+    assert.equal(Support.find()
+      .count(), 0);
   });
 });
 
-describe('FAQ Page Helpers', function (){
+describe('FAQ Page Helpers', function () {
   if (Meteor.isClient) {
     import './Faq_Page.html';
     import './Faq_Page.js';
@@ -71,6 +75,7 @@ describe('FAQ Page Helpers', function (){
       function options() {
         return Template.Faq_Page.__helpers[' options']();
       }
+
       assert.equal(options().no_display, 'My budget(s) are not displaying correctly.');
       assert.equal(options().no_add, 'I cannot add a new item/goal.');
       assert.equal(options().no_update_bal, 'My balance is not updating correctly.');
@@ -84,6 +89,7 @@ describe('FAQ Page Helpers', function (){
       function questionCollection() {
         return Template.Faq_Page.__helpers[' questionCollection']();
       }
+
       assert.equal(questionCollection(), Question);
     });
 
@@ -92,11 +98,12 @@ describe('FAQ Page Helpers', function (){
       function supportCollection() {
         return Template.Faq_Page.__helpers[' supportCollection']();
       }
+
       assert.equal(supportCollection(), Support);
     });
 
     this.slow(0);
-    it('Adding and removing a question and support item should take no longer than 20ms', function(done){
+    it('Adding and removing a question and support item should take no longer than 20ms', function (done) {
       Question.insert({
         email: 'test@test.com',
         message: 'test message',
@@ -113,5 +120,4 @@ describe('FAQ Page Helpers', function (){
       done();
     });
   }
-
 });

@@ -1,44 +1,41 @@
 <template name="SubmitQ_Page">
-    <style>
+  <style>
     .ui.notification.container {
-        /*position: relative;*/
-        text-align: center;
-        color: white;
-        padding-top: 5%;
-        padding-bottom: 10%;
-        width: 50%;
+      text-align: center;
+      color: white;
+      padding-top: 5%;
+      padding-bottom: 10%;
+      width: 50%;
     }
 
     /* Centered text */
     .ui.huge.header {
-        /*position: absolute;*/
-        top: 25%;
-        left: 50%;
-        text-align: center;
-        /*transform: translate(-50%, -50%);*/
-        /*color: white;*/
-        font-size: 4em;
+      top: 25%;
+      left: 50%;
+      text-align: center;
+      font-size: 4em;
     }
 
     #message {
-        font-size: 30px;
-        color: gray;
-        padding-bottom: 20px;
+      font-size: 30px;
+      color: gray;
+      padding-bottom: 20px;
     }
-    </style>
-    <div class="ui notification container">
-        <h1 class="ui huge header">
+  </style>
+
+  <div class="ui notification container">
+    <h1 class="ui huge header">
       <i class="envelope outline icon"></i>
       Success!
     </h1>
-        <div class="content">
-            <div class="sub header">
-                <h2 id="message"></h2>
-            </div>
-        </div>
-        <a id="homeButton" class="ui large button" href="{{pathFor 'Home_Page'}}">
+    <div class="content">
+      <div class="sub header">
+        <h2 id="message"></h2>
+      </div>
+    </div>
+    <a id="homeButton" class="ui large button" href="{{pathFor 'Home_Page'}}">
       <i class="angle double left icon"></i>
       Back to Home
     </a>
-    </div>
+  </div>
 </template>

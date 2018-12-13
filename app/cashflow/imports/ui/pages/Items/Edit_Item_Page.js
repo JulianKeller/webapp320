@@ -5,6 +5,7 @@ import { Stuff } from '../../../api/stuff/stuff.js';
 
 /* eslint-disable object-shorthand, no-unused-vars */
 
+// Check for valid input before updating the document
 export function update(doc) {
   const regex = /^[0-9]\d*(((,\d{3}){1})?(\.\d{2})?)$/;
   if (regex.test(doc.$set.balance)) {
@@ -13,8 +14,8 @@ export function update(doc) {
   return false;
 }
 
-/**
- * After successful edit, go to List page.
+/*
+ * After successful edit, go to Budget page.
  * See: https://github.com/aldeed/meteor-autoform#callbackshooks
  */
 AutoForm.hooks({
@@ -26,7 +27,7 @@ AutoForm.hooks({
       },
     },
     /**
-     * After successful form submission, go to List_Stuff_Page.
+     * After successful form submission, go to Budget_Page.
      * @param formType The form.
      * @param result The result of form submission.
      */
@@ -36,7 +37,9 @@ AutoForm.hooks({
   },
 });
 
+
 Template.Edit_Item_Page.helpers({
+  // Get the current document from the database
   getDoc() {
     return Stuff.findOne(FlowRouter.getParam('_id'));
   },
@@ -58,4 +61,3 @@ Template.Edit_Item_Page.events({
     Stuff.remove(item._id);
   },
 });
-

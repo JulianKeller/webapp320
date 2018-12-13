@@ -5,6 +5,7 @@ import { Stuff } from '../../../api/stuff/stuff.js';
 
 /* eslint-disable object-shorthand, no-unused-vars */
 
+// Check for valid input before updating the document
 export function insert(doc) {
   const regex = /^[0-9]\d*(((,\d{3}){1})?(\.\d{2})?)$/;
   if (regex.test(doc.balance)) {
@@ -13,8 +14,8 @@ export function insert(doc) {
   return false;
 }
 
-/**
- * After successful addition of a new Stuff document, go to List page.
+/*
+ * After successful addition of a new Stuff document, go to Budget page.
  * See: https://github.com/aldeed/meteor-autoform#callbackshooks
  */
 AutoForm.hooks({

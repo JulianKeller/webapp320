@@ -6,7 +6,7 @@ import { Random } from 'meteor/random';
 
 export const Stuff = new Mongo.Collection('Stuff');
 
-/**
+/*
  * Create the schema for Stuff
  */
 export const StuffSchema = new SimpleSchema({

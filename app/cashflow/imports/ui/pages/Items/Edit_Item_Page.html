@@ -1,8 +1,7 @@
 <template name="Edit_Item_Page">
-    <style>
-        .ui.raised.segment {
+  <style>
+    .ui.raised.segment {
       width: 75%;
-      /*text-align: center;*/
       margin-left: auto;
       margin-right: auto;
       background: whitesmoke;
@@ -24,47 +23,48 @@
       padding-bottom: 15px;
     }
   </style>
-    {{#If_Logged_In}}
+
+  {{#If_Logged_In}}
     {{#autoForm
-    collection=stuffCollection
-    template="semanticUI"
-    id="EditItemForm"
-    type="update"
-    doc=getDoc
-    buttonContent="Update"
+        collection=stuffCollection
+        template="semanticUI"
+        id="EditItemForm"
+        type="update"
+        doc=getDoc
+        buttonContent="Update"
     }}
-    <div class="ui raised segment">
+      <div class="ui raised segment">
         <form class="ui form">
-            <h1 class="ui dividing header">Edit Item</h1>
-            <div class="two fields">
-                <div class="field">
-                    {{>afQuickField name='name'}}
-                </div>
-                <div class="field">
-                    {{>afQuickField name='description'}}
-                </div>
+          <h1 class="ui dividing header">Edit Item</h1>
+          <div class="two fields">
+            <div class="field">
+              {{>afQuickField name='name'}}
             </div>
             <div class="field">
-                {{>afQuickField name='balance'}}
+              {{>afQuickField name='description'}}
             </div>
+          </div>
+          <div class="field">
+            {{>afQuickField name='balance'}}
+          </div>
         </form>
         <button id="button" type="submit" class="positive ui button">Save</button>
-    </div>
-    <div class="ui container">
+      </div>
+      <div class="ui container">
         <div class="ui accordion">
-            <div class="title">
-                <i class="dropdown icon"></i>
-                Delete Item
-            </div>
-            <div class="content">
-                <button id="button" class="negative ui remove button">Delete Item</button>
-            </div>
-            <script>
+          <div class="title">
+            <i class="dropdown icon"></i>
+            Delete Item
+          </div>
+          <div class="content">
+            <button id="button" class="negative ui remove button">Delete Item</button>
+          </div>
+          <script>
             $('.ui.accordion')
                 .accordion();
-            </script>
+          </script>
         </div>
-    </div>
+      </div>
     {{/autoForm}}
-    {{/If_Logged_In}}
+  {{/If_Logged_In}}
 </template>

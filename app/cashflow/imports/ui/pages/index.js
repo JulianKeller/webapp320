@@ -15,4 +15,3 @@ import './Goals/Edit_Goal_Page.html';
 import './Goals/Edit_Goal_Page.js';
 import './Budget/Summary_Template.html';
 import './Budget/Summary_Template.js';
-

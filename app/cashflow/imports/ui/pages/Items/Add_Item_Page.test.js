@@ -7,9 +7,10 @@ import { assert } from 'meteor/practicalmeteor:chai';
 
 // empty the database
 function emptyDatabase(db) {
-  db.find().forEach(function (item) {
-    db.remove(item._id);
-  });
+  db.find()
+    .forEach(function (item) {
+      db.remove(item._id);
+    });
 }
 
 // Test the Summary
@@ -72,8 +73,8 @@ describe('Add Item (Expense) Page', function () {
         balance: 99999999,
       });
 
-
-      for ( i = 1; i <= 7; i++) {
+      // run the tests
+      for (i = 1; i <= 7; i++) {
         let testNum = 'test ' + i.toString();
         let test = Stuff.findOne({ name: testNum });
         expect(insert(test.balance)).to.be.false;
@@ -118,7 +119,8 @@ describe('Add Item (Expense) Page', function () {
         balance: 3.12,
       });
 
-      for ( i = 1; i <= 7; i++) {
+      // run the tests
+      for (i = 1; i <= 7; i++) {
         let testNum = 'test ' + i.toString();
         let test = Stuff.findOne({ name: testNum });
         assert.equal(test, insert(test));
@@ -133,7 +135,7 @@ describe('Add Item (Expense) Page', function () {
       assert.equal(stuffCollection(), Stuff);
     });
 
-    it('Checking valid input against regex should take no longer than 5ms', function(done){
+    it('Checking valid input against regex should take no longer than 5ms', function (done) {
       // insert item into database
       Stuff.insert({
         name: 'test 1',
@@ -147,7 +149,7 @@ describe('Add Item (Expense) Page', function () {
       done();
     });
 
-    it('Checking invalid input against regex should take no longer than 5ms', function(done){
+    it('Checking invalid input against regex should take no longer than 5ms', function (done) {
       // insert item into database
       Stuff.insert({
         name: 'test 1',
@@ -160,6 +162,5 @@ describe('Add Item (Expense) Page', function () {
       insert(test);
       done();
     });
-
   }
 });

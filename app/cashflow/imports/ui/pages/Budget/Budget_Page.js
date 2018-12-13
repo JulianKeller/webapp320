@@ -3,7 +3,6 @@ import { Stuff } from '../../../api/stuff/stuff.js';
 import { Goals } from '../../../api/stuff/goals.js';
 import { ReactiveVar } from 'meteor/reactive-var';
 import { Meteor } from 'meteor/meteor';
-
 import './Budget_Page.js';
 
 // create some locally global variables the helper functions can access
@@ -27,9 +26,13 @@ Template.Budget_Page.helpers({
     return Goals.find();
   },
 
-  // return the difference between the goal and the saved
+  // return the difference between the goal and the balance
   difference(goal, balance) {
-    return Math.round((goal - balance) * 100) / 100;
+    const diff = Math.round((goal - balance) * 100) / 100;
+    if (diff < 0) {
+      return 0;
+    }
+    return diff;
   },
 
   // check if the current user is the owner of the budget data

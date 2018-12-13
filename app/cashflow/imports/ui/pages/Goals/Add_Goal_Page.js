@@ -5,6 +5,7 @@ import { Goals } from '../../../api/stuff/goals.js';
 
 /* eslint-disable object-shorthand, no-unused-vars */
 
+// check an items input before it is inserted
 export function insert(doc) {
   const regex = /^[0-9]\d*(((,\d{3}){1})?(\.\d{2})?)$/;
   if (regex.test(doc.balance) && regex.test(doc.goal)) {
@@ -13,8 +14,8 @@ export function insert(doc) {
   return false;
 }
 
-/**
- * After successful addition of a new Stuff document, go to List page.
+/*
+ * After successful addition of a new Stuff document, go to Budget page.
  * See: https://github.com/aldeed/meteor-autoform#callbackshooks
  */
 AutoForm.hooks({
@@ -42,4 +43,3 @@ Template.Add_Goal_Page.helpers({
     return Goals;
   },
 });
-

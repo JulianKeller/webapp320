@@ -1,8 +1,7 @@
 <template name="Add_Goal_Page">
-    <style>
-        .ui.raised.segment {
+  <style>
+    .ui.raised.segment {
       width: 75%;
-      /*text-align: center;*/
       margin-left: auto;
       margin-right: auto;
       background: #F7F7F9;
@@ -24,30 +23,31 @@
       padding-bottom: 15px;
     }
   </style>
-    {{#If_Logged_In}}
+
+  {{#If_Logged_In}}
     <div style="padding-top: 20px" class="ui raised segment">
-        {{#autoForm
-        collection=goalCollection
-        template="semanticUI"
-        id="AddGoalForm"
-        type="insert"
-        resetOnSuccess=true }}
+      {{#autoForm
+          collection=goalCollection
+          template="semanticUI"
+          id="AddGoalForm"
+          type="insert"
+          resetOnSuccess=true }}
         <form class="ui form">
-            <h1 class="ui dividing header">Add Goal</h1>
-            <div class="three fields">
-                <div class="field">
-                    {{>afQuickField name='name'}}
-                </div>
-                <div class="field">
-                    {{>afQuickField name='goal'}}
-                </div>
-                <div class="field">
-                    {{>afQuickField name='balance'}}
-                </div>
+          <h1 class="ui dividing header">Add Goal</h1>
+          <div class="three fields">
+            <div class="field">
+              {{>afQuickField name='name'}}
             </div>
+            <div class="field">
+              {{>afQuickField name='goal'}}
+            </div>
+            <div class="field">
+              {{>afQuickField name='balance'}}
+            </div>
+          </div>
         </form>
         <button type="submit" class="positive ui button">Update</button>
-        {{/autoForm}}
+      {{/autoForm}}
     </div>
-    {{/If_Logged_In}}
+  {{/If_Logged_In}}
 </template>
