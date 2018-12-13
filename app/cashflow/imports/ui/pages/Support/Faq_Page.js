@@ -5,6 +5,12 @@ import { Question } from '../../../api/stuff/question.js';
 import { Support } from '../../../api/stuff/support.js';
 
 AutoForm.hooks({
+  before: {
+    insert: function (doc) {
+      console.log(doc);
+      return doc;
+    },
+  },
   AddQuestionForm: {
     onSuccess: function onSuccess(formType, result) {
       FlowRouter.go('SubmitQ_Page');
@@ -12,6 +18,7 @@ AutoForm.hooks({
   },
   AddSupportForm: {
     onSuccess: function onSuccess(formType, result) {
+      console.log('got onSuccess');
       FlowRouter.go('SubmitQ_Page');
     },
   },
@@ -34,9 +41,11 @@ Template.Faq_Page.helpers({
       other: 'Other (Please describe below)',
     };
   },
+
   questionCollection() {
     return Question;
   },
+
   supportCollection() {
     return Support;
   },

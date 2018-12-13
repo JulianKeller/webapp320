@@ -22,8 +22,8 @@ Testing Phase
 - [x] Add some theming to the no-permission page
 - [x] Change support page add category and add item buttons to reflect current budget page layout
 - [x] Make General Questions Functional
-- [ ] Ensure functions test for edge cases
-- [ ] Write Testing Library and run tests
+- [x] Ensure functions test for edge cases
+- [x] Write Testing Library and run tests
 
 ## Testing TODO
 After shutting down normal app, run tests with: 
@@ -36,18 +36,17 @@ You can drop a file-name.test.js file anywhere and meteor seems to run it fine.
 - [x] Test Budget Page Page functions
 - [x] Test Summary Template functions
 - [x] Test Add Goal Page functions
-- [ ] Test Add Item Page functions
+- [x] Test Add Item Page functions
+- [x] Test Edit Goal Page functions
+- [x] Test Edit Item Page functions
+- [x] Test Add Item Page functions
+- [x] Test Support Page Schemas
 - [ ] Tests all links
-- [ ] Test Edit Goal Page functions
-- [ ] Test Edit Item Page functions
-- [ ] Test Add Item Page functions
-- [ ] Test Support Page Schemas
-*Note: 
 
 ## Bugs to Fix
-- [ ] Fix text/buttons from overlapping on FAQ page
-- [ ] Budget Page total can have more than 2 decimals after float
-- [ ] Budget Page goals progress bar rounds up 1%
+- [x] Fix text/buttons from overlapping on FAQ page
+- [x] Budget Page total can have more than 2 decimals after float
+- [x] Budget Page goals progress bar rounds up 1% -> this is a problem with semantic UI
 - [x] Make budget page not visible when logged out
 - [x] On Add and Edit pages make money inputs only take 2 decimal floats
 - [x] Fixed an issue where all users shared the same expenses and goals.

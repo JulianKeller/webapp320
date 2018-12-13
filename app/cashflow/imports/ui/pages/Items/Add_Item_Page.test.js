@@ -1,6 +1,7 @@
 import { Meteor } from 'meteor/meteor';
 import { Stuff } from '../../../api/stuff/stuff.js';
 import { assert } from 'meteor/practicalmeteor:chai';
+import { Goals } from '../../../api/stuff/goals';
 
 /* global describe, afterEach, beforeEach, it, expect */
 /* eslint-env mocha */
@@ -123,6 +124,14 @@ describe('Add Item (Expense) Page', function () {
         let test = Stuff.findOne({ name: testNum });
         assert.equal(test, insert(test));
       }
+    });
+
+    it('stuffCollection returns the Stuff schema', function () {
+      // define the helper function
+      function stuffCollection() {
+        return Template.Add_Item_Page.__helpers[' stuffCollection']();
+      }
+      assert.equal(stuffCollection(), Stuff);
     });
   }
 });
