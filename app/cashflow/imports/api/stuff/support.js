@@ -12,7 +12,7 @@ export const SupportSchema = new SimpleSchema({
     label: 'Issue:',
     autoform: {
       group: 'Support',
-      placeholder: 'Select Issue'
+      placeholder: 'Select Issue',
     },
   },
 

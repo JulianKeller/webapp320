@@ -8,57 +8,58 @@ import { assert } from 'meteor/practicalmeteor:chai';
 
 // empty the database
 function emptyDatabase(db) {
-  db.find().forEach(function (item) {
-    db.remove(item._id);
-  });
+  db.find()
+    .forEach(function (item) {
+      db.remove(item._id);
+    });
 }
 
 
 // Test Adding and Removing items from the Database on both Client and Server Sides
 describe('Budget Page Databases', function () {
-    beforeEach(function () {
-      emptyDatabase(Stuff);   // Empty Database before each test
-      emptyDatabase(Goals);
-    });
+  beforeEach(function () {
+    emptyDatabase(Stuff);   // Empty Database before each test
+    emptyDatabase(Goals);
+  });
 
-    afterEach(function () {
-      emptyDatabase(Stuff);   // Empty Database after each test
-      emptyDatabase(Goals);
-    });
+  afterEach(function () {
+    emptyDatabase(Stuff);   // Empty Database after each test
+    emptyDatabase(Goals);
+  });
 
-    it('Add then remove an expense from the Stuff database', function () {
-      Stuff.insert({
-        name: 'test expense',
-        description: 'test description',
-        balance: 10,
-      });
-      const item = Stuff.findOne({ name: 'test expense' });
-      assert.equal(Stuff.find()
-        .count(), 1);
-      Stuff.remove(item._id);
-      assert.equal(Stuff.find()
-        .count(), 0);
+  it('Add then remove an expense from the Stuff database', function () {
+    Stuff.insert({
+      name: 'test expense',
+      description: 'test description',
+      balance: 10,
     });
+    const item = Stuff.findOne({ name: 'test expense' });
+    assert.equal(Stuff.find()
+      .count(), 1);
+    Stuff.remove(item._id);
+    assert.equal(Stuff.find()
+      .count(), 0);
+  });
 
-    it('Add then remove an expense from the Goals database', function () {
-      Goals.insert({
-        name: 'test goal',
-        goal: 100,
-        balance: 10,
-        needed: 90,
-      });
-      const item = Goals.findOne({ name: 'test goal' });
-      assert.equal(Goals.find()
-        .count(), 1);
-      Goals.remove(item._id);
-      assert.equal(Goals.find()
-        .count(), 0);
+  it('Add then remove an expense from the Goals database', function () {
+    Goals.insert({
+      name: 'test goal',
+      goal: 100,
+      balance: 10,
+      needed: 90,
     });
+    const item = Goals.findOne({ name: 'test goal' });
+    assert.equal(Goals.find()
+      .count(), 1);
+    Goals.remove(item._id);
+    assert.equal(Goals.find()
+      .count(), 0);
+  });
 });
 
-describe('Budget Page Helpers', function (){
+describe('Budget Page Helpers', function () {
   if (Meteor.isClient) {
-    import '../Budget/Budget_Page.html';
+    import './Budget_Page.html';
     import '../Budget/Budget_Page.js';
 
     beforeEach(function () {
@@ -118,9 +119,7 @@ describe('Budget Page Helpers', function (){
         return Template.Budget_Page.__helpers[' goalList']();
       }
 
-      assert.equal(goalList()
-        .count(), Goals.find()
-        .count());
+      assert.equal(goalList().count(), Goals.find().count());
 
       // add item to Stuff database
       Goals.insert({
@@ -131,9 +130,7 @@ describe('Budget Page Helpers', function (){
       });
 
       // verify that the correct database is returned
-      assert.equal(goalList()
-        .count(), Goals.find()
-        .count());
+      assert.equal(goalList().count(), Goals.find().count());
     });
   }
 

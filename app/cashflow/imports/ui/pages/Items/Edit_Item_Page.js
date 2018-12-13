@@ -5,7 +5,7 @@ import { Stuff } from '../../../api/stuff/stuff.js';
 
 /* eslint-disable object-shorthand, no-unused-vars */
 
-function update(doc) {
+export function update(doc) {
   const regex = /^[0-9]\d*(((,\d{3}){1})?(\.\d{2})?)$/;
   if (regex.test(doc.$set.balance)) {
     return doc;

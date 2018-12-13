@@ -17,20 +17,21 @@ AutoForm.hooks({
   },
 });
 
+// Javascript for Semantic UI elements
 Template.Faq_Page.onRendered(function () {
   $('.menu .item').tab({});
   $('.ui .accordion').accordion();
 });
 
 Template.Faq_Page.helpers({
-  options(){
+  options() {
     return {
       no_display: 'My budget(s) are not displaying correctly.',
       no_add: 'I cannot add a new item/goal.',
       no_update_bal: 'My balance is not updating correctly.',
       no_update_info: 'I\'m having trouble updating my information.',
       delete_acct: 'I\'d like to delete my account.',
-      other: 'Other (Please describe below)'
+      other: 'Other (Please describe below)',
     };
   },
   questionCollection() {

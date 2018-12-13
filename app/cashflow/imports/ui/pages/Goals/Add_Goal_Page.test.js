@@ -1,8 +1,9 @@
 import { Meteor } from 'meteor/meteor';
 import { Stuff } from '../../../api/stuff/stuff.js';
+import { Goals } from '../../../api/stuff/goals.js';
 import { assert } from 'meteor/practicalmeteor:chai';
 
-/* global describe, afterEach, beforeEach, it, expect */
+/* global describe, afterEach, beforeEach, it */
 /* eslint-env mocha */
 
 // empty the database
@@ -13,113 +14,114 @@ function emptyDatabase(db) {
 }
 
 // Test the Summary
-describe('Add Item (Expense) Page', function () {
+describe('Add Goal Page', function () {
   if (Meteor.isClient) {
-    import '../Stuff/Add_Item_Page.html';
-    import '../Stuff/Add_Item_Page.js';
-    import { insert } from '../../../ui/pages/inputRegex.js';
+    import './Add_Goal_Page.html';
+    import '../Goals/Add_Goal_Page.js';
+    import { insert } from './Add_Goal_Page.js';
 
     beforeEach(function () {
       emptyDatabase(Stuff);   // Empty Database before each test
-      emptyDatabase(Stuff);
+      emptyDatabase(Goals);
     });
 
     afterEach(function () {
       emptyDatabase(Stuff);   // Empty Database after each test
-      emptyDatabase(Stuff);
+      emptyDatabase(Goals);
     });
 
-    it('Invalid input is not allowed in the description and fields', function () {
+    it('Invalid input is not allowed in the goal and fields', function () {
       // add items to the database
-      Stuff.insert({
+      Goals.insert({
         name: 'test 1',
-        description: '0',
+        goal: '0',
         balance: '0',
       });
-      Stuff.insert({
+      Goals.insert({
         name: 'test 2',
-        description: .123,
+        goal: .123,
         balance: .123,
       });
-      Stuff.insert({
+      Goals.insert({
         name: 'test 3',
-        description: .1,
+        goal: .1,
         balance: .1,
       });
-      Stuff.insert({
+      Goals.insert({
         name: 'test 4',
-        description: 100.,
+        goal: 100.,
         balance: 100.,
       });
-      Stuff.insert({
+      Goals.insert({
         name: 'test 5',
-        description: 0.0,
+        goal: 0.0,
         balance: 0.0,
       });
-      Stuff.insert({
+      Goals.insert({
         name: 'test 6',
-        description: 123.123659765,
+        goal: 123.123659765,
         balance: 123.123659765,
       });
-      Stuff.insert({
+      Goals.insert({
         name: 'test 7',
-        description: '123.12',
+        goal: '123.12',
         balance: '123.12',
       });
-      Stuff.insert({
+      Goals.insert({
         name: 'test 7',
-        description: 99999999,
-        balance: 9999999,
+        goal: 9999999,
+        balance: 999999,
       });
 
       for ( i = 1; i <= 7; i++) {
         let testNum = 'test ' + i.toString();
-        let test = Stuff.findOne({ name: testNum });
+        let test = Goals.findOne({ name: testNum });
+        expect(insert(test.goal)).to.be.false;
         expect(insert(test.balance)).to.be.false;
       }
     });
 
-    it('Only valid input is allowed in the description and fields', function () {
+    it('Only valid input is allowed in the goal and fields', function () {
       // add items to the database
-      Stuff.insert({
+      Goals.insert({
         name: 'test 1',
-        description: 0,
+        goal: 0,
         balance: 0,
       });
-      Stuff.insert({
+      Goals.insert({
         name: 'test 2',
-        description: .00,
+        goal: .00,
         balance: .12,
       });
-      Stuff.insert({
+      Goals.insert({
         name: 'test 3',
-        description: 0.01,
+        goal: 0.01,
         balance: 0.01,
       });
-      Stuff.insert({
+      Goals.insert({
         name: 'test 4',
-        description: 100,
+        goal: 100,
         balance: 100,
       });
-      Stuff.insert({
+      Goals.insert({
         name: 'test 5',
-        description: 1232.34,
+        goal: 1232.34,
         balance: 1232.34,
       });
-      Stuff.insert({
+      Goals.insert({
         name: 'test 6',
-        description: 530234,
+        goal: 530234,
         balance: 580234,
       });
-      Stuff.insert({
+      Goals.insert({
         name: 'test 7',
-        description: 3.12,
+        goal: 3.12,
         balance: 3.12,
       });
 
       for ( i = 1; i <= 7; i++) {
         let testNum = 'test ' + i.toString();
-        let test = Stuff.findOne({ name: testNum });
+        let test = Goals.findOne({ name: testNum });
         assert.equal(test, insert(test));
       }
     });
