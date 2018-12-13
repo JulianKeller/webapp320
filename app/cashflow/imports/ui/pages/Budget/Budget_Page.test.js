@@ -79,13 +79,13 @@ describe('Budget Page Helpers', function () {
 
       // basic subtraction
       assert.equal(diff(0, 0), 0);
-      assert.equal(diff(0, 1), -1);
+      assert.equal(diff(0, 1), 0);
       assert.equal(diff(1, 0), 1);
       assert.equal(diff(1, 1), 0);
       assert.equal(diff(1.00, .01), 0.99);
-      assert.equal(diff(0.01, 1.00), -0.99);
+      assert.equal(diff(0.01, 1.00), 0.00);
       assert.equal(diff(0.34, 0.33), 0.01);
-      assert.equal(diff(0.33, 0.34), -0.01);
+      assert.equal(diff(0.33, 0.34), 0);
       assert.equal(diff(0.34, 0.33), 0.01);
     });
 
