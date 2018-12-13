@@ -6,3 +6,5 @@ import '/imports/ui/pages';
 import '/imports/ui/stylesheets/style-main.css';
 import '/imports/ui/stylesheets/style-budget.css';
 import '/imports/ui/stylesheets/style-faq.css';
+
+import { Support } from '../imports/api/stuff/support.js';

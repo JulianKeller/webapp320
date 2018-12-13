@@ -16,6 +16,7 @@ export const QuestionSchema = new SimpleSchema({
       placeholder: 'example@example.com',
     },
   },
+
   message: {
     label: 'Message:',
     type: String,

@@ -50,3 +50,10 @@ Template.Faq_Page.helpers({
     return Support;
   },
 });
+
+// Template.registerHelper('options', function () {
+//   return [
+//     { label: 'option 1', value: 'value 1' },
+//     { label: 'option 2', value: 'value 2' },
+//   ];
+// });

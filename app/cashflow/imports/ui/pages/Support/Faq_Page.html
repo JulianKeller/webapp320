@@ -53,6 +53,7 @@
           If you are having technical issues or have a specific question about your account,
           please fill out the form below and we will assign a support ticket and work with you
           to resolve the problem.
+
           {{#autoForm
               collection=supportCollection
               template="semanticUI"
@@ -63,11 +64,13 @@
             <form id="supportForm" class="ui form">
               <div class="field">
                 {{>afQuickField name='issue' type=select options=options}}
+                <!--{{>afQuickField name='issue'}}-->
               </div>
 
               <div class="field">
                 {{>afQuickField name='details'}}
               </div>
+
             </form>
             <button class="ui button" type="submit">Submit</button>
           {{/autoForm}}
