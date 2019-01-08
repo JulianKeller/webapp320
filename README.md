@@ -11,7 +11,7 @@ These instructions will get you a copy of the project running on your local mach
 
 ### Prerequisites
 
-- Meteor (Install Details)[https://www.meteor.com/install]
+- Meteor [Install Details](https://www.meteor.com/install)
 - This program is best viewed in a web browser such as Google Chrome.
 
 ## Installing the program
