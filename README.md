@@ -11,11 +11,12 @@ These instructions will get you a copy of the project running on your local mach
 
 ### Prerequisites
 
-This program is best viewed in a web browser such as Google Chrome.
+- Meteor (Install Details)[https://www.meteor.com/install]
+- This program is best viewed in a web browser such as Google Chrome.
 
 ## Installing the program
 
-Go to the webapp320 directory then:
+Go to the CashFlow directory then:
 ```
 cd app/cashflow
 meteor npm install
