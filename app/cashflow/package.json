@@ -16,7 +16,7 @@
     "chai": "*",
     "docdash": "^0.3.0",
     "es6-enum": "^1.0.3",
-    "eslint": "^3.19.0",
+    "eslint": "^4.18.2",
     "eslint-config-airbnb": "^15.1.0",
     "eslint-import-resolver-meteor": "^0.4.0",
     "eslint-plugin-import": "^2.14.0",
